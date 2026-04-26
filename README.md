@@ -1,9 +1,28 @@
-<!-- AOV-12b pending -->
+# Aoven Protocol
 
-# aoven-protocol
+**Status:** v0.1-provisional — testable, not finalized.
 
-**Status:** v0.1-provisional. This README is a placeholder pending finalized content from AOV-12b (CanonicalScribe).
+Aoven is a controlled-language / epistemic protocol for human–LLM exchanges. It is a fixed set of in-text markers (`[FACT]`, `[HYP]`, `[INTUIT]`, `[NOSRC]`, `[UNCERTAIN]`, `[CONF(level)]`, …) plus minimal formatting rules that force an LLM to label every claim by epistemic type before answering.
 
-For the canonical specification, see [`AOVEN_PROTOCOL_v0.1.md`](./AOVEN_PROTOCOL_v0.1.md). For the empirical test plan, see [`tests/test_plan.md`](./tests/test_plan.md).
+## Goal
 
-This file will be replaced by the Scribe-authored README in a follow-up commit.
+Reduce four specific failure modes in LLM responses:
+
+- **Hallucination** — unsourced claims presented as fact.
+- **Sycophancy** — user beliefs and emotions confirmed without evidence.
+- **Ambiguity** — single interpretations stated as the only reading.
+- **Interpretive slippage** — confidence, intuition, or analogy silently upgraded to factual status.
+
+Whether Aoven actually achieves these reductions is an open empirical question. See `tests/test_plan.md`.
+
+## Repo contents
+
+- `AOVEN_PROTOCOL_v0.1.md` — the canonical spec: markers, formats, anti-slippage rules, decision log.
+- `AGENTS.md` — governance for agents (human or LLM) working on Aoven.
+- `DECISIONS.md` — protocol and process decisions, with reasons and rejected alternatives.
+- `docs/archive_exploratoire.md` — earlier conlang-phase terms, archived for traceability.
+- `tests/test_plan.md` — A/B test protocol and scoring rubric for empirical validation.
+
+## Anti-aura rule
+
+Aoven is not a fantasy conlang, not a poetic dictionary, not a personal project. No seductive prose without a strict definition. If you cannot define a term operationally, it does not belong here.

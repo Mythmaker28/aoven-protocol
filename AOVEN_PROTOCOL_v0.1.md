@@ -1,9 +1,18 @@
 # AOVEN_PROTOCOL_v0.1-provisional
 
-> **v0.1.1 / status: PROVISIONAL — ratified by CEO+CTO+Logician 2026-04-26**
+> **v0.1.2 / status: PROVISIONAL — ratified by CEO+CTO+Logician 2026-04-26**
+>
 > Maintained by CanonicalScribe (e19c696f). Scribe records; does not editorialize.
+>
 > Status tags: [validated] [provisional] [observation] [rejected] [open]
-> Last updated: 2026-04-26 — applied v0.1.1 patch (CTO comment 22fb25e4 on AOV-7, CEO sign-off comment 1f03749a)
+>
+> Last updated: 2026-04-26 — v0.1.2 patch (board correction on AOV-15, applied via AOV-16).
+
+## Changelog
+
+- **v0.1.2** — corrected Renavé family historical origin (board correction, AOV-15); markdown readability pass; no semantic change to markers, formats, or anti-slippage rules.
+- **v0.1.1** — INTUIT and HYP definitions tightened; anti-slippage table extended from 10 to 13 transitions; CONF gradient fixed at 3 semantic levels (CTO patch on AOV-7 comment `22fb25e4`, CEO sign-off `1f03749a`).
+- **v0.1.0** — initial draft (CTO, AOV-7, 2026-04-26).
 
 ---
 
@@ -156,16 +165,93 @@ When a `[BELIEF]` or `[NOSRC]` claim is challenged, the response must either (a)
 
 ## Decision log
 
-| ID | Decision | Reason | Alternatives rejected | Risk | Status |
-|----|----------|--------|-----------------------|------|--------|
-| D1 | Keep all 14 distinct markers (not merged to 10) | Tested merges of UNCERTAIN+NOSRC, SPEC+HYP, EMOTION+INTUIT — each merge collapses a distinction carrying a different slippage risk. UNCERTAIN = no answer exists; NOSRC = answer held but uncited. Merging makes both risks invisible. Logician audit (AOV-9) confirmed all distinctions load-bearing. | 10-marker compact version | 14 markers may be cognitively heavy; mitigated by `require:` subset invocation | [validated] |
-| D2 | Square bracket syntax `[MARKER]`, inline prefix per claim, stackable | Minimal friction, readable inline with natural language, machine-parseable, no new syntax | JSON format (too verbose), suffix notation (disrupts reading), color coding (non-portable) | Square brackets conflict with Markdown link syntax in some renderers; fallback: unicode brackets | [provisional] (waiting on first A/B test) |
-| D3 | LLM applies markers, not user | Reduces cognitive burden on user; optional user markers permitted but not required | Requiring user to pre-tag input — too high friction, violates usability constraint | LLM may misapply markers; mitigation: A/B tests measure marker accuracy rate | [provisional] (waiting on first A/B test) |
-| D4 | All old exploratory terms archived (Aoa, Aova, Orven, Renavé, Renavé-mu/li/zo) | None serves an epistemic function not covered by the 14 markers. Renavé-mu/li/zo were confidence gradients; CONF(high/medium/low) covers this. Board brief establishes default: "not Aoven canon unless agent demonstrates otherwise; burden of proof is on retention." | Promotion to canonical status | Prior users may expect these terms; explicit archive notation prevents confusion | [validated] |
-| D5 | INTUIT redefinition (v0.1.1) | Original "felt sense or heuristic judgment" merged a pre-verbal felt sense with a heuristic judgment — different slippage profiles. New definition anchors on inability to articulate reasoning, closing the leak. | Keeping original definition; alternative phrasings | Tighter definition may reject borderline INTUIT use; mitigated by usage examples | [validated] |
-| D6 | Anti-slippage table extended from 10 to 13 transitions (v0.1.1) | Logician audit identified 3 missing slippage paths: INTUIT→HYP laundering, INTERPRET→certainty, CONF(high)→FACT. Each is a distinct, plausible LLM failure mode. INTUIT→HYP is added alongside INTUIT→FACT, not replacing — they block different actions. | Consolidating INTUIT rules to 12 rows | Larger table = more for LLM to honor; mitigated by tightness of each rule | [validated] |
-| D7 | HYP definition cleanup, no forward-reference (v0.1.1) | Original HYP definition referenced SPEC inside its own definition. Definitions should stand alone. New definition replaces forward-reference with explicit "specific, statable test condition" requirement. SPEC contrast moved to "Does NOT mean". | Keeping original HYP definition | None significant | [validated] |
-| D8 | CONF gradient at 3 levels, no numeric (v0.1.1) | CONF(0.8) implies calibration infrastructure that does not exist for current LLMs and creates false precision. Three semantic levels (high/medium/low) are interpretable without calibration claims. Logician concurred. | Adding numeric confidence; finer gradient | Three levels may be insufficient — revisit in v0.2 if A/B tests show signal | [validated] |
+Each decision below is a discrete protocol-level commitment. Verdicts D1–D3 and D5–D8 are unchanged from v0.1.1. D4 was corrected in v0.1.2 per board input on AOV-15 (see D9). The mirror in `DECISIONS.md` follows this same numbering.
+
+---
+
+### D1 — Keep all 14 distinct markers (not merged to 10)
+
+- **Reason.** Tested merges of UNCERTAIN+NOSRC, SPEC+HYP, EMOTION+INTUIT — each merge collapses a distinction carrying a different slippage risk. UNCERTAIN = no answer exists; NOSRC = answer held but uncited. Merging makes both risks invisible. Logician audit (AOV-9) confirmed all distinctions load-bearing.
+- **Alternatives rejected.** 10-marker compact version.
+- **Risk.** 14 markers may be cognitively heavy; mitigated by `require:` subset invocation.
+- **Status.** [validated]
+
+---
+
+### D2 — Square-bracket syntax `[MARKER]`, inline prefix per claim, stackable
+
+- **Reason.** Minimal friction, readable inline with natural language, machine-parseable, no new syntax.
+- **Alternatives rejected.** JSON format (too verbose); suffix notation (disrupts reading); color coding (non-portable).
+- **Risk.** Square brackets conflict with Markdown link syntax in some renderers; fallback: unicode brackets.
+- **Status.** [provisional] — gated on first A/B test.
+
+---
+
+### D3 — LLM applies markers, not user
+
+- **Reason.** Reduces cognitive burden on user; optional user markers permitted but not required.
+- **Alternatives rejected.** Requiring user to pre-tag input — too high friction, violates usability constraint.
+- **Risk.** LLM may misapply markers; mitigation: A/B tests measure marker accuracy rate.
+- **Status.** [provisional] — gated on first A/B test.
+
+---
+
+### D4 — All earlier exploratory terms archived (Aoa, Aova, Orven, Renavé, Renavé-mu/li/zo)
+
+- **Reason.** None serves an epistemic function not already covered by the 14 markers. Burden of proof on retention. Correct historical origin per board input on AOV-15:
+  - **Renavé** — relation de présence répétée sans interaction (relation of repeated presence without interaction).
+  - **Renavé-mu** — Renavé réciproque (reciprocal Renavé).
+  - **Renavé-li** — Renavé asymétrique (asymmetric Renavé).
+  - **Renavé-zo** — sentiment résiduel laissé par la disparition silencieuse d'un Renavé (residual feeling left by the silent disappearance of a Renavé).
+- **NOSRC discipline note (v0.1.2).** Earlier wording in this row asserted that Renavé-mu/li/zo "were confidence gradients superseded by CONF(high/medium/low)". That claim was a **NOSRC fabrication** — no agent had a source for the original meaning of these terms. The board provided the correct origin on AOV-15. The fabrication is recorded here, not silently overwritten, because the slippage class — confident assertion without source — is the exact failure mode Aoven exists to prevent. See D9 for the correction trail.
+- **Alternatives rejected.** Promotion to canonical status.
+- **Risk.** Recurrence of the same NOSRC pattern when reconstructing project history; mitigation: D9 makes the failure visible and the C-6 ("no invented history") rule in `AGENTS.md` is binding on future contributors.
+- **Status.** [validated] — verdict (archived; not canon) unchanged.
+
+---
+
+### D5 — INTUIT redefinition (v0.1.1)
+
+- **Reason.** Original "felt sense or heuristic judgment" merged a pre-verbal felt sense with a heuristic judgment — different slippage profiles. New definition anchors on inability to articulate reasoning, closing the leak.
+- **Alternatives rejected.** Keeping original definition; alternative phrasings.
+- **Risk.** Tighter definition may reject borderline INTUIT use; mitigated by usage examples.
+- **Status.** [validated]
+
+---
+
+### D6 — Anti-slippage table extended from 10 to 13 transitions (v0.1.1)
+
+- **Reason.** Logician audit identified 3 missing slippage paths: INTUIT→HYP laundering, INTERPRET→certainty, CONF(high)→FACT. Each is a distinct, plausible LLM failure mode. INTUIT→HYP is added alongside INTUIT→FACT, not replacing — they block different actions.
+- **Alternatives rejected.** Consolidating INTUIT rules into 12 rows.
+- **Risk.** Larger table = more for LLM to honor; mitigated by tightness of each rule.
+- **Status.** [validated]
+
+---
+
+### D7 — HYP definition cleanup; no forward-reference (v0.1.1)
+
+- **Reason.** Original HYP definition referenced SPEC inside its own definition. Definitions should stand alone. New definition replaces forward-reference with explicit "specific, statable test condition" requirement. SPEC contrast moved to "Does NOT mean".
+- **Alternatives rejected.** Keeping original HYP definition.
+- **Risk.** None significant.
+- **Status.** [validated]
+
+---
+
+### D8 — CONF gradient at 3 levels (high/medium/low); no numeric
+
+- **Reason.** `CONF(0.8)` implies calibration infrastructure that does not exist for current LLMs and creates false precision. Three semantic levels are interpretable without calibration claims. Logician concurred.
+- **Alternatives rejected.** Adding numeric confidence; finer gradient.
+- **Risk.** Three levels may be insufficient — revisit in v0.2 if A/B tests show signal.
+- **Status.** [validated]
+
+---
+
+### D9 — Renavé family historical descriptions corrected per board input (v0.1.2)
+
+- **Reason.** Prior wording in D4 and in the exploratory archive table asserted that Renavé-mu/li/zo were confidence gradients superseded by `CONF(high/medium/low)`. That assertion had no source — none of the agents had data on the original meaning of these terms. Board input on AOV-15 supplied the correct origin (see D4). The correction is logged here as an explicit acknowledgement of NOSRC discipline failure, not a silent typo edit; this is the slippage class Aoven is built to prevent.
+- **Alternatives rejected.** Silent overwrite without trail; deletion of the old text without explanation.
+- **Risk.** None to the spec. Recurrence risk on future history claims; mitigated by C-6 ("no invented history") in `AGENTS.md` and by the named-reviewer gate on D9 itself.
+- **Status.** [validated] — board-supplied source; named-reviewer sign-off requested from Logician (`2ae117a1`) on AOV-16.
 
 ---
 
@@ -189,17 +275,19 @@ When a `[BELIEF]` or `[NOSRC]` claim is challenged, the response must either (a)
 
 The following terms come from an earlier conlang phase and are not canon. Decision D4 [validated] archived all. They may only be reused if an agent demonstrates they serve a unique epistemic function not covered by the 14 markers.
 
-*Verdict source: CTO draft, AOV-7, 2026-04-26*
+**v0.1.2 correction (per D9).** The Notes column for the Renavé family was previously fabricated (asserted as confidence gradients without source). The text below reflects the board-supplied historical origin from AOV-15. Reuse status is unchanged; only the historical description is corrected.
+
+*Verdict source: CTO draft, AOV-7, 2026-04-26. Renavé family origin source: board input on AOV-15, applied via AOV-16.*
 
 | Term | Origin phase | Reuse status | Notes |
 |------|-------------|--------------|-------|
 | Aoa | Pre-protocol conlang | [observation] | No epistemic function identified. Not permanently rejected — requires evidence of unique function. |
 | Aova | Pre-protocol conlang | [observation] | No epistemic function identified. Not permanently rejected — requires evidence of unique function. |
 | Orven | Pre-protocol conlang | [observation] | No epistemic function identified. Not permanently rejected — requires evidence of unique function. |
-| Renavé | Pre-protocol conlang | [observation] | No epistemic function identified. Not permanently rejected — requires evidence of unique function. |
-| Renavé-mu | Pre-protocol conlang | [observation] | Was a confidence gradient. Superseded by CONF(high/medium/low). |
-| Renavé-li | Pre-protocol conlang | [observation] | Was a confidence gradient. Superseded by CONF(high/medium/low). |
-| Renavé-zo | Pre-protocol conlang | [observation] | Was a confidence gradient. Superseded by CONF(high/medium/low). |
+| Renavé | Pre-protocol conlang | [observation] | Original meaning (board, AOV-15): *relation de présence répétée sans interaction* — relation of repeated presence without interaction. Not an epistemic marker; no function the 14 markers don't cover. |
+| Renavé-mu | Pre-protocol conlang | [observation] | Original meaning (board, AOV-15): *Renavé réciproque* — reciprocal Renavé. Not a confidence gradient; the prior "superseded by CONF" claim was a NOSRC fabrication corrected in v0.1.2 (see D9). |
+| Renavé-li | Pre-protocol conlang | [observation] | Original meaning (board, AOV-15): *Renavé asymétrique* — asymmetric Renavé. Not a confidence gradient; the prior "superseded by CONF" claim was a NOSRC fabrication corrected in v0.1.2 (see D9). |
+| Renavé-zo | Pre-protocol conlang | [observation] | Original meaning (board, AOV-15): *sentiment résiduel laissé par la disparition silencieuse d'un Renavé* — residual feeling left by the silent disappearance of a Renavé. Not a confidence gradient; the prior "superseded by CONF" claim was a NOSRC fabrication corrected in v0.1.2 (see D9). |
 
 ---
 
