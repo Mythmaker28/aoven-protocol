@@ -247,6 +247,7 @@ The other §4 input-bucket items (subset-header semantics, MEMORY-quoting, pause
   - Gap 4 (§5 Gap 2 split): split into protocol-structural (CONF stacking, marker-set redraw) vs cheatsheet-authoring (wedge-teaching, bare-unmarked-sentence rule, common-knowledge boundary). Per-item bucket assignments added inline to §4.
   - Minor (§4 item 4): "Five UR-5 violations" → "Four UR-5 violations" (correct count).
 - Audit confirmed: anti-aura discipline PASS, slippage classification PASS-with-revisions (all per-item attributions match §2 sources; only count error), verdict scope PASS, structural-gap defensibility PASS-with-revisions (Gap 4 split applied).
+- **Fold commit:** `83f9463` (delta-only verification by Logician audit AOV-105 comment `02cd4851`, verdict PASS-WITH-MOD on item 6 footer-provenance only — closed by this line).
 
 ---
 
