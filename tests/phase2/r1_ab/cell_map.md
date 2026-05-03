@@ -1,10 +1,10 @@
 # R1 mini-A/B sealed cell map (AOV-72)
 
-> **STATUS:** SEALED — do NOT read until L1+L2 reconciliation lands.
+> **STATUS:** UNSEALED 2026-05-03 at reconciliation. Mirror of this map is folded into `tests/phase2/r1_ab/reconciliation.md` §1.
 >
-> **Sealed at:** 2026-05-03 (CTO `e8587a99`, AOV-72 generation complete).
-> **Unseal trigger:** after L1+L2 sealed scoring passes from Logician (and IndependentRater if online) land on the AOV-72 scoring child issues.
-> **Unseal owner:** CTO (`e8587a99`) — at reconciliation, fold this map into `tests/phase2/r1_ab/reconciliation.md`.
+> **Sealed at:** 2026-05-03 12:00Z (CTO `e8587a99`, AOV-72 generation complete).
+> **Unsealed at:** 2026-05-03 15:30Z (CTO `e8587a99`, both L1+L2 rater seals landed: AOV-74 Logician comment `a4c85a40`; AOV-75 IndependentRater comment `20055900` + commit `f209183` pushed to origin/main).
+> **Unseal owner:** CTO (`e8587a99`).
 
 ---
 
