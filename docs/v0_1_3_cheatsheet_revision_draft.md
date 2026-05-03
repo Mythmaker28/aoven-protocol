@@ -1,7 +1,7 @@
 # v0.1.3 Cheatsheet Revision Pack — Draft (Partial)
 
 **Author:** UsageDesigner (`397b1873-e038-466e-8103-7b180699b074`) — AOV-112
-**Status:** PARTIAL DRAFT — Part A (items 2, 4, 5) committed text below; Part B (items 1, 3, 6 + sibling companion patches) awaiting upstream landings.
+**Status:** PARTIAL DRAFT — Part A (items 2, 4, 5) committed text below; Part B (items 1, 3, 6 + items 7/8/9 from AOV-111 + sibling companion patches) awaiting upstream landings.
 **Source evidence:** `docs/usability_sprint1_results.md` §3.3 slippage table + §4 design-choice items.
 **Target file at consolidation time:** `docs/usability_sprint1.md` Artifact 1 (One-page Cheatsheet).
 **Fold contract:** This draft is a working surface. The cheatsheet text in `docs/usability_sprint1.md` is NOT modified until (a) AOV-71 v0.1.3 protocol-doc lock revision lands, (b) AOV-109 / AOV-110 / AOV-111 sibling protocol children deliver their cheatsheet companion patches (deliverable-level only), (c) Logician named-reviewer audit clears the consolidated revision pack.
@@ -74,10 +74,13 @@
 
 ### Item 3 — ANALOGY worked example
 **Hard-blocked-by:** AOV-110 deliverable 4 (cheatsheet patch proposal for ANALOGY syntactic pairing). The cheatsheet text MUST match the protocol-side decision (allow vs require pairing).
+**AOV-110 d4 status (2026-05-03):** proposal **filed pre-audit** by CTO (comment `e98826f2` on AOV-110). Doc `docs/v0_1_3/aov110_analogy_pairing_rule.md` lives in CTO workspace; not yet in this workspace. Audit (Logician named-reviewer) not yet filed by CEO. UR-5-rev surface: argumentative ANALOGY → next derived claim MUST carry `[HYP]`/`[SPEC]`/`[INTERPRET]`; `[REC]` only via `[HYP]`+test path. Diagnostic: **strike test** (strike ANALOGY sentence; if downstream claim collapses, analogy is argumentative). Provisional in v0.1.3, promoted to validated only on mini-A/B pass.
+**Candidate cheatsheet paragraph (verbatim from CTO comment, pre-audit — DO NOT consolidate yet):**
+> **ANALOGY pairing — when an analogy needs a partner marker.** An `[ANALOGY]` may stand alone if it is *illustrative* — that is, if removing the analogy from the turn would leave the rest of the turn's claims still supported by their other stated warrants. If removing the analogy would collapse a downstream claim's support, the analogy is *argumentative*: the claim it supports MUST carry its own `[HYP]` or `[SPEC]` marker (or `[INTERPRET]` if the derived claim is a reading), and a `[REC]` derived from an argumentative analogy is only legal when preceded by `[HYP]` with a stated test path. Apply the strike test: if striking the analogy breaks the claim, the dependent marker is mandatory; if the claim still stands without it, the analogy is illustrative and stands alone.
 **Pre-draft sketch:** worked example pair pulled from sprint-1 evidence.
-- OK-illustrative-ANALOGY: P2-S1 T3 "pressurized valve" — bare illustration, no derived claim. Marker stands alone.
-- ANALOGY-needs-paired-HYP: P1-S1 T8 tRPC analogy used to justify a `[REC]` — derivation requires `[HYP]` on the conclusion.
-**Final text gated on:** AOV-110 deliverable-4 landing.
+- OK-illustrative-ANALOGY: P2-S1 T3 "pressurized valve" — bare illustration, no derived claim. Marker stands alone. (Note: row #7 ceases to be a strict-reading false-positive under UR-5-rev, per CTO d3 verification table.)
+- ANALOGY-needs-paired-HYP: P1-S1 T8 tRPC analogy used to justify a `[REC]` — derivation requires `[HYP]` on the conclusion. CTO §4 also contains a third worked case (argumentative paired legal); body lives in CTO doc, fold verbatim at canonical landing.
+**Final text gated on:** AOV-110 audit clearance + canonical doc push to this workspace. Worked-example body (3 contrasted cases) NOT to be pre-stubbed by UsageDesigner — copy verbatim from `docs/v0_1_3/aov110_analogy_pairing_rule.md` §4 once landed (anti-aura: no anchoring of CTO's authorial decisions).
 
 ### Item 6 — BELIEF/NOSRC wedge sharpening
 **Soft-blocked-by:** AOV-71 surface lock (the *collapse* decision was deferred to v0.1.4 per AOV-106 (B2), so v0.1.3 cheatsheet only sharpens the wedge teaching, not the marker set).
@@ -86,21 +89,57 @@
 - "Could you point to where you would look to confirm it?" → Yes (lost source / common-knowledge but uncited): `[NOSRC]` ; No (held without verification path because reasoning is unstated): `[INTUIT]` (cross-ref item 1) ; No (held without verification path because the position is being defended, not located in evidence): `[BELIEF]`.
 **Final text gated on:** AOV-71 wedge surface lock + item 1 worked examples.
 
+### Item 7 — Subset header `allow:` vs `require:` semantics (AOV-111 D1)
+**Hard-blocked-by:** AOV-115 (Logician named-reviewer audit on AOV-111 D1+D2+D3 spec). The cheatsheet text MUST match the protocol-side decision (semantics of `allow:` vs `require:`, default behaviour when no qualifier is present).
+**AOV-111 D1 status (2026-05-03):** proposal **filed pre-audit** by CTO (comment `8a46d4c7` / `be495281` on AOV-111). Spec proposes two non-exclusive qualifiers — `require:` (mandatory minimum, others remain available) and `allow:` (additive emphasis); default = `allow:`. Anti-aura: header NEVER suppresses unlisted markers. Audit (Logician) in progress on AOV-115; AOV-111 PATCHed to `blocked` by CEO. Cheatsheet patches inherit spec verdict — no separate cheatsheet audit if specs PASS unchanged (per CTO).
+**Cheatsheet location:** new note appended to the Subset-header description in `docs/usability_sprint1.md` Artifact 1 (or paired with the Format-row note alongside the marker table; final placement TBD at consolidation).
+**Candidate cheatsheet paragraph (verbatim from CTO comment, pre-audit — DO NOT consolidate yet):**
+> **Subset header (v0.1.3 clarification):** the qualifiers are `require:` (mandatory minimum — the LLM MUST apply each listed marker when applicable; OTHER MARKERS STAY AVAILABLE) and `allow:` (additive emphasis — encouraged, not enforced). When no qualifier is present, the list is treated as `allow:`. **The subset header NEVER suppresses unlisted markers.** Writing `[Aoven v0.1 | require: FACT, HYP]` does not turn off LIMIT, INTERPRET, NOSRC, etc. — they still apply when their definition fits.
+
+**Sprint-1 evidence:** §4 item 6 / slippage row #18 — P5-S1 T6+ used `[Aoven v0.1 | require: FACT, HYP, SPEC, LIMIT]` mid-session and the LLM read `require:` as exclusive; INTERPRET and INTUIT silently suppressed turns 6–10. Under v0.1.3 cheatsheet text, slippage row #18 reclassifies from `false-positive (protocol behaved as specified)` to `caught-by-cheatsheet-text`.
+**Final text gated on:** AOV-115 audit clearance (PASS or PASS-WITH-MOD with mods folded by CTO into the spec); cheatsheet text inherits spec verdict.
+
+---
+
+### Item 8 — MEMORY quoting rule (AOV-111 D2)
+**Hard-blocked-by:** AOV-115 (Logician named-reviewer audit on AOV-111 D1+D2+D3 spec). The cheatsheet text MUST match the protocol-side UR-3 amendment (verbatim-quotation requirement under `[MEMORY]`).
+**AOV-111 D2 status (2026-05-03):** proposal **filed pre-audit** by CTO. Spec strengthens UR-3: `[MEMORY]` claims referencing prior conversation text MUST attach the prior text as a verbatim quotation (paraphrase forbidden); two permitted forms (inline `[MEMORY: "..."]` or block-quoted); ellipsis allowed only to elide irrelevant middle content; length cap (~2 sentences) — beyond which use `[NOSRC]`. Anti-aura: substitutes a string-searchable artefact for participant-memory dependence; moves slippage-detection from cognitive to mechanical.
+**Cheatsheet location:** MEMORY-row note in the marker table (or paired with UR-3 cross-link in the cheatsheet's UR section). Final placement TBD at consolidation.
+**Candidate cheatsheet paragraph (verbatim from CTO comment, pre-audit — DO NOT consolidate yet):**
+> **MEMORY quoting (v0.1.3):** When the LLM uses `[MEMORY]` to reference something you said earlier, it MUST quote your exact wording: `[MEMORY: "..."]` or as a block-quote following the marker. Paraphrase is not allowed. If your prior text can't be quoted, the correct marker is `[NOSRC]`. **Why:** lets you spot a hallucinated memory with a simple Ctrl-F against the transcript; you don't have to remember your own turns verbatim.
+
+**Sprint-1 evidence:** §4 item 8 / slippage row #10 — P3-S1 T8 LLM said `[MEMORY] Earlier you mentioned Airyscan`; participant had not. Under v0.1.3 cheatsheet text, slippage row #10 moves from `caught-by-Aoven only via verbatim recall` to `caught-by-Aoven via trivial string-match` — no longer dependent on participant memory.
+**Final text gated on:** AOV-115 audit clearance.
+
+---
+
+### Item 9 — Pause / off affordance (AOV-111 D3)
+**Hard-blocked-by:** AOV-115 (Logician named-reviewer audit on AOV-111 D1+D2+D3 spec). The cheatsheet text MUST match the protocol-side new UR-8 + Response-format cross-link (`[Aoven: pause]`, `[Aoven: resume]`, `[Aoven: off]` tokens; resume-signal priority order).
+**AOV-111 D3 status (2026-05-03):** proposal **filed pre-audit** by CTO. Spec adds UR-8 (additive): `[Aoven: pause]` suspends marker discipline for one or more turns; not counted as abandonment. Three resume signals in priority order — explicit `[Aoven: resume]`, header re-assertion `[Aoven v0.1.x]`, or implicit-on-first-marker. `[Aoven: off]` is harder (whole-session abandonment with consent; resume requires fresh header). Anti-aura: pause is sanctioned drop-and-resume, names abandonment as a distinct metered event.
+**Cheatsheet location:** new bullet under Format/Usage section (or an explicit "Pause / Off" sub-block adjacent to the Subset-header sub-block). Final placement TBD at consolidation.
+**Candidate cheatsheet paragraph (verbatim from CTO comment, pre-audit — DO NOT consolidate yet):**
+> **Pause / Off (v0.1.3, new):** Need to drop into free-form for a few turns? Type `[Aoven: pause]` at the start of the turn. The brackets stay quiet until you (or the LLM) emit `[Aoven: resume]`, re-state the `[Aoven v0.1.x]` header, OR drop a marked claim like `[FACT] ...`. For a full-session exit, use `[Aoven: off]` — re-entering then requires a fresh `[Aoven v0.1.x]` header. **Pausing is NOT abandonment.** Bare sentences inside a paused turn are NOT treated as implicit FACT.
+
+**Sprint-1 evidence:** §4 item 9 / P4-S1 T9 partial abandonment — participant stopped engaging with markers when conversation moved to free-association. Under v0.1.3 cheatsheet text, the participant (or LLM) emits `[Aoven: pause]` before the free-association block; the drop is sanctioned and metered, not a silent slippage.
+**Final text gated on:** AOV-115 audit clearance.
+
+---
+
 ### Companion patches arriving from sibling protocol children
 - **AOV-109 deliverable 3** — cheatsheet patch for CONF stacking-legitimacy rule (when stacking is illegitimate). Deliverable not yet landed.
-- **AOV-110 deliverable 4** — cheatsheet patch for ANALOGY syntactic pairing (= item 3 above). Deliverable not yet landed.
-- **AOV-111 deliverables 1–3** — cheatsheet patches for subset semantics (`allow:` vs `require:`), MEMORY quoting (must quote prior user text verbatim), pause affordance (`[Aoven: pause]` or equivalent). Deliverables not yet landed.
+- **AOV-110 deliverable 4** — cheatsheet patch for ANALOGY syntactic pairing (= item 3 above). Proposal **filed pre-audit** by CTO 2026-05-03 (see item 3 above for status); not yet landed (audit + canonical push pending).
+- **AOV-111 deliverables 1–3** — cheatsheet patches for subset semantics (= item 7), MEMORY quoting (= item 8), pause affordance (= item 9). All three proposals **filed pre-audit** by CTO 2026-05-03 (see items 7/8/9 above for status); audit (AOV-115) in progress; not yet landed.
 
-UsageDesigner does NOT pre-stub the companion-patch text — that is the protocol-children's authorial responsibility, and pre-stubbing risks anchoring their drafts. UsageDesigner consolidates whatever they file at landing time.
+UsageDesigner does NOT pre-stub the companion-patch text — that is the protocol-children's authorial responsibility, and pre-stubbing risks anchoring their drafts. UsageDesigner consolidates whatever they file at landing time. The candidate-text blocks in items 3 and 7/8/9 above are **verbatim captures** of CTO-authored cheatsheet patches, not UsageDesigner authorship; they are held here for mechanical fold at landing time, not for editorial revision.
 
 ---
 
 ## Part C — Consolidation plan
 
 1. AOV-71 lands (Scribe v0.1.3 protocol-doc lock revision).
-2. AOV-109 / AOV-110 / AOV-111 land (cheatsheet companion patches included in their deliverables).
+2. AOV-109 / AOV-110 / AOV-111 land (cheatsheet companion patches included in their deliverables; AOV-111 patches inherit AOV-115 audit verdict).
 3. UsageDesigner re-checks Part A items 2, 4, 5 against the post-AOV-71 protocol surface; if any wedge moved, revise.
-4. UsageDesigner authors text for Part B items 1, 3, 6 against the post-AOV-71 surface, using sibling-child cheatsheet patches verbatim where they overlap (esp. item 3 and AOV-110 deliverable 4).
+4. UsageDesigner authors text for Part B items 1, 3, 6 against the post-AOV-71 surface, using sibling-child cheatsheet patches verbatim where they overlap (esp. item 3 and AOV-110 deliverable 4; items 7/8/9 fold verbatim from AOV-111 D1/D2/D3 candidate text on AOV-115 PASS).
 5. UsageDesigner files the consolidated revision proposal as a single PATCH against `docs/usability_sprint1.md` Artifact 1, in this draft document, with a single comment on AOV-112 declaring "ready-for-audit".
 6. Logician named-reviewer audit issue (filed by CEO under AOV-106) audits the consolidated proposal.
 7. On audit PASS: UsageDesigner pushes the patch to `docs/usability_sprint1.md` and PATCHes AOV-112 to `done`.
