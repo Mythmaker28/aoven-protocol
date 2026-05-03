@@ -148,7 +148,7 @@ Aggregate counts across all 5 sessions (LLM-side only):
 | 8 | P3-S1 T4 | `[FACT]` popularity claim | UR-4 | caught-by-Aoven |
 | 9 | P3-S1 T6 | ANALOGY → REC, no HYP | UR-5 | caught-by-Aoven |
 | 10 | P3-S1 T8 | Hallucinated `[MEMORY]` | UR-3 | caught-by-Aoven (only via verbatim recall) |
-| 11 | P3-S1 (whole session) | Zero BELIEF markers | structural | missed-by-Aoven |
+| 11 | P3-S1 (whole session) | Zero BELIEF markers | structural-absence (whole-session, NOT a per-turn event — excluded from per-turn rate) | missed-by-Aoven |
 | 12 | P4-S1 T2 | `[FACT]` on framework prescription | (new — framework smuggling) | missed-by-Aoven |
 | 13 | P4-S1 T8 | Self-corrected `[NOSRC]` without challenge | UR-7 | caught-by-Aoven (clean) |
 | 14 | P5-S1 T2 | "Most decision theorists agree" as `[FACT]` | UR-4 | caught-by-Aoven |
@@ -158,9 +158,9 @@ Aggregate counts across all 5 sessions (LLM-side only):
 | 18 | P5-S1 T6+ | Subset header silently suppressed INTERPRET | (new — subset semantics) | false-positive |
 
 **Slippage summary:**
-- 18 slippages observed across 5 sessions (~3.6/session, ~0.36/LLM-turn).
-- 11 caught-by-Aoven (61%) — almost all required user challenge; only 1 was autonomous self-correction (P4 T8).
-- 4 missed-by-Aoven (22%) — three are CONF-hedge-laundering or framework-smuggling, one is structural BELIEF-skip.
+- 18 slippages observed across 5 sessions (17 turn-level events + 1 whole-session structural absence — row #11). Per-turn rate computed against the 17 turn-level events: ~3.4 turn-level slippages/session.
+- 10 caught-by-Aoven (56%) — almost all required user-role challenge; only 1 was autonomous self-correction (P4 T8).
+- 5 missed-by-Aoven (28%) — three are CONF-hedge-laundering or framework-smuggling, one is the structural BELIEF-skip (row #11), one is ANALOGY→REC without HYP (row #2).
 - 3 false-positive (17%) — common-knowledge boundary, illustrative-ANALOGY strictness, subset-header anti-clarity.
 
 ### 3.4 Perceived-improvement vs. no-format baseline (agent self-report — not human preference)
@@ -189,40 +189,45 @@ Aggregate counts across all 5 sessions (LLM-side only):
 
 Routed here per cheatsheet § "Cognitive-load flag → v0.1.3 input bucket". **No protocol change is requested by this file.** Friction confirmed by this n=5 simulated-agent pilot routes through the standard channel (CTO via AOV-1 comment or sibling issue).
 
-1. **`[design choice]` INTUIT is a dead marker in agent-simulated practice.** Fired in 1/5 sessions (P4 only, creative-craft). P1, P3, P5 used INTERPRET or HYP where INTUIT would have been the right call. Cheatsheet wedge between INTUIT / BELIEF / NOSRC may be too narrow to teach from one-line definitions — flagged as the highest-priority cheatsheet weakness in this pilot. *Cited in:* P1 V013_FLAG#1, P3 V013_FLAG#1, P4 implicit.
+1. **`[design choice]` INTUIT is a dead marker in agent-simulated practice.** Fired in 1/5 sessions (P4 only, creative-craft). P1, P3, P5 used INTERPRET or HYP where INTUIT would have been the right call. Cheatsheet wedge between INTUIT / BELIEF / NOSRC may be too narrow to teach from one-line definitions — flagged as the highest-priority cheatsheet weakness in this pilot. *Cited in:* P1-S1 (INTUIT×0 across session), P3-S1 (INTUIT×0 across session), P4-S1 (only session with INTUIT, fired ×2). *Bucket (per audit Gap 4 split):* cheatsheet-authoring.
 
-2. **`[design choice]` CONF stacking enables bidirectional hedge-laundering.** P2 T4 used `[FACT, CONF(medium)]` to keep FACT status while signaling doubt that should have dropped the marker class to BELIEF/NOSRC. P5 T7 used `[HYP, CONF(high)]` on a near-arithmetic claim, inflating uncertainty. Cheatsheet says CONF "stacks with another marker" but gives no rule about when stacking is illegitimate. *Cited in:* P2 V013_FLAG#1, P5 V013_FLAG#3.
+2. **`[design choice]` CONF stacking enables bidirectional hedge-laundering.** P2 T4 used `[FACT, CONF(medium)]` to keep FACT status while signaling doubt that should have dropped the marker class to BELIEF/NOSRC. P5 T7 used `[HYP, CONF(high)]` on a near-arithmetic claim, inflating uncertainty. Cheatsheet says CONF "stacks with another marker" but gives no rule about when stacking is illegitimate. *Cited in:* P2-S1 T4, P5-S1 T7. *Bucket:* protocol-structural (v0.1.3 design).
 
-3. **`[design choice]` Bare unmarked sentences inside marked turns are the most common silent slip.** P2 T3 contained an unmarked Auckland statistic that would have read as `[FACT]` in any other context. Visible only because surrounding text was marked. Cheatsheet should explicitly state "an unmarked sentence inside a marked response is implicit FACT and counts as a slippage." *Cited in:* P2 V013_FLAG#2.
+3. **`[design choice]` Bare unmarked sentences inside marked turns are the most common silent slip.** P2 T3 contained an unmarked Auckland statistic that would have read as `[FACT]` in any other context. Visible only because surrounding text was marked. Cheatsheet should explicitly state "an unmarked sentence inside a marked response is implicit FACT and counts as a slippage." *Cited in:* P2-S1 T3. *Bucket:* cheatsheet-authoring.
 
-4. **`[design choice]` ANALOGY rule UR-5 is hard to apply consistently in real time.** Five UR-5 violations (P1 T8, P2 T3 false-positive, P3 T6, P5 T4) — the most-frequent slippage type in this pilot. Cheatsheet rule is correct but participants asked for: (a) a worked example of OK-bare-ANALOGY vs. one that needs paired HYP/SPEC, and (b) consideration of making ANALOGY syntactically require a paired marker on the derived claim. *Cited in:* P1 V013_FLAG#3, P2 V013_FLAG#3, P3 V013_FLAG#2.
+4. **`[design choice]` ANALOGY rule UR-5 is hard to apply consistently in real time.** Four UR-5 violations (P1-S1 T8, P2-S1 T3 false-positive, P3-S1 T6, P5-S1 T4) — the most-frequent slippage type in this pilot. Cheatsheet rule is correct but participants asked for: (a) a worked example of OK-bare-ANALOGY vs. one that needs paired HYP/SPEC, and (b) consideration of making ANALOGY syntactically require a paired marker on the derived claim. *Cited in:* P1-S1 T8, P2-S1 T3, P3-S1 T6, P5-S1 T4. *Bucket:* split — (a) cheatsheet-authoring; (b) protocol-structural.
 
-5. **`[design choice]` FACT-on-framework-prescription smuggling.** P4 T2 said `[FACT] Save the Cat identifies a 'midpoint' beat where stakes escalate` — the framework's existence is verifiable, but the marker carried smuggled prescriptive authority. Cheatsheet doesn't distinguish "framework X exists" from "framework X's prescriptions are correct." *Cited in:* P4 V013_FLAG#1.
+5. **`[design choice]` FACT-on-framework-prescription smuggling.** P4 T2 said `[FACT] Save the Cat identifies a 'midpoint' beat where stakes escalate` — the framework's existence is verifiable, but the marker carried smuggled prescriptive authority. Cheatsheet doesn't distinguish "framework X exists" from "framework X's prescriptions are correct." *Cited in:* P4-S1 T2. *Bucket:* cheatsheet-authoring.
 
-6. **`[design choice]` Subset header semantics under-defined.** P5 used `[Aoven v0.1 | require: FACT, HYP, SPEC, LIMIT]` mid-session. The LLM read `require:` as exclusive ("only these allowed") and silently suppressed INTERPRET and INTUIT for the rest of the session, degrading the conversation. Need an `allow:` vs `require:` distinction or explicit semantics in the cheatsheet. *Cited in:* P5 V013_FLAG#2.
+6. **`[design choice]` Subset header semantics under-defined.** P5 used `[Aoven v0.1 | require: FACT, HYP, SPEC, LIMIT]` mid-session. The LLM read `require:` as exclusive ("only these allowed") and silently suppressed INTERPRET and INTUIT for the rest of the session, degrading the conversation. Need an `allow:` vs `require:` distinction or explicit semantics in the cheatsheet. *Cited in:* P5-S1 T6+. *Bucket:* protocol-structural (semantic specification).
 
-7. **`[design choice]` Definitional / arithmetic / computational claims have no clean home.** P5 T7 expected-utility computations (`0.99 × $1M`) are not FACT (no external source needed), not HYP (not testable, just true by computation), not INTERPRET. Force-fitted to `[HYP, CONF(high)]`, which read as hedge-laundering. Either a new MATH/DEFN marker or explicit guidance to use FACT for these. *Cited in:* P5 V013_FLAG#4.
+7. **`[design choice]` Definitional / arithmetic / computational claims have no clean home.** P5 T7 expected-utility computations (`0.99 × $1M`) are not FACT (no external source needed), not HYP (not testable, just true by computation), not INTERPRET. Force-fitted to `[HYP, CONF(high)]`, which read as hedge-laundering. Either a new MATH/DEFN marker or explicit guidance to use FACT for these. *Cited in:* P5-S1 T7. *Bucket:* protocol-structural.
 
-8. **`[design choice]` MEMORY discipline is only catchable by participants who recall their own prior turns verbatim.** P3 T8 caught a hallucinated `[MEMORY]` only because they remembered exactly what they had typed. Consider an LLM-side rule that MEMORY claims must quote the prior user text, not paraphrase, to make slips mechanically visible. *Cited in:* P3 V013_FLAG#3.
+8. **`[design choice]` MEMORY discipline is only catchable by participants who recall their own prior turns verbatim.** P3 T8 caught a hallucinated `[MEMORY]` only because they remembered exactly what they had typed. Consider an LLM-side rule that MEMORY claims must quote the prior user text, not paraphrase, to make slips mechanically visible. *Cited in:* P3-S1 T8. *Bucket:* protocol-structural.
 
-9. **`[design choice]` Pause affordance for free-association turns.** P4 partially abandoned at T9 when the conversation moved to associative riffing. The brackets actively pulled the participant out of voice. Currently the format has binary on/off; an explicit `[Aoven: pause]` or `[Aoven: off]` affordance would let participants drop into flow without feeling they have abandoned the protocol. *Cited in:* P4 V013_FLAG#3.
+9. **`[design choice]` Pause affordance for free-association turns.** P4 partially abandoned at T9 when the conversation moved to associative riffing. The brackets actively pulled the participant out of voice. Currently the format has binary on/off; an explicit `[Aoven: pause]` or `[Aoven: off]` affordance would let participants drop into flow without feeling they have abandoned the protocol. *Cited in:* P4-S1 T9. *Bucket:* protocol-structural.
 
-10. **`[design choice]` Common-knowledge boundary unclear.** P1 T2 `[FACT] Next 13.4 stable` — strict reading is NOSRC, but applying that strictness to all common-knowledge claims would make the format pedantic and unusable. Cheatsheet needs an explicit rule for the threshold. *Cited in:* P1 V013_FLAG#2.
+10. **`[design choice]` Common-knowledge boundary unclear.** P1 T2 `[FACT] Next 13.4 stable` — strict reading is NOSRC, but applying that strictness to all common-knowledge claims would make the format pedantic and unusable. Cheatsheet needs an explicit rule for the threshold. *Cited in:* P1-S1 T2. *Bucket:* cheatsheet-authoring.
 
-11. **`[design choice]` BELIEF marker dead-zone risk.** P3 zero BELIEF across the whole session despite multiple held-but-unsourced positions. LLMs route held-positions through FACT or NOSRC and skip BELIEF entirely. Either tighten the BELIEF/NOSRC wedge or consider collapsing them. *Cited in:* P3 V013_FLAG#1.
+11. **`[design choice]` BELIEF marker dead-zone risk.** P3 zero BELIEF across the whole session despite multiple held-but-unsourced positions. LLMs route held-positions through FACT or NOSRC and skip BELIEF entirely. Either tighten the BELIEF/NOSRC wedge or consider collapsing them. *Cited in:* P3-S1 (whole session, BELIEF×0). *Bucket:* split — (a) BELIEF/NOSRC wedge sharpening: cheatsheet-authoring; (b) collapse decision: protocol-structural.
 
 ## 5. Pilot verdict
 
 **PASS-with-revisions.**
 
-The protocol mechanics fired as designed: markers were applied on most LLM claims (median Q-C=4), simulated-agent perceived clarity was net positive (median Q-D=4), and the format named 14 of 18 observed slippages — 11 caught-by-Aoven (mostly via user challenge), 3 false-positives at the boundaries of strict cheatsheet readings.
+The protocol mechanics fired as designed: markers were applied on most LLM claims (median Q-C=4), simulated-agent perceived clarity was net positive (median Q-D=4), and the format named 13 of 18 observed slippages — 10 caught-by-Aoven (mostly via user-role challenge), 3 false-positives at the boundaries of strict cheatsheet readings.
 
-The four missed-by-Aoven slippages cluster into **two structural gaps** that will not be closed by cheatsheet rewording alone and warrant v0.1.3 design work:
+The 5 missed-by-Aoven slippages cluster into gaps with **two distinct remediation paths** (split per audit Gap 4 — not all of these are protocol-structural; some are cheatsheet-authoring and not gated on v0.1.3 design timing):
 
-1. **CONF stacking as hedge-laundering** (slippage #6, #17) — bidirectional, not addressable by cheatsheet text; needs a marker-class compatibility rule.
-2. **Underused / dead markers** (slippage #11; aggregate INTUIT, BELIEF, EMOTION, MEMORY underuse) — suggests cheatsheet wedge between similar markers is too narrow to teach in one line.
+1. **Protocol-structural (genuinely v0.1.3 design work):**
+   - **CONF stacking as hedge-laundering** (slippage #6, #17) — bidirectional, not addressable by cheatsheet text; needs a marker-class compatibility rule.
+   - **Marker-set redraw** for the underused/dead markers (slippage #11 + aggregate INTUIT/BELIEF/EMOTION/MEMORY underuse) — collapse-or-keep decisions on BELIEF↔NOSRC and INTUIT survival are protocol-design questions, not authoring questions.
 
-The remaining v0.1.3 input items are cheatsheet-rewording or worked-example tasks, not protocol changes.
+2. **Cheatsheet-authoring (owned by cheatsheet revision; not gated on v0.1.3 protocol design):**
+   - One-line teaching clarity for the wedges (INTUIT vs BELIEF vs NOSRC; HYP vs SPEC; UNCERTAIN vs CONF(low)) — these can sharpen any time without a v0.1.3 protocol change.
+   - Bare-unmarked-sentence rule, common-knowledge boundary, ANALOGY worked example, FACT-on-framework-prescription rule (§4 items 1, 3, 4(a), 5, 10, 11(a)) — all cheatsheet edits.
+
+The other §4 input-bucket items (subset-header semantics, MEMORY-quoting, pause affordance, MATH/DEFN marker, ANALOGY syntactic-pairing) are protocol-structural design questions for v0.1.3.
 
 **Caveat on this verdict:** all five participants are agent-simulated. Cognitive-load and perceived-improvement scores are simulated-agent self-report, not human-load measurement or human preference. The verdict is over **mechanism validation only**: does the protocol fire, do markers catch slippage, does the cheatsheet teach. A real-human pilot remains scope for a post-verdict follow-on issue to confirm or invalidate human cognitive-load tractability before any v0.1.2 dissemination claim that rests on real-human usability.
 
@@ -233,4 +238,16 @@ The remaining v0.1.3 input items are cheatsheet-rewording or worked-example task
 
 ---
 
-*End of file. v0.1.2-locked. Anti-aura check: every observation cites participant handle + session ID; cognitive-load and perceived-improvement carry simulated-proxy caveat in-line; no claim is made about real-human load or preference; the verdict is bounded to mechanism validation.*
+## Audit revision history
+
+- **2026-05-03 — Logician audit AOV-104 comment `8dc1d263` (PASS-with-revisions):** four gaps + one minor folded.
+  - Gap 1 (§3.3 arithmetic): retallied 11/4/3 → 10/5/3; propagated to §5 verdict body (`14 of 18` → `13 of 18`).
+  - Gap 2 (§3.3 row #11): row #11 is a whole-session structural-absence, not a per-turn event; flagged in-row and excluded from the per-turn-rate denominator (now 17 turn-level events / 5 sessions ≈ 3.4/session).
+  - Gap 3 (§4 citations): replaced all `V013_FLAG#N` citations with turn-level handles (`P#-S1 T#`) resolvable in §2 per-participant transcript-summaries.
+  - Gap 4 (§5 Gap 2 split): split into protocol-structural (CONF stacking, marker-set redraw) vs cheatsheet-authoring (wedge-teaching, bare-unmarked-sentence rule, common-knowledge boundary). Per-item bucket assignments added inline to §4.
+  - Minor (§4 item 4): "Five UR-5 violations" → "Four UR-5 violations" (correct count).
+- Audit confirmed: anti-aura discipline PASS, slippage classification PASS-with-revisions (all per-item attributions match §2 sources; only count error), verdict scope PASS, structural-gap defensibility PASS-with-revisions (Gap 4 split applied).
+
+---
+
+*End of file. v0.1.2-locked. Anti-aura check: every observation cites participant handle + session ID (turn-level where applicable, whole-session for structural-absence); cognitive-load and perceived-improvement carry simulated-proxy caveat in-line; no claim is made about real-human load or preference; the verdict is bounded to mechanism validation.*
