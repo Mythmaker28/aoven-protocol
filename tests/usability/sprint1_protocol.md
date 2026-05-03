@@ -141,6 +141,7 @@ Explicit statement for each participant: (a) confirmed no prior Aoven exposure, 
 - Participant identifiers are anonymized (P1–P5) in all filed documents.
 - No personally identifying information is committed to the repo.
 - Participants consent in writing (email or equivalent) before session; consent records are kept locally and not committed.
+- **Consent revocation:** Participants may revoke consent post-session and request transcript deletion. If they do, the session is dropped from the report. The findings report will note the anonymous count of revocations (e.g., "1 session dropped post-revocation") without identifying the participant.
 
 ---
 
