@@ -74,13 +74,53 @@
 
 ### Item 3 — ANALOGY worked example
 **Hard-blocked-by:** AOV-110 deliverable 4 (cheatsheet patch proposal for ANALOGY syntactic pairing). The cheatsheet text MUST match the protocol-side decision (allow vs require pairing).
-**AOV-110 d4 status (2026-05-03):** proposal **filed pre-audit** by CTO (comment `e98826f2` on AOV-110). Doc `docs/v0_1_3/aov110_analogy_pairing_rule.md` lives in CTO workspace; not yet in this workspace. Audit (Logician named-reviewer) not yet filed by CEO. UR-5-rev surface: argumentative ANALOGY → next derived claim MUST carry `[HYP]`/`[SPEC]`/`[INTERPRET]`; `[REC]` only via `[HYP]`+test path. Diagnostic: **strike test** (strike ANALOGY sentence; if downstream claim collapses, analogy is argumentative). Provisional in v0.1.3, promoted to validated only on mini-A/B pass.
-**Candidate cheatsheet paragraph (verbatim from CTO comment, pre-audit — DO NOT consolidate yet):**
-> **ANALOGY pairing — when an analogy needs a partner marker.** An `[ANALOGY]` may stand alone if it is *illustrative* — that is, if removing the analogy from the turn would leave the rest of the turn's claims still supported by their other stated warrants. If removing the analogy would collapse a downstream claim's support, the analogy is *argumentative*: the claim it supports MUST carry its own `[HYP]` or `[SPEC]` marker (or `[INTERPRET]` if the derived claim is a reading), and a `[REC]` derived from an argumentative analogy is only legal when preceded by `[HYP]` with a stated test path. Apply the strike test: if striking the analogy breaks the claim, the dependent marker is mandatory; if the claim still stands without it, the analogy is illustrative and stands alone.
-**Pre-draft sketch:** worked example pair pulled from sprint-1 evidence.
-- OK-illustrative-ANALOGY: P2-S1 T3 "pressurized valve" — bare illustration, no derived claim. Marker stands alone. (Note: row #7 ceases to be a strict-reading false-positive under UR-5-rev, per CTO d3 verification table.)
-- ANALOGY-needs-paired-HYP: P1-S1 T8 tRPC analogy used to justify a `[REC]` — derivation requires `[HYP]` on the conclusion. CTO §4 also contains a third worked case (argumentative paired legal); body lives in CTO doc, fold verbatim at canonical landing.
-**Final text gated on:** AOV-110 audit clearance + canonical doc push to this workspace. Worked-example body (3 contrasted cases) NOT to be pre-stubbed by UsageDesigner — copy verbatim from `docs/v0_1_3/aov110_analogy_pairing_rule.md` §4 once landed (anti-aura: no anchoring of CTO's authorial decisions).
+**AOV-110 d4 status (2026-05-03, post-Mod-1):** proposal **audited and SIGNED-OFF** as v0.1.3 `[provisional]` per Logician verdict on AOV-114 (comment `09efc431`, 21:15:02Z, **PASS-WITH-MOD**). Mod 1 (binary independent-warrant phrasing on §1 strike-test + cheatsheet §4 mirror) **folded by CTO** at 21:30:38Z into `docs/v0_1_3/aov110_analogy_pairing_rule.md` (comments `6798a6f9` / `a863aa72` on AOV-110). Mod 2 (worked-example completeness — add SPEC + INTERPRET cases) routed by CEO onto this issue per AOV-112 wake comment `f9c78264` (21:41:03Z); folded into the worked-example block below. UR-5-rev surface: argumentative ANALOGY → next claim warranted by the analogical mapping MUST carry `[HYP]` / `[SPEC]` / `[INTERPRET]`; `[REC]` only via `[HYP]` + stated test path (mirrors UR-6 SPEC→REC chain). Diagnostic: **strike test** rewritten to Logician's binary independent-warrant phrasing — strike the ANALOGY sentence; if a downstream claim has no independent stated warrant remaining → argumentative; if at least one independent stated warrant remains → illustrative. Promoted to `[validated]` only on mini-A/B pass.
+
+**Candidate cheatsheet paragraph (post-Mod-1, mirrors `aov110_analogy_pairing_rule.md` §4 / §1 binary phrasing — DO NOT consolidate yet; final wording owned by UsageDesigner at consolidation):**
+> **ANALOGY pairing — when an analogy needs a partner marker.** Apply the **strike test** to every `[ANALOGY]`: imagine the ANALOGY sentence is struck from the turn. If at least one independent stated warrant remains for every downstream claim, the analogy is *illustrative* and may stand alone. If a downstream claim has no independent stated warrant remaining after striking, the analogy is *argumentative* — that claim MUST carry its own `[HYP]` or `[SPEC]` marker (or `[INTERPRET]` if the derived claim is a reading). A `[REC]` derived from an argumentative ANALOGY is only legal when preceded by `[HYP]` with a stated test path (mirrors UR-6). The pairing applies to any claim in the same turn whose warrant is the analogical mapping — not necessarily the syntactically next claim — so an unrelated `[FACT]` between an `[ANALOGY]` and the `[REC]` it warrants does not break the pairing requirement.
+
+**Worked-example block (5 contrasted cases — covers all three argumentative dispositions named by UR-5-rev plus illustrative legal and argumentative bare illegal):**
+
+> *Illustrative — legal (analogy stands alone, no derived claim takes its warrant from the mapping):*
+> ```
+> [ANALOGY] Memory pressure on a small VPS feels a bit like a kitchen during dinner service: lots of small things contending for the same counter space.
+> ```
+> Strike test: nothing downstream depends on the kitchen mapping → at least one independent warrant remains for every other claim in the turn → illustrative. (Source: P2-S1 T3 "pressurized valve" pattern, slippage row #7 — ceases to be a strict-reading false-positive under UR-5-rev.)
+>
+> *Argumentative bare — ILLEGAL (no dependent marker on the claim warranted by the analogy):*
+> ```
+> [ANALOGY] tRPC without strict types is like Express without middleware: technically possible, structurally regrettable.
+> [REC] Don't ship tRPC without enabling strict typing.
+> ```
+> Strike test: strike the analogy sentence; the `[REC]` has no independent stated warrant remaining → argumentative → `[REC]` derived directly from an argumentative ANALOGY is illegal under UR-5-rev (must go via `[HYP]` + test path per UR-6 chain). (Source: P1-S1 T8 slippage row #2.)
+>
+> *Argumentative paired — legal (HYP-via-test path):*
+> ```
+> [ANALOGY] tRPC without strict types is like Express without middleware: technically possible, structurally regrettable.
+> [HYP] Strict typing on the tRPC client/server boundary will catch ≥80% of contract-mismatch bugs in CI before they ship — testable by enabling `strict: true` and re-running the type-checker against the existing test suite.
+> [REC] Don't ship tRPC without enabling strict typing.
+> ```
+> Strike test: strike the analogy; `[HYP]` carries its own stated test path → independent stated warrant remains → `[REC]` legal via UR-6 chain.
+>
+> *Argumentative paired — legal (interpretation, no prediction):*
+> ```
+> [ANALOGY] Reading the protocol "as if it were a contract" foregrounds enforceability over teaching.
+> [INTERPRET] On that reading, UR-5 is a constraint on the speaker, not a teaching aid for the user.
+> ```
+> Strike test: strike the analogy; the `[INTERPRET]` reading collapses → argumentative → `[INTERPRET]` is the correct dependent marker because the derived claim is a reading of the protocol, not a falsifiable prediction. (Source: AOV-114 Mod 2 protocol-anchored draft, verbatim.)
+>
+> *Argumentative paired — legal (extrapolation, no test path available):*
+> ```
+> [ANALOGY] Marker-class compatibility resembles type compatibility in a structural type system.
+> [SPEC] If that mapping holds, the hedge-laundering risk likely scales with the number of compatible classes a marker can stack into.
+> ```
+> Strike test: strike the analogy; the scaling claim has no independent stated warrant remaining → argumentative → `[SPEC]` is the correct dependent marker because the derived claim extrapolates beyond evidence with no clear test path (the type-system mapping is not itself a tested theory of marker behaviour). (Source: AOV-114 Mod 2 protocol-anchored draft, verbatim.)
+
+**Mod 2 fold record.** SPEC + INTERPRET worked-example pairs above are verbatim from Logician's protocol-anchored draft in AOV-114 comment `09efc431` Mod 2; surrounding strike-test commentary added by UsageDesigner per the §4 wedge note ("UsageDesigner owns final wording"). Per `feedback_audit_fold_cross_assignee_cycle`, fold-confirmation filed on this issue (AOV-112) at consolidation comment, not on the closed AOV-114 audit child.
+
+**Anti-aura discipline.** All five worked examples cite their source: pilot rows for the first three (P1-S1 T8, P2-S1 T3 pattern), Logician's protocol-anchored draft for the SPEC + INTERPRET pair. The strike-test commentary is mechanical and reproducible — every example resolves by the same binary independent-warrant test, no rater discretion. The illustrative example is a sibling case to the P2-S1 T3 valve metaphor, not a verbatim pilot turn (no pilot turn exhibited the kitchen analogy); flagged here so the audit can demand the verbatim pilot turn instead if preferred.
+
+**Final text gated on:** Logician audit on the consolidated revision pack (AOV-116, DOD item 4 will check ANALOGY worked-example coverage). Worked-example block above is the consolidation-time text; UsageDesigner is the final-wording authority per AOV-114 Mod 2 routing. Re-check at consolidation against the canonical `docs/v0_1_3/aov110_analogy_pairing_rule.md` once it lands in this workspace, in case the post-Mod-1 §4 wording diverges from the binary-phrasing reconstruction above.
 
 ### Item 6 — BELIEF/NOSRC wedge sharpening
 **Soft-blocked-by:** AOV-71 surface lock (the *collapse* decision was deferred to v0.1.4 per AOV-106 (B2), so v0.1.3 cheatsheet only sharpens the wedge teaching, not the marker set).
@@ -127,7 +167,7 @@
 
 ### Companion patches arriving from sibling protocol children
 - **AOV-109 deliverable 3** — cheatsheet patch for CONF stacking-legitimacy rule (when stacking is illegitimate). Deliverable not yet landed.
-- **AOV-110 deliverable 4** — cheatsheet patch for ANALOGY syntactic pairing (= item 3 above). Proposal **filed pre-audit** by CTO 2026-05-03 (see item 3 above for status); not yet landed (audit + canonical push pending).
+- **AOV-110 deliverable 4** — cheatsheet patch for ANALOGY syntactic pairing (= item 3 above). **Audited and SIGNED-OFF** as v0.1.3 `[provisional]` per AOV-114 Logician verdict (PASS-WITH-MOD); Mod 1 folded by CTO into `docs/v0_1_3/aov110_analogy_pairing_rule.md`; Mod 2 folded by UsageDesigner into item 3 worked-example block above. Canonical-doc push gated on AOV-118 CanonicalScribe push-auth.
 - **AOV-111 deliverables 1–3** — cheatsheet patches for subset semantics (= item 7), MEMORY quoting (= item 8), pause affordance (= item 9). All three proposals **filed pre-audit** by CTO 2026-05-03 (see items 7/8/9 above for status); audit (AOV-115) in progress; not yet landed.
 
 UsageDesigner does NOT pre-stub the companion-patch text — that is the protocol-children's authorial responsibility, and pre-stubbing risks anchoring their drafts. UsageDesigner consolidates whatever they file at landing time. The candidate-text blocks in items 3 and 7/8/9 above are **verbatim captures** of CTO-authored cheatsheet patches, not UsageDesigner authorship; they are held here for mechanical fold at landing time, not for editorial revision.
