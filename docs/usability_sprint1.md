@@ -54,7 +54,7 @@ LLM:
 [FACT] Python's GIL prevents true CPU-parallelism in Python threads.
 [FACT, CONF(medium)] HFT latency requirements are typically sub-millisecond.
 [INTERPRET] "Suitable" depends on whether latency or development speed is prioritized.
-[REC] For latency-critical execution, prefer C++ or Rust. For prototyping, Python is adequate.
+[REC] For latency-critical execution, prefer C++ or Rust. For strategy prototyping, Python is adequate.
 [HYP] Python with compiled extensions (Cython/Numba) can approach C-level performance in specific bottlenecks.
 [LIMIT] I cannot assess your specific system's performance profile without benchmarks.
 ```
@@ -62,7 +62,7 @@ LLM:
 
 ### 6 common slippages and how Aoven blocks them
 
-*Source: `AOVEN_PROTOCOL_v0.1.md` §Anti-slippage rules (13 transitions). The 6 below are the highest-frequency failure modes in everyday LLM use; the remaining 7 are in the canonical table.*
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Anti-slippage rules (13 transitions). The 6 below are chosen as the most common failure modes in everyday LLM use [design choice — UsageDesigner judgement, no frequency study filed]; the remaining 7 are in the canonical table.*
 
 1. **Confident belief stated as fact.** BELIEF cannot upgrade to FACT without an external source; if challenged, it must drop to NOSRC or UNCERTAIN — silent withdrawal counts as slippage (UR-7).
 2. **"Most experts agree…" treated as a citation.** Attributed-consensus phrasings do not meet FACT; correct label is NOSRC or BELIEF (UR-4).
@@ -98,13 +98,13 @@ LLM:
 
 ### Prompt 4 — Mid-session abandonment note (paste to the survey, only if you stop using the format)
 
-> I stopped using the Aoven format at turn **__**. The reason: *[free text — e.g., "the LLM stopped applying markers and I didn't want to remind it", "the conversation moved to a topic where the markers felt forced", "I forgot the header on a follow-up", or any other honest reason].* I continued the conversation in plain language from that turn onward.
+> I stopped using the Aoven format at turn **__**. The reason: *[free text — e.g., "the labeling felt like more overhead than I wanted to keep paying", "I was spending more attention on the format than on the content I cared about", "the LLM stopped applying markers and I didn't want to remind it", "the conversation moved to a topic where the markers felt forced", "I forgot the header on a follow-up", or any other honest reason].* I continued the conversation in plain language from that turn onward.
 
 ### Prompt 5 — Post-session submission (paste to UsageDesigner)
 
 > Session complete. Attached / pasted below: (a) the full conversation transcript including the LLM's responses, and (b) my completed 4-question survey. **LLM platform used:** _____. **Topic (one sentence):** _____. I confirm my consent for anonymized inclusion in the sprint findings report. *(Optional: I would like to revoke my consent — please delete my transcript and drop my session from the report.)*
 
-### Self-report instrument (copy-paste, identical to `tests/usability/sprint1_survey.md`)
+### Self-report instrument (copy-paste, condensed from `tests/usability/sprint1_survey.md`)
 
 *Source: `tests/usability/sprint1_survey.md` §§A–D, reproduced for one-place portability. The canonical version remains the survey file.*
 
