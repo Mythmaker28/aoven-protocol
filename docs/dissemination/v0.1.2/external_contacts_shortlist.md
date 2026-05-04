@@ -49,7 +49,7 @@ v0.2 is in pre-registration with human raters and cross-LLM generation. I'm happ
 — Tommy
 ```
 
-[FACT] Word count of body: 247 words. Within the ≤ 250 target.
+[FACT] Word count, body-only basis (between Subject line and `— Tommy` signature, blank-separated): **235 words**. Word count, full-block basis (subject + body + signature, code-fenced inclusive): **252 words**. The ≤ 250 target applies on the body-only basis (235 ≤ 250 ✓). Recounted by mechanical Python `str.split()` after Logician audit on AOV-96 returned FLAG on prior counts (claimed 247); discrepancy was eyeball-estimation error. No posting risk under either basis (cold-email register tolerates ±10 words).
 
 ---
 
@@ -86,7 +86,7 @@ A pointer to whether Aoven would be useful or counter-productive in your eval st
 — Tommy
 ```
 
-[FACT] Word count of body: 245 words. Within the ≤ 250 target.
+[FACT] Word count, body-only basis: **231 words**. Word count, full-block basis: **245 words**. Both ≤ 250. Recounted by Python `str.split()` after Logician audit on AOV-96 (FLAG on prior counts; eyeball-estimation error). No posting risk.
 
 ---
 
@@ -123,7 +123,7 @@ I would value Anthropic alignment's view on (a) whether internal model variants 
 — Tommy
 ```
 
-[FACT] Word count of body: 246 words. Within the ≤ 250 target.
+[FACT] Word count, body-only basis: **227 words**. Word count, full-block basis: **239 words**. Both ≤ 250. Recounted by Python `str.split()` after Logician audit on AOV-96 (FLAG on prior counts; eyeball-estimation error). No posting risk.
 
 ---
 

@@ -1,4 +1,4 @@
-# Aoven: An Epistemic-Marker Protocol for Reducing Hallucination, Confidence Miscalibration, and Sycophancy in LLM Responses — v0.1.2 Confirmatory A/B Results
+# Aoven v0.1.2: A Controlled-Language Marker Protocol — Confirmatory A/B Results on 16 Questions for `claude-opus-4-7` Under Two-LLM-Rater Stripped-Prose Blind Scoring
 
 **Target venue:** arXiv cs.CL (short-form preprint, 4–6 pages).
 **Status:** draft v0.1 — pending Logician NOSRC audit (child issue) + CEO sign-off.
@@ -232,4 +232,17 @@ Each dimension is scored on a 0–3 ordinal scale (0 = good, 3 = severe). [FACT]
 
 ---
 
-*Drafted by CanonicalScribe (`e19c696f`) under AOV-91. Pending Logician NOSRC audit (filed as named-reviewer audit child) and CEO countersign before Tommy posts to arXiv.*
+## Appendix A — Aoven-marker face-validity audit on this preprint
+
+Pragmatic note: a published preprint would not normally include a meta-audit appendix. This section is included per the AOV-91 dissemination directive that every Aoven v0.1.2 dissemination draft demonstrate a face-validity audit at the meta-level — a precommitment to applying the protocol to its own announcement. If the preprint is submitted to arXiv, the Logician + CEO sign-off chain may waive this appendix as preprint formatting overhead; the audit-pass that motivated its inclusion is recorded here regardless.
+
+- **No `[FACT]`-tier claim in the body lacks a NOSRC citation.** Every empirical claim in §3 (Empirical Results), §4 (Limitations), §6 (Reproducibility) is sourced to (a) a canonical file path that exists in `Mythmaker28/aoven-protocol`, and/or (b) an issue ID that exists in the AOV board log (AOV-1, AOV-7/9, AOV-36, AOV-43, AOV-48, AOV-49, AOV-55, AOV-56, AOV-67, AOV-90, AOV-91).
+- **Overclaiming guardrail.** The title now scopes the result to "16 Questions for `claude-opus-4-7` Under Two-LLM-Rater Stripped-Prose Blind Scoring" — surfaces the single-LLM, fixed-N, two-LLM-rater scoping in the artefact arXiv readers see in search results and citations, not only inside the abstract. The abstract `[LIMIT]` line and §4 explicitly disclaim "Aoven works in general" and "Aoven reduces hallucinations" without scoping. The §1 (Introduction) `[NOSRC]` paragraph denies marker-vocabulary novelty and constrains the novelty claim to the (rubric, hold-out, three-part criterion) execution package.
+- **Hold-out numbers.** Aggregate L1 score reduction figures (91.7 % Logician, 100.0 % IndependentRater) and Σ-level κ = 0.759 substantial in this preprint match `tests/phase2/reconciliation_holdout_v0.1.2.md` exactly. No rounding drift. Primary-set figures (79.3 % / 87.5 %; per-dim κ from D1 0.938 to D8 0.100) match `tests/phase2/reconciliation_logician_independentrater.md`.
+- **DOI handling.** Both DOI references in the preprint (abstract + §References) are marked `[provisional: DOI to be verified by Tommy before submission]`. No fabricated DOI URL appears in this draft.
+- **Use of Aoven markers in the preprint prose.** [FACT] / [HYP] / [NOSRC] / [LIMIT] / [CONF] / [SPEC] / [REC] markers are applied inline to body claims throughout §1–§5; this is the meta-application face-validity check called out in the AOV-91 directive.
+- **Marker accuracy spot-check.** Every [FACT] in §1–§3 has either a citation in the same paragraph or a §6 traceability entry. [HYP] is reserved for forward-looking causal claims (e.g., §1 "may reduce surface frequency"). [NOSRC] is reserved for one explicit prior-art negative claim (§1) where no source is cited. [LIMIT] is reserved for scoping disclaimers in the abstract and §4. [CONF] is used twice (abstract: `CONF(medium)` on the headline finding; §2.2: `CONF(high)` on the methodology specification).
+
+---
+
+*Drafted by CanonicalScribe (`e19c696f`) under AOV-91. Title and Appendix A added in revision after Logician audit verdict on AOV-96 returned FLAG on (a) title overclaim risk and (b) missing dedicated face-validity audit section. Body content unchanged. Pending Logician re-audit + CEO countersign before Tommy posts to arXiv.*

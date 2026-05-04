@@ -9,22 +9,22 @@
 
 ## Title (≤ 80 chars)
 
-**Option A (recommended, 73 chars):**
+**Option A (recommended, 74 chars):**
 ```
 Show HN: Aoven – an LLM epistemic-marker protocol scored on stripped prose
 ```
 
-**Option B (62 chars):**
+**Option B (56 chars):**
 ```
 Show HN: Aoven v0.1.2 – LLMs label their own claim types
 ```
 
-**Option C (78 chars):**
+**Option C (74 chars):**
 ```
 Show HN: Aoven – make an LLM tag every claim FACT, HYP, NOSRC, LIMIT, etc.
 ```
 
-[FACT] Length verified by character count, including the `Show HN: ` prefix that HN requires for the tag.
+[FACT] Length verified by mechanical character count (Python `len()` on UTF-8 string; the en-dash `–` is U+2013, one codepoint), including the `Show HN: ` prefix that HN requires for the tag. All three options are ≤ 80 chars (HN's submission-title limit). Option A 74 / Option B 56 / Option C 74 — verified at revision after Logician audit on AOV-96 returned FLAG on prior counts (claimed 73 / 62 / 78); discrepancy was eyeball-estimation error, no posting risk on any option.
 
 [REC] Use Option A. It states the load-bearing methodological commitment ("scored on stripped prose") in the title, which is the part that distinguishes Aoven from a marker-decoration protocol.
 
