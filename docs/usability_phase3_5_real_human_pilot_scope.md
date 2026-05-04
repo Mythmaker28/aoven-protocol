@@ -59,6 +59,8 @@ Single-email request (`<contact-TBD-by-execution-owner>`) with phrase "withdraw 
 
 We are not academic, but the design above passes the standard items an IRB would demand: voluntary informed consent, data minimization (only what the study needs), right to withdraw, data retention limits, anonymization protocol, no coercion, no deception. Audit gate (Deliverable 5) verifies this against the items.
 
+**Study-purpose disclosure (no deception):** Study purpose is disclosed verbatim in the consent form: "Measure your subjective cognitive load and perceived response quality when using the Aoven controlled-language protocol on a real LLM session." No deception about study purpose or data use.
+
 ### 1.6 Out of scope (Deliverable 1)
 
 - Building a consent-collection web form. If a form is needed, file as `Phase-3.5-CONSENT-INFRA` child issue under execution owner. Email-with-checkboxes is the cheapest defensible default.
@@ -76,15 +78,19 @@ We are not academic, but the design above passes the standard items an IRB would
 2. Human-load measurement on someone who cannot operate the LLM at all yields confounded signal (we'd be measuring LLM friction, not Aoven friction).
 3. Cheatsheet-comprehension baseline — sprint-1's mechanism validation already showed the cheatsheet teaches at a "literate-but-naive" level. Phase-3.5 measures whether real humans at that level converge to the same load profile.
 
+**External-validity caveat (Mod-2.B fold):** Findings cannot be generalized to non-technical or LLM-novice populations; further pilots required to extend external validity.
+
 ### 2.2 Pre-screen (5-question gate, sent before consent form)
 
 1. Approximate weekly LLM use over the past 90 days (≥ 2 hours/week required to qualify).
 2. Have you previously read AOVEN_PROTOCOL_v0.1.md, the cheatsheet, or any AOV-prefixed materials? (Answer must be NO.)
 3. Are you on the Aoven project team or have you rated Aoven materials? (Answer must be NO.)
-4. Do you consent to the recording + data-handling described in §1.1–§1.4? (Required: YES.)
+4. Are you willing to review and sign a recording + data-handling consent form before the session? (Required: YES.)
 5. Do you have ~60 min for one session and a possible 5-day pre-publication review window? (Required: YES.)
 
 Rejected applicants get a polite decline with no further outreach.
+
+**Q4 ordering choice (Mod-1.B fold):** option (b) chosen — Q4 is reworded to ask willingness to review-and-sign rather than asking pre-screen recipients to consent to §1.1–§1.4 they have not yet seen. Cheapest defensible default; full consent form is delivered at the consent step after pre-screen pass, not bundled into the pre-screen email.
 
 ### 2.3 N — sample size
 
@@ -108,6 +114,8 @@ Decision rule:
 - If T1 + T2 < 8 at day-14, escalate to board for T3 budget approval.
 
 Tommy's bandwidth is the bottleneck on T1 and the public-post drafting on T2; per `user_tommy.md` we do not micro-manage but escalate at major milestones — recruitment-open is a major milestone and is a `request_confirmation` board interaction filed under the execution owner, not a unilateral CEO call.
+
+**Tier-confound disclosure (Mod-2.A fold, BLOCKING):** "T1 participants may exhibit social-desirability bias on Q-D vs T2/T3; findings will report Q-D stratified by tier and flag any tier-divergence ≥ 1 Likert point as a confound."
 
 ### 2.5 Incentive
 
@@ -154,6 +162,8 @@ Hard-rejects (re-confirmed at consent step):
 
 Same as sprint-1 Prompt-2: participant declares topic before session, in one sentence. Topic must be (a) participant-chosen, (b) not steered by anyone on the project team, (c) one the participant genuinely wants to think through. UD does not pre-screen topic content; UD does pre-screen for "this participant has been told what to ask" red flags.
 
+**Topic-confound logging (Mod-3.C fold):** "UD logs topic category per session; if ≥ 5/8 participants cluster on a single category, findings flag this as a topic-confound."
+
 ### 3.5 Total study window
 
 21 days from launch, conditional on T1 yield:
@@ -176,6 +186,14 @@ Deletion of raw transcripts at day 114 (publication + 90).
 - Group / classroom format. Not relevant at pilot scale.
 - A/B comparison with vanilla LLM sessions in same study. Phase-3.5b option only.
 
+### 3.7 UD orientation Q&A scope (Mod-3.A fold, BLOCKING)
+
+"During orientation Q&A, UD answers are limited to (a) procedural questions, (b) typo / formatting questions on the cheatsheet, (c) consent / data-handling questions. UD does not explain marker semantics beyond the cheatsheet's verbatim definition. If the cheatsheet is unclear on a marker, UD's response is: 'Use the cheatsheet definition; if unclear, mark CONF=low and proceed.'"
+
+### 3.8 Q-D wording neutrality judgment (Mod-3.B fold)
+
+Q-D in `tests/usability/sprint1_survey.md` is reused unchanged for Phase-3.5. Judgment: **already neutral**. Rationale: anchors are symmetric around a "No difference" midpoint ("Clearly worse" → "Slightly worse" → "No difference" → "Slightly better" → "Clearly better"), and the question stem ("how much better or worse did the Aoven response feel") asks the comparison in both directions rather than leading toward the improvement pole. No Phase-3.5 wording change folded; this judgment is the documented one-line rationale Mod-3.B requested.
+
 ---
 
 ## 4. Deliverable 4 — Version-of-Aoven-under-test
@@ -191,8 +209,8 @@ All four required:
 
 1. Canonical `AGENTS.md` header line carries `v0.1.3` and a `Last updated:` date.
 2. Cheatsheet revision pack (AOV-112 + AOV-115 D1+D2+D3 fold) landed at canonical path with Scribe sign-off.
-3. No open structural-design issues for v0.1.3 (i.e., AOV-90, AOV-110, AOV-79 follow-ons closed; no in-flight protocol-class compatibility rule audits).
-4. 5-day stability window: no canonical-artifact churn for 5 days before recruitment-open.
+3. No open structural-design issues for v0.1.3. Per Mod-4.A fold: "In-flight = any issue with status 'todo' or 'in_progress' that touches v0.1.3 protocol-class structure or marker-set canonical definitions." (i.e., AOV-90, AOV-110, AOV-79 follow-ons closed; no in-flight protocol-class compatibility rule audits matching the Mod-4.A definition.)
+4. 5-day stability window. Per Mod-4.B fold: "Canonical artifacts = {AGENTS.md, AOVEN_PROTOCOL_v0.1.md, tests/usability/cheatsheet*.md, marker-set table file}. No commits modifying these files in the 5 days preceding recruitment-open."
 
 ### 4.3 Rationale
 
@@ -259,9 +277,13 @@ Justification:
 
 Switching execution owners adds setup cost without adding capability; the contingency below covers the bandwidth-saturation case.
 
-### 6.2 Bandwidth contingency
+### 6.2 Bandwidth contingency (Mod-5.A fold — proactive trigger)
 
-If at recruitment-open T-7 UsageDesigner is saturated by sprint-1 follow-on work or v0.1.3 input-bucket commitments (currently parked: AOV-95 Logician PASS round-trip, AOV-92 phase closure, sprint-1 dissemination contributions), CEO hires a dedicated Phase-3.5 owner via `paperclip-create-agent` skill — general agent, sonnet-4-6, reportsTo=CEO, scope=Phase-3.5-only — and reassigns the execution chain. Trigger condition: UsageDesigner explicitly declines or signals saturation on AOV-107 thread.
+**Proactive trigger (replaces prior reactive UD-self-flag trigger per Mod-5.A):** at recruitment-open T-7, CEO posts a structured ask on `Phase-3.5-PILOT-EXECUTION` asking UsageDesigner to confirm capacity in writing within 48h. Known-parked concurrent loads to acknowledge in the ask: **AOV-95** (Logician PASS round-trip), **AOV-92** (phase closure), **sprint-1 dissemination contributions**.
+
+**Escalation path:** if UD does not confirm within 48h, OR confirms but flags saturation, CEO hires a dedicated Phase-3.5 owner via `paperclip-create-agent` skill — general agent, sonnet-4-6, reportsTo=CEO, scope=Phase-3.5-only — and reassigns the execution chain.
+
+This replaces the prior reactive posture (UD self-flagging on AOV-107 thread) with a CEO-owned proactive capacity confirmation gate at T-7, so saturation is surfaced before recruitment opens rather than after a missed deliverable.
 
 ### 6.3 Child-issue tree (filed at audit-PASS, NOT now)
 
@@ -278,6 +300,8 @@ AOV-107 (CEO; this issue, scoping)
 ```
 
 The Phase-3.5-RECRUITMENT child carries the `request_confirmation` interaction to board for T1 sourcing — that is the major milestone where Tommy's bandwidth is committed.
+
+**Forward requirement (per Mod-2.A fold):** the Phase-3.5-RECRUITMENT child MUST log recruitment tier (T1 / T2 / T3) per participant. This is required input for the §2.4 stratified-by-tier Q-D analysis and the ≥ 1 Likert-point tier-divergence confound flag.
 
 ### 6.4 Out of scope (Deliverable 6)
 
