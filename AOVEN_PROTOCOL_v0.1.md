@@ -1,15 +1,16 @@
 # AOVEN_PROTOCOL_v0.1-provisional
 
-> **v0.1.2 / status: PROVISIONAL — ratified by CEO+CTO+Logician 2026-04-26**
+> **v0.1.3 / status: PROVISIONAL — minor-clarifications bundle ratified by CEO + Logician 2026-05-03 (AOV-111 / AOV-115)**
 >
 > Maintained by CanonicalScribe (e19c696f). Scribe records; does not editorialize.
 >
 > Status tags: [validated] [provisional] [observation] [rejected] [open]
 >
-> Last updated: 2026-05-02 — added "Exploratory pre-registered pilots" section linking the 2026-05-01 board pilot (AOV-24/AOV-26). Doc cross-reference only; no protocol version bump.
+> Last updated: 2026-05-03 — v0.1.3 minor clarifications bundle landed: subset-header `allow:` / `require:` semantics (D10), UR-3 MEMORY verbatim-quote requirement (D11), UR-8 pause/resume affordance (D12). Source: CTO comment `8a46d4c7` on AOV-111. Audit: Logician PASS on AOV-115 (`b6bd7a58`). CEO ratification: AOV-111 comment `50abfc16`. Folded under AOV-71 per CEO repose comment `6e58c604`.
 
 ## Changelog
 
+- **v0.1.3** — three minor clarifications under the "v0.1.3-PROTOCOL clarifications bundle" track (AOV-111): (1) subset-header qualifier semantics — `require:` is mandatory minimum / `allow:` is additive emphasis / default `= allow:` / never silently suppresses unlisted markers (D10); (2) UR-3 strengthened — `[MEMORY]` claims MUST attach a verbatim quotation of prior text in inline `[MEMORY: "..."]` or block-quote form, ≤~2-sentence cap, longer references use `[NOSRC]` (D11); (3) UR-8 added — `[Aoven: pause]` / `[Aoven: resume]` / `[Aoven: off]` graceful-exit affordance with three sanctioned resume signals (D12). Source: CTO bundle on AOV-111 (`8a46d4c7`); Logician PASS on AOV-115 (`b6bd7a58`); CEO ratification on AOV-111 (`50abfc16`); fold-issue AOV-71 (`6e58c604`). NOTE: AOV-54 Patches 1/2/5 ([IT] disambiguation, marker stack-depth cap, launch-checklist legend) — originally also scoped to v0.1.3 under AOV-71 — are NOT in this fold. Patch 1 (stack-depth cap → UR-8) collides with the new UR-8 numbering used here for pause/resume; awaiting CEO/CTO disposition (renumber to UR-9, defer to v0.1.4, or re-scope).
 - **v0.1.2** — corrected Renavé family historical origin (board correction, AOV-15); markdown readability pass; no semantic change to markers, formats, or anti-slippage rules.
 - **v0.1.1** — INTUIT and HYP definitions tightened; anti-slippage table extended from 10 to 13 transitions; CONF gradient fixed at 3 semantic levels (CTO patch on AOV-7 comment `22fb25e4`, CEO sign-off `1f03749a`).
 - **v0.1.0** — initial draft (CTO, AOV-7, 2026-04-26).
@@ -77,6 +78,15 @@ Rules:
 - Users do not need to apply markers themselves — the LLM applies markers to its own output.
 - `require:` lets users invoke a marker subset for their context, reducing cognitive load.
 
+**Subset-header qualifiers (v0.1.3):** the header `[Aoven v0.1.x | <qualifier>: M1, M2, ...]` accepts two qualifiers, both **non-exclusive**:
+- **`require:`** — mandatory minimum. The LLM MUST apply each listed marker when its definition fits a claim. Other markers REMAIN AVAILABLE and SHOULD be applied when their definitions fit. `require:` is a floor, not a ceiling.
+- **`allow:`** — additive emphasis. Listed markers are signaled as expected/encouraged; the LLM is invited but not forced to use them. Other markers remain fully available.
+- **Default (no qualifier present, e.g. `[Aoven v0.1 | FACT, HYP, LIMIT]`)** — treated as `allow:`.
+
+**No qualifier silently suppresses other markers.** Suppressing INTERPRET, INTUIT, NOSRC, LIMIT etc. via the subset header is **not supported and not safe**: those markers carry independent slippage-blocking work (INTUIT→FACT, INTERPRET→certainty, NOSRC→assertion). Users who want a narrower output should rely on prompt-level shaping, not header suppression. Anti-aura: the protocol's default is to fail open (more markers) on ambiguity, never to fail closed (fewer markers).
+
+*Source: CTO comment `8a46d4c7` on AOV-111, D1 spec text. Audit: Logician PASS on AOV-115 (`b6bd7a58`). CEO ratification: AOV-111 comment `50abfc16`. See D10.*
+
 ### Response format
 
 [provisional]
@@ -96,6 +106,7 @@ Rules:
 - Multiple markers may stack: `[HYP, CONF(low)]`
 - Marker-free text permitted only for procedural connectives ("See above.", "To summarize:").
 - Response ends with a `[LIMIT]` block if any structural model constraint applies to the answer.
+- **Pause / resume / off (v0.1.3):** marker discipline may be suspended for one or more turns via `[Aoven: pause]` and resumed via `[Aoven: resume]`, header re-assertion, or first-marker implicit resume. Whole-session abandonment uses `[Aoven: off]`. See UR-8 for full rules.
 
 **Example — response to "Is Python suitable for high-frequency trading?":**
 ```
@@ -122,8 +133,20 @@ Multiple markers may apply to the same claim when their dimensions are independe
 - `[MEMORY, NOSRC]` — recalled but unverified. Expected.
 - `[HYP, CONF(low)]` — testable claim, weak commitment. Expected.
 
-**UR-3 — LLM hallucinated recall is NOSRC, not MEMORY:**
-When the LLM "recalls" something that cannot be traced to the actual prior conversation, the correct label is NOSRC, not MEMORY. MEMORY references a specific prior event in the actual conversation history.
+**UR-3 (v0.1.3 — strengthens v0.1.2 UR-3):** A `[MEMORY]` claim referencing prior conversation text MUST attach the prior text as a **verbatim quotation**. Paraphrase, summary, or characterization of prior content is forbidden under MEMORY; if the LLM cannot reproduce the prior wording, the correct marker is `[NOSRC]`, not `[MEMORY]`. The verbatim-quote requirement makes hallucinated recall mechanically detectable: any reader can string-search the prior conversation for the quoted text. The same rule applies to MEMORY claims about the LLM's own prior outputs (self-quotation).
+
+**Quoting syntax — two permitted forms:**
+- **Inline:** `[MEMORY: "<exact prior text>"] Your earlier note about brevity...`
+- **Block:** the marker on its own line, followed by a Markdown blockquote of the exact prior text, followed by the claim:
+  ```
+  [MEMORY]
+  > <exact prior text>
+  You asked for shorter outputs earlier in this session.
+  ```
+- **Ellipsis (`...`)** is permitted only to elide irrelevant middle content within a single quoted span; it must NEVER alter wording.
+- **Length cap:** if quoting the relevant prior text would exceed roughly two sentences, the LLM MUST instead use `[NOSRC]` and describe the prior content rather than claim memory of it. (Long paraphrase under MEMORY is the silent-slippage path this rule closes.)
+
+*Source: CTO comment `8a46d4c7` on AOV-111, D2 spec text. Audit: Logician PASS on AOV-115 (`b6bd7a58`). CEO ratification: AOV-111 comment `50abfc16`. Subsumes the v0.1.2 UR-3 rule (NOSRC-not-MEMORY for hallucinated recall — preserved within the verbatim-quote requirement). See D11.*
 
 **UR-4 — FACT requires a citable source, not attributed consensus:**
 "Most experts agree", "It is widely accepted", and similar attributed-consensus phrasings do not meet the FACT requirement of an external verifiable source. Correct label is NOSRC or BELIEF.
@@ -136,6 +159,22 @@ Any predictive, prescriptive, or causal claim downstream of an EMOTION observati
 
 **UR-7 — Challenge response for BELIEF and NOSRC:**
 When a `[BELIEF]` or `[NOSRC]` claim is challenged, the response must either (a) produce an external source (upgrade to FACT) or (b) explicitly downgrade to UNCERTAIN. Silent withdrawal is a slippage.
+
+**UR-8 — Pause and resume (v0.1.3, additive):** Either party (user or LLM) MAY suspend marker discipline for one or more turns by emitting a `[Aoven: pause]` token at the start of the turn that drops the format. Pausing is an explicit, sanctioned graceful exit and is NOT counted as abandonment under usage metrics. Inside paused turns:
+- Marker prefixes are NOT required.
+- Bare unmarked sentences are NOT treated as implicit FACT (the implicit-FACT-on-bare-sentence reading is suspended for the duration of the pause).
+- The LLM SHOULD acknowledge the pause once and MUST NOT re-prompt the user to remark turns until resume.
+
+**Resume — three sanctioned signals (in priority order):**
+1. **Explicit:** either party emits `[Aoven: resume]`. Restores all v0.1.x rules from the next claim onward.
+2. **Header re-assertion:** a turn that begins with `[Aoven v0.1.x]` resumes from a fresh state.
+3. **Implicit-on-first-marker:** the first claim that emits any standard marker (e.g., `[FACT] ...`) is treated as a resume signal. Mid-turn implicit resume is permitted (a paused turn that ends with a marked claim resumes from that claim).
+
+**`[Aoven: off]`** is a separate, harder signal reserved for whole-session abandonment with consent. After `[Aoven: off]`, a fresh `[Aoven v0.1.x]` header is REQUIRED to resume — implicit resume is NOT honored. This distinguishes "I'm dropping into voice for a few turns" (`pause`) from "I'm done with the protocol for this session" (`off`).
+
+Anti-aura: pause is intentionally additive, not coercive. Forcing markers through a free-association turn is a known abandonment driver (P4-S1 T9); a sanctioned drop-and-resume preserves discipline elsewhere in the session that would otherwise be lost wholesale.
+
+*Source: CTO comment `8a46d4c7` on AOV-111, D3 spec text. Audit: Logician PASS on AOV-115 (`b6bd7a58`). CEO ratification: AOV-111 comment `50abfc16`. Cross-linked from `## Formats > Response format`. See D12.*
 
 ---
 
@@ -165,7 +204,7 @@ When a `[BELIEF]` or `[NOSRC]` claim is challenged, the response must either (a)
 
 ## Decision log
 
-Each decision below is a discrete protocol-level commitment. Verdicts D1–D3 and D5–D8 are unchanged from v0.1.1. D4 was corrected in v0.1.2 per board input on AOV-15 (see D9). The mirror in `DECISIONS.md` follows this same numbering.
+Each decision below is a discrete protocol-level commitment. Verdicts D1–D3 and D5–D8 are unchanged from v0.1.1. D4 was corrected in v0.1.2 per board input on AOV-15 (see D9). D10–D12 added in v0.1.3 (AOV-111 minor-clarifications bundle). The mirror in `DECISIONS.md` follows this same numbering.
 
 ---
 
@@ -252,6 +291,39 @@ Each decision below is a discrete protocol-level commitment. Verdicts D1–D3 an
 - **Alternatives rejected.** Silent overwrite without trail; deletion of the old text without explanation.
 - **Risk.** None to the spec. Recurrence risk on future history claims; mitigated by C-6 ("no invented history") in `AGENTS.md` and by the named-reviewer gate on D9 itself.
 - **Status.** [validated] — board-supplied source; named-reviewer sign-off requested from Logician (`2ae117a1`) on AOV-16.
+
+---
+
+### D10 — Subset-header qualifier semantics: `allow:` / `require:` non-exclusive (v0.1.3)
+
+- **Reason.** Sprint-1 row #18 (P5-S1 T6+) showed an LLM reading `[Aoven v0.1 | require: FACT, HYP, SPEC, LIMIT]` as exclusive and silently suppressing INTERPRET and INTUIT for turns 6–10. Protocol behaved as specified, but the qualifier semantics were under-defined. v0.1.3 codifies that `require:` is a mandatory minimum (other markers stay available), `allow:` is additive emphasis, and bare-list default = `allow:`. Subset header NEVER suppresses unlisted markers. Anti-aura discipline: fail open on ambiguity, never closed.
+- **Alternatives rejected.** Letting `require:` retain implicit-exclusive reading (collapses slippage-blocking markers like INTUIT→FACT, NOSRC→assertion); introducing a third `only:` qualifier (re-introduces the suppression failure mode).
+- **Risk.** Existing v0.1.2 valid headers parse identically; no break. Some users may have relied on the implicit-exclusive reading to narrow output; v0.1.3 redirects them to prompt-level shaping.
+- **Source.** CTO comment `8a46d4c7` on AOV-111 (D1 spec text); Logician PASS on AOV-115 (`b6bd7a58`); CEO ratification on AOV-111 (`50abfc16`); fold via AOV-71 CEO repose (`6e58c604`).
+- **Out of scope (v0.1.4 carry-over).** Mixed `allow: A; require: B` qualifier composition.
+- **Status.** [provisional] — CEO + Logician ratified; provisional pending broader v0.1.3 launch validation.
+
+---
+
+### D11 — UR-3 strengthened: MEMORY claims MUST attach verbatim quotation (v0.1.3)
+
+- **Reason.** Sprint-1 row #10 (P3-S1 T8) showed an LLM emitting `[MEMORY] Earlier you mentioned Airyscan` when the participant had never said "Airyscan" — a hallucinated MEMORY (UR-3 violation) caught only because P3 had verbatim recall of own prior turns. Under v0.1.3, a MEMORY claim referencing prior text MUST attach a verbatim quotation (inline `[MEMORY: "..."]` or block-quote form), making hallucinated recall mechanically detectable by string-search against transcript. ≤ ~2-sentence cap; longer references must use `[NOSRC]` and describe. Same rule applies to LLM self-quotation. Subsumes the v0.1.2 UR-3 (NOSRC-not-MEMORY for hallucinated recall is preserved within the verbatim-quote requirement).
+- **Alternatives rejected.** Keeping v0.1.2 UR-3 unchanged (relies on participant-memory dependence — fails in long sessions); requiring `[MEMORY, NOSRC]` stack for unverified recall (doesn't address hallucination, just labels it).
+- **Risk.** Tightens MEMORY discipline; pre-v0.1.3 MEMORY claims without quotes become slippages under v0.1.3. Migration: cheatsheet refresh + UR-3 wording change. Length cap (~2 sentences) is a soft heuristic — will need empirical tuning.
+- **Source.** CTO comment `8a46d4c7` on AOV-111 (D2 spec text); Logician PASS on AOV-115 (`b6bd7a58`); CEO ratification on AOV-111 (`50abfc16`); fold via AOV-71 CEO repose (`6e58c604`).
+- **Out of scope (v0.1.4 carry-over).** Cross-session quoting boundary.
+- **Status.** [provisional] — CEO + Logician ratified; provisional pending broader v0.1.3 launch validation.
+
+---
+
+### D12 — UR-8 added: `[Aoven: pause]` / `[Aoven: resume]` / `[Aoven: off]` graceful-exit affordance (v0.1.3, additive)
+
+- **Reason.** Sprint-1 §4 item 9 (P4-S1 T9 partial abandonment): participant stopped engaging with markers when conversation moved to free-association ("the brackets pulled me out of voice"); did not re-add header or call format off, just drifted. v0.1.2's binary on/off model converted graceful drop into silent slippage. v0.1.3 adds `[Aoven: pause]` (sanctioned, NOT counted as abandonment), three resume signals (explicit `[Aoven: resume]`, header re-assertion, implicit-on-first-marker), and `[Aoven: off]` for whole-session exit (resume requires fresh header, no implicit). Inside paused turns: bare sentences NOT implicit FACT, LLM acknowledges once and MUST NOT re-prompt. Cross-linked from `## Formats > Response format > Rules`.
+- **Alternatives rejected.** Keeping binary on/off (drives silent abandonment as in P4-S1 T9); auto-detecting drop via missing markers (false-positive risk on procedural connectives); single off-only token (no path back without ceremony).
+- **Risk.** Pure addition — no v0.1.2 behavior breaks. New `[Aoven: pause]` / `[Aoven: resume]` / `[Aoven: off]` tokens reserved. UR-8 numbering note: AOV-54 Patch 1 (marker stack-depth cap of 3) was originally also drafted as UR-8 under the AOV-71 task description; that patch is NOT in this fold and the UR-8 slot is taken by D12 per CEO repose. Patch 1 disposition (renumber to UR-9, defer to v0.1.4, or re-scope) pending CEO/CTO decision.
+- **Source.** CTO comment `8a46d4c7` on AOV-111 (D3 spec text); Logician PASS on AOV-115 (`b6bd7a58`); CEO ratification on AOV-111 (`50abfc16`); fold via AOV-71 CEO repose (`6e58c604`).
+- **Out of scope (v0.1.4 carry-over).** `[Aoven: off]` consent-party naming.
+- **Status.** [provisional] — CEO + Logician ratified; provisional pending broader v0.1.3 launch validation.
 
 ---
 
