@@ -184,6 +184,8 @@ Each dimension is scored on a 0–3 ordinal scale (0 = good, 3 = severe). [FACT]
 
 [LIMIT] **The result is scoped to v0.1.2 confirmatory pass on Q1–Q10 + Q11–Q16 hold-out.** Not "Aoven works in general." Not "Aoven reduces hallucinations" without the full scoping above.
 
+[LIMIT] **Exploratory single-rater single-question observation, not a retrofit data point.** During v0.1.2 dissemination support (2026-05-04), an external reviewer (Cowork, via sponsor) ran a 2×2 paired Aoven-vs-baseline spot-check on Mistral Le Chat (single novel medical question, n=1) and reported aggregate Layer-1 dominance (Σ=4 → 0) for both Aoven cells. The observation included a notable mechanical-emergence pattern: Mistral Medium (Oct 2023 cutoff) explicitly emitted `data as of October 2023` on every claim under the Aoven prompt without coaching of the LIMIT marker. **This is not included as a retrofit data point** — single non-blind sponsor-prompter rater, single domain (date-anchor-maximally-favorable medical), no instructed-baseline control, no clean intra-model paired cell, transcripts not committed pre-audit. Carried forward to v0.2 pre-registration (AOV-90) as candidate stimulus under controlled-design fixes (instructed-baseline arm, blind rater, multi-domain, intra-model fixed web-state, pre-commit transcripts). See AOV-139 issue thread for the full RedTeam adversarial audit (`9219a386` 13:37Z) and CEO adjudication.
+
 ---
 
 ## 5. Discussion
