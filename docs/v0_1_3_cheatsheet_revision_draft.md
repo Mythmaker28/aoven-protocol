@@ -1,7 +1,7 @@
 # v0.1.3 Cheatsheet Revision Pack — Draft (Partial)
 
 **Author:** UsageDesigner (`397b1873-e038-466e-8103-7b180699b074`) — AOV-112
-**Status:** PARTIAL DRAFT — Part A (items 2, 4, 5) committed pre-AOV-71; items 7, 8, 9 (AOV-111 D1/D2/D3) audit-cleared via AOV-115 PASS; item 10 (AOV-109 D3 — CONF stacking-legitimacy rule) audit-cleared via AOV-113 PASS-WITH-MOD and ready for consolidation; Part B (items 1, 3, 6) awaiting upstream landings (item 3 worked-example block fully landed; item 1 + item 6 soft-blocked on AOV-71 wedge surface lock).
+**Status:** FULL DRAFT — Part A (items 2, 4, 5) committed pre-AOV-71; items 7, 8, 9 (AOV-111 D1/D2/D3) audit-cleared via AOV-115 PASS; item 10 (AOV-109 D3 — CONF stacking-legitimacy rule) audit-cleared via AOV-113 PASS-WITH-MOD and ready for consolidation; Part B items 1 + 6 (INTUIT/BELIEF/NOSRC wedge teaching + decision tree) drafted post-AOV-71 against the confirmed-intact wedge surface and ready for consolidation; item 3 (ANALOGY worked-example block) Mod 1 + Mod 2 fully folded. **All ten items now ready for consolidation; sole residual gate is AOV-116 named-reviewer audit on the consolidated PATCH.**
 **Source evidence:** `docs/usability_sprint1_results.md` §3.3 slippage table + §4 design-choice items.
 **Target file at consolidation time:** `docs/usability_sprint1.md` Artifact 1 (One-page Cheatsheet).
 **Fold contract:** This draft is a working surface. The cheatsheet text in `docs/usability_sprint1.md` is NOT modified until (a) AOV-71 v0.1.3 protocol-doc lock revision lands, (b) AOV-109 / AOV-110 / AOV-111 sibling protocol children deliver their cheatsheet companion patches (deliverable-level only), (c) Logician named-reviewer audit clears the consolidated revision pack.
@@ -65,12 +65,28 @@
 ## Part B — Items deferred to consolidation
 
 ### Item 1 — INTUIT/BELIEF/NOSRC wedge teaching
-**Soft-blocked-by:** AOV-71 (does the v0.1.3 lock-revision keep the INTUIT/BELIEF/NOSRC marker triple, or restructure it?).
-**Pre-draft sketch:** three worked examples per wedge.
-- INTUIT — judgment with no derivable reasoning chain. *Example to develop: "[INTUIT] This plot beat won't land" said by a craft-experienced novelist who can't articulate why.*
-- BELIEF — held position taken as probably true but not currently being verified. *Example to develop: "[BELIEF] FDT is a more defensible decision procedure than CDT" said by an analyst who has reasoned about it but is not citing now.*
-- NOSRC — claim is held but no source can be cited. *Example to develop: "[NOSRC] Most decision theorists treat FDT as a serious contender" — is held, has no in-hand cite, but is in principle citable.*
-**Final text gated on:** AOV-71 protocol surface lock.
+
+**Source:** sprint-1 §3.2 marker frequency table (`docs/usability_sprint1_results.md:131` — INTUIT 1/5 sessions, dead-marker call; `:129` — BELIEF 3/5 sessions, P3 zero structural concern) + §4 design-choice item 1 (`:192`) + §4 item 11 (`:212`) + P4 standout INTUIT moment (`:84`).
+**Sprint-1 evidence (verbatim, results doc line 192):** `INTUIT is a dead marker in agent-simulated practice. Fired in 1/5 sessions (P4 only, creative-craft). P1, P3, P5 used INTERPRET or HYP where INTUIT would have been the right call. Cheatsheet wedge between INTUIT / BELIEF / NOSRC may be too narrow to teach from one-line definitions.`
+**Sprint-1 evidence (verbatim, results doc line 84 — P4 standout INTUIT moment):** `P4 cited [INTUIT] Quiet novels often substitute internal recognition for external choice as the standout moment where the marker actively earned its overhead.`
+**Post-AOV-71 surface confirmed intact:** AOV-71 fold (commit `fb71920`, 2026-05-04) lands D10/D11/D12 (subset header / MEMORY quoting / pause). Marker-table rows for INTUIT (`AOVEN_PROTOCOL_v0.1.md:38`), BELIEF (`:40`), and NOSRC (`:45`) are unchanged from v0.1.2; UR-7 (challenge response, `:161`) and INTUIT→HYP laundering rule (`:199`) likewise unchanged. The wedge surface is preserved — this item is now ready for consolidation against the post-AOV-71 surface.
+**Cheatsheet location:** new "Wedge-clarification — INTUIT / BELIEF / NOSRC" sub-block appended below the marker table (`docs/usability_sprint1.md:36`) and before the "Prompt format" section (`:38`). The sub-block holds item 6's decision tree (procedural — when writing) followed by item 1's three worked examples (per-marker semantics — what each is FOR). Items 1 + 6 land together as a single insertion; they are factored into two issue-items here for audit traceability against the sprint-1 §4 source items they each address.
+
+**Proposed insertion (wedge-clarification block — worked examples; pairs with item 6 decision tree):**
+
+> **INTUIT / BELIEF / NOSRC — what each marker is FOR.** All three carry held positions without external verification. They are NOT interchangeable.
+>
+> *`[INTUIT]` — judgment without a derivable reasoning chain.* Use when you cannot state the inference but the judgment is still doing real work in the response. Worked example (verbatim from pilot P4-S1, the only session where INTUIT fired): `[INTUIT] Quiet novels often substitute internal recognition for external choice.` The judgment is craft-experienced, not deduced; there is no inference chain to state. **Do not** retag to `[INTERPRET]` (that requires a specific reading of specific data) or to `[HYP]` (that requires a stated test condition — the laundering rule under "Anti-slippage rules" blocks bare INTUIT→HYP retag without a stated test path).
+>
+> *`[BELIEF]` — held position, currently defended without verification.* Use when you hold the position as probably true and would *argue for it* if challenged, but are not now performing the verification work. Canonical example (verbatim from `AOVEN_PROTOCOL_v0.1.md:40`): `[BELIEF] Most users will abandon a protocol requiring more than 3 seconds of overhead per message.` The position is defended (the speaker would back it with reasons), not located in a specific in-hand source. **Do not** retag to `[FACT]` if challenged: UR-7 requires producing an external source (upgrade to FACT) or explicitly downgrading to UNCERTAIN. Silent withdrawal is a slippage.
+>
+> *`[NOSRC]` — claim is held but no in-hand source can be cited.* Use when a source exists in principle (you've read it, it could be looked up, the claim is checkable against a corpus) but is not at hand right now. Worked example (verbatim from pilot P4-S1 T8 self-correction without challenge): `[NOSRC] My examples skew toward commercial structure.` The speaker holds the claim AND knows it could be checked against the conversation's corpus of cited examples; they just have no cite to attach. **Do not** retag to `[BELIEF]` (BELIEF defends a position; NOSRC concedes a missing cite) or to `[FACT]` (no in-hand source = no FACT).
+>
+> See item 6 (decision tree) above for the procedural choice at the moment of writing.
+
+**Independence justification:** INTUIT, BELIEF, NOSRC, UR-7, and the INTUIT→HYP laundering rule are all canonical in v0.1.2 and unchanged by AOV-71's v0.1.3 fold (commit `fb71920`). The wedge collapse (BELIEF↔NOSRC merge) is explicitly deferred to v0.1.4 per AOV-106 B2 — this item only sharpens teaching, does not propose marker-set redraw. Worked examples each cite source: P4-S1 INTUIT verbatim (results doc line 84, the only INTUIT firing in pilot), canonical BELIEF example (protocol line 40, verbatim), P4-S1 T8 NOSRC self-correction verbatim (results doc line 82). No fabricated examples.
+
+**Final text gated on:** AOV-116 audit on the consolidated revision pack. Wording above is the consolidation-time text; UsageDesigner final-wording authority.
 
 ### Item 3 — ANALOGY worked example
 **Hard-blocked-by:** AOV-110 deliverable 4 (cheatsheet patch proposal for ANALOGY syntactic pairing). The cheatsheet text MUST match the protocol-side decision (allow vs require pairing).
@@ -123,11 +139,26 @@
 **Final text gated on:** Logician audit on the consolidated revision pack (AOV-116, DOD item 4 will check ANALOGY worked-example coverage). Worked-example block above is the consolidation-time text; UsageDesigner is the final-wording authority per AOV-114 Mod 2 routing. Re-check at consolidation against the canonical `docs/v0_1_3/aov110_analogy_pairing_rule.md` once it lands in this workspace, in case the post-Mod-1 §4 wording diverges from the binary-phrasing reconstruction above.
 
 ### Item 6 — BELIEF/NOSRC wedge sharpening
-**Soft-blocked-by:** AOV-71 surface lock (the *collapse* decision was deferred to v0.1.4 per AOV-106 (B2), so v0.1.3 cheatsheet only sharpens the wedge teaching, not the marker set).
-**Pre-draft sketch:** explicit decision tree.
-- "You hold this position." → continue.
-- "Could you point to where you would look to confirm it?" → Yes (lost source / common-knowledge but uncited): `[NOSRC]` ; No (held without verification path because reasoning is unstated): `[INTUIT]` (cross-ref item 1) ; No (held without verification path because the position is being defended, not located in evidence): `[BELIEF]`.
-**Final text gated on:** AOV-71 wedge surface lock + item 1 worked examples.
+
+**Source:** sprint-1 §3.2 (`docs/usability_sprint1_results.md:129` — BELIEF 4 fires across 3/5 sessions, P3 zero, "structural concern") + §4 design-choice item 11 (`:212` — BELIEF marker dead-zone risk) + slippage row #11 (`:151` — P3-S1 whole-session zero BELIEF, classified as missed-by-Aoven structural absence).
+**Sprint-1 evidence (verbatim, results doc line 212):** `BELIEF marker dead-zone risk. P3 zero BELIEF across the whole session despite multiple held-but-unsourced positions. LLMs route held-positions through FACT or NOSRC and skip BELIEF entirely. Either tighten the BELIEF/NOSRC wedge or consider collapsing them.`
+**Sprint-1 evidence (verbatim, results doc line 68 — example of FACT→NOSRC retrofit where BELIEF was a candidate but skipped):** `T4 [FACT] MitoGraph is the most widely used pipeline... — popularity claim with no source, caught-by-Aoven via challenge (UR-4); model retrofitted [NOSRC].` (A defended popularity claim is BELIEF when the speaker would *argue* the position rather than concede absent-cite — the retrofit-to-NOSRC path is the dead-zone slip the decision tree below is designed to interrupt.)
+**v0.1.3 scope (per AOV-106 B2):** *sharpen the wedge teaching only.* Collapse decision (BELIEF↔NOSRC merge) is deferred to v0.1.4. This item adds a decision tree to the cheatsheet; it does NOT change the marker set.
+**Cheatsheet location:** within the "Wedge-clarification — INTUIT / BELIEF / NOSRC" sub-block introduced by item 1 (appended below the marker table, before the "Prompt format" section). Decision tree precedes the worked examples. Items 1 + 6 land together as a single insertion.
+
+**Proposed insertion (wedge-clarification block — decision tree; precedes item 1 worked examples):**
+
+> **Decision tree — which of the three you actually hold.**
+> 1. **You hold this position.** (If you do not, the marker is wrong — choose `[UNCERTAIN]`, `[INTERPRET]`, or `[HYP]` per the marker table.)
+> 2. **Could you point to where you would look to confirm it?**
+>    - **Yes** — a source exists, you just cannot cite it now (lost source, common-knowledge but uncited, you have read it but do not have the link): `[NOSRC]`.
+>    - **No, because the reasoning is unstated and not reducible to one** — craft judgment, felt sense, expert pattern-recognition: `[INTUIT]` (see worked examples below).
+>    - **No, because the position is defended rather than located in evidence** — you would *argue* for it, not look it up: `[BELIEF]`.
+> 3. **Common pitfall — the BELIEF dead-zone.** When an LLM is challenged on a confident-sounding held position with no source, the laziest exit is `[NOSRC]`. If the position is being *defended* (you would back it with reasons), `[BELIEF]` is correct — and UR-7 then requires producing a source on next challenge or downgrading to `[UNCERTAIN]`. Routing every held-position through `[NOSRC]` is the BELIEF dead-zone slippage observed in pilot P3-S1 (zero BELIEF across the whole session despite multiple defended-position turns).
+
+**Independence justification:** decision tree operates on the v0.1.2 marker definitions of INTUIT (`AOVEN_PROTOCOL_v0.1.md:38`), BELIEF (`:40`), NOSRC (`:45`), UR-7 (`:161`), and the BELIEF→reality anti-slippage row (`:193`) — all unchanged by AOV-71's v0.1.3 fold. Per AOV-106 B2, collapse is v0.1.4-out-of-scope; the tree is teaching-only, additive to the cheatsheet, and does not commit the protocol to any wedge restructuring. Source-cite for the slippage the tree is designed to prevent: P3-S1 whole-session BELIEF zero (results doc lines 71, 129, 151, 212).
+
+**Final text gated on:** AOV-116 audit on the consolidated revision pack.
 
 ### Item 7 — Subset header `allow:` vs `require:` semantics (AOV-111 D1)
 **Audit status:** **SIGNED-OFF** via cross-deliverable check. AOV-111 D1 spec audited under AOV-115 — Logician verdict `b6bd7a58` clean **PASS** on the spec; cheatsheet patch wording inherits the same PASS via the cross-deliverable check (per CEO ratification `50abfc16` on AOV-111 + CEO repose `29fc346d` on this issue 2026-05-03T21:51:02Z). No separate AOV-116 gate needed for item 7 — wording is already audited.
@@ -189,12 +220,12 @@ UsageDesigner does NOT pre-stub the companion-patch text — that is the protoco
 
 ## Part C — Consolidation plan
 
-1. AOV-71 lands (Scribe v0.1.3 protocol-doc lock revision; Scribe reposed with AOV-111 D1/D2/D3 spec deltas as part of the fold payload).
+1. AOV-71 LANDED (commit `fb71920`, 2026-05-04) — Scribe v0.1.3 protocol-doc lock revision folding AOV-111 D1/D2/D3 spec deltas (subset header / MEMORY quoting / pause). Wedge surface (INTUIT/BELIEF/NOSRC + UR-7 + INTUIT→HYP laundering rule) confirmed intact — items 1 + 6 authored against confirmed-intact surface.
 2. AOV-110 lands (Mod 1 + Mod 2 already folded into item 3 worked-example block). AOV-109 D3 + AOV-111 D1/D2/D3 ALREADY audit-cleared — items 7/8/9 + 10 carry the verbatim audited cheatsheet text and are ready for consolidation.
-3. UsageDesigner re-checks Part A items 2, 4, 5 against the post-AOV-71 protocol surface; if any wedge moved, revise.
-4. UsageDesigner authors text for Part B items 1, 3, 6 against the post-AOV-71 surface, using sibling-child cheatsheet patches verbatim where they overlap (esp. item 3 and AOV-110 deliverable 4). Items 7/8/9 fold verbatim into the consolidated pack — no editorial revision (per AOV-115 PASS + CEO repose `29fc346d`). Item 10 folds verbatim — bidirectional framing + re-class test binding (per AOV-113 PASS-WITH-MOD + CEO repose `3ef633d2`); compression for one-page form is permitted but must preserve both directions and the re-class operational test.
-5. UsageDesigner files the consolidated revision proposal as a single PATCH against `docs/usability_sprint1.md` Artifact 1, in this draft document, with a single comment on AOV-112 declaring "ready-for-audit".
-6. Logician named-reviewer audit issue (filed by CEO under AOV-106) audits the consolidated proposal.
+3. Part A items 2, 4, 5 — re-check against post-AOV-71 surface complete: surface unchanged on FACT (line 36), BELIEF (line 40), NOSRC (line 45), and the marker-application discipline; no revision needed. (Items 2/4/5 independence-justifications already cleared this re-check at authoring time.)
+4. Part B items 1 + 6 authored post-AOV-71 (this revision); item 3 Mod 1 + Mod 2 folded; items 7/8/9 fold verbatim into the consolidated pack — no editorial revision (per AOV-115 PASS + CEO repose `29fc346d`); item 10 folds verbatim — bidirectional framing + re-class test binding (per AOV-113 PASS-WITH-MOD + CEO repose `3ef633d2`); compression for one-page form is permitted but must preserve both directions and the re-class operational test.
+5. UsageDesigner files the consolidated revision proposal as a single PATCH against `docs/usability_sprint1.md` Artifact 1, in this draft document, with a single comment on AOV-112 declaring "ready-for-audit". **(NEXT ACTION post this revision.)**
+6. Logician named-reviewer audit issue (AOV-116, filed by CEO under AOV-106) audits the consolidated proposal.
 7. On audit PASS: UsageDesigner pushes the patch to `docs/usability_sprint1.md` and PATCHes AOV-112 to `done`.
 8. On audit PASS-WITH-MOD: per `feedback_audit_fold_cross_assignee_cycle`, fold the mod into this draft, push, then file fold-confirm on the parent (AOV-112) — not on the audit issue — and check the audit issue for the revised verdict.
 9. On audit FAIL: revise this draft, re-file for audit; do not push.
