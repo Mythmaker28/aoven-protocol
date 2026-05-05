@@ -243,4 +243,206 @@ This draft commits to:
 
 ---
 
-*End of draft. Not yet pushed to `docs/usability_sprint1.md`. Not yet audited. Held in this file pending upstream landings.*
+## Part E — Consolidated PATCH against `docs/usability_sprint1.md` Artifact 1
+
+**Status:** READY FOR AUDIT (AOV-116). All ten items merged into a single coherent post-patch text below. This is the auditable artifact. On AOV-116 PASS, UsageDesigner replaces lines 12-72 of `docs/usability_sprint1.md` with the post-patch text below; on PASS-WITH-MOD, fold the mod into this Part E, repush, file fold-confirm on AOV-112.
+
+**Patch range:** `docs/usability_sprint1.md` lines 12-72 (Artifact 1 — One-page Cheatsheet). Title line 12 unchanged. Source-of-truth references at line 19, 46, 61, 65 preserved (extended to cite v0.1.3 protocol surface where new content lands).
+
+**Item-to-text map** (anti-aura — every additive block traceable to the per-item spec above):
+- Items 4 + 5 + 8 → Marker-table notes block (between the table at line 36 and the Wedge-clarification sub-block).
+- Items 1 + 6 → Wedge-clarification sub-block (between Marker-table notes and Prompt format).
+- Item 7 → Subset-invocation paragraph extension (within Prompt format).
+- Item 9 → Pause / Off sub-block (between Prompt format and Response format).
+- Item 2 → Slippages list bullet 7.
+- Item 4 → Slippages list bullet 8.
+- Item 5 → Slippages list bullet 9.
+- Item 10 → Slippages list bullet 10 (and CONF-row cross-reference).
+- Item 3 → ANALOGY worked-example sub-block (after slippages list).
+
+**Source-line note:** the section header changes from "6 common slippages" → "10 common slippages". The header already concedes "[design choice — UsageDesigner judgement, no frequency study filed]", so the count change is consistent with the existing framing and does not require a new frequency-study disclosure.
+
+---
+
+### POST-PATCH ARTIFACT 1 (full text):
+
+````markdown
+## Artifact 1 — One-page Cheatsheet: "Aoven for users"
+
+**What Aoven is.** A lightweight annotation format for human-LLM exchanges. The user adds one header to their first message; the LLM prefixes each of its claims with a square-bracket marker that names the *kind* of claim it is. Goal: surface the difference between facts, beliefs, hypotheses, and guesses so the user can see what the model is hedging and what it is asserting.
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Definition.*
+
+### The 14 markers (one line each)
+
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Markers (full table). Definitions paraphrased to one line; the verbatim definitions, "does NOT mean" column, and full examples are in the participant pre-session package.*
+
+| Marker | One-line definition |
+|--------|--------------------|
+| **FACT** | Verifiable against an external source independent of this conversation. |
+| **HYP** | Testable claim with a stated test condition; not yet confirmed. |
+| **INTUIT** | Judgment with no derivable reasoning chain. |
+| **ANALOGY** | Structural similarity used as illustration — not equivalence, not proof. |
+| **BELIEF** | Held position taken as probably true but not currently being verified. |
+| **EMOTION** | Affective state reported descriptively — not diagnosis or cause. |
+| **MEMORY** | Personal recall of an actual prior event in this conversation. *Must quote the prior text verbatim — see "MEMORY quoting" note below.* |
+| **INTERPRET** | One reading of ambiguous data, with other readings possible. |
+| **UNCERTAIN** | The answer itself is unknown — not "low confidence in a held belief". |
+| **NOSRC** | Claim is held but no source can be cited. |
+| **CONF(high/medium/low)** | Degree of commitment. Stacks with another marker; never stands alone. *Cannot launder marker class — see "CONF stacking — legitimacy rule" (slippage 10).* |
+| **REC** | Suggested action — advisory, not mandatory. |
+| **SPEC** | Extrapolation beyond evidence with no clear test path. |
+| **LIMIT** | The model itself cannot reliably answer (training cutoff, lack of access). |
+
+**Framework caveat for `[FACT]`.** "Framework X exists / framework X says Y" is `[FACT]` only on the *existence* claim. The endorsement-of-the-prescription is `[BELIEF]` or `[NOSRC]`, not `[FACT]`. See slippage rule 8.
+
+**Common-knowledge threshold for `[FACT]`.** Strict reading would require an external citation for every verifiable claim, including widely-known software-version statements ("Next 13.4 stable") or basic geography. To avoid pedantic over-tagging, `[FACT]` is acceptable for claims that are: (a) *publicly verifiable in seconds via standard sources* (release notes, official documentation, common reference works), AND (b) *unlikely to be challenged by a domain-literate reader on the spot*. Claims that fail either test should be `[NOSRC]` or `[BELIEF]` instead. The threshold is "domain-literate reader would not ask for a cite", not "anyone could find a cite eventually". Quantitative claims, contested claims, and claims about effect sizes never qualify.
+
+**MEMORY quoting (v0.1.3).** When the LLM uses `[MEMORY]` to reference something you said earlier, it MUST quote your exact wording: `[MEMORY: "..."]` or as a block-quote following the marker. Paraphrase is not allowed. If your prior text can't be quoted, the correct marker is `[NOSRC]`. **Why:** lets you spot a hallucinated memory with a simple Ctrl-F against the transcript; you don't have to remember your own turns verbatim.
+
+### Wedge-clarification — INTUIT / BELIEF / NOSRC
+
+All three carry held positions without external verification. They are NOT interchangeable.
+
+**Decision tree — which of the three you actually hold.**
+1. **You hold this position.** (If you do not, the marker is wrong — choose `[UNCERTAIN]`, `[INTERPRET]`, or `[HYP]` per the marker table.)
+2. **Could you point to where you would look to confirm it?**
+   - **Yes** — a source exists, you just cannot cite it now (lost source, common-knowledge but uncited, you have read it but do not have the link): `[NOSRC]`.
+   - **No, because the reasoning is unstated and not reducible to one** — craft judgment, felt sense, expert pattern-recognition: `[INTUIT]`.
+   - **No, because the position is defended rather than located in evidence** — you would *argue* for it, not look it up: `[BELIEF]`.
+3. **Common pitfall — the BELIEF dead-zone.** When an LLM is challenged on a confident-sounding held position with no source, the laziest exit is `[NOSRC]`. If the position is being *defended* (you would back it with reasons), `[BELIEF]` is correct — and UR-7 then requires producing a source on next challenge or downgrading to `[UNCERTAIN]`. Routing every held-position through `[NOSRC]` is the BELIEF dead-zone slippage observed in pilot P3-S1 (zero BELIEF across the whole session despite multiple defended-position turns).
+
+**What each marker is FOR — three worked examples.**
+
+*`[INTUIT]` — judgment without a derivable reasoning chain.* Use when you cannot state the inference but the judgment is still doing real work in the response. Worked example (verbatim from pilot P4-S1, the only session where INTUIT fired): `[INTUIT] Quiet novels often substitute internal recognition for external choice.` The judgment is craft-experienced, not deduced; there is no inference chain to state. **Do not** retag to `[INTERPRET]` (that requires a specific reading of specific data) or to `[HYP]` (that requires a stated test condition — the laundering rule under "Anti-slippage rules" blocks bare INTUIT→HYP retag without a stated test path).
+
+*`[BELIEF]` — held position, currently defended without verification.* Use when you hold the position as probably true and would *argue for it* if challenged, but are not now performing the verification work. Canonical example (verbatim from `AOVEN_PROTOCOL_v0.1.md:40`): `[BELIEF] Most users will abandon a protocol requiring more than 3 seconds of overhead per message.` The position is defended (the speaker would back it with reasons), not located in a specific in-hand source. **Do not** retag to `[FACT]` if challenged: UR-7 requires producing an external source (upgrade to FACT) or explicitly downgrading to UNCERTAIN. Silent withdrawal is a slippage.
+
+*`[NOSRC]` — claim is held but no in-hand source can be cited.* Use when a source exists in principle (you've read it, it could be looked up, the claim is checkable against a corpus) but is not at hand right now. Worked example (verbatim from pilot P4-S1 T8 self-correction without challenge): `[NOSRC] My examples skew toward commercial structure.` The speaker holds the claim AND knows it could be checked against the conversation's corpus of cited examples; they just have no cite to attach. **Do not** retag to `[BELIEF]` (BELIEF defends a position; NOSRC concedes a missing cite) or to `[FACT]` (no in-hand source = no FACT).
+
+### Prompt format
+
+```
+[Aoven v0.1]
+your question or request — natural language
+```
+
+Optional subset invocation (lower cognitive load): `[Aoven v0.1 | require: FACT, HYP, LIMIT]`. The header is sent once at the start of the first message; the LLM applies markers to *its* output. Users are not expected to label their own messages.
+
+**Subset header (v0.1.3 clarification):** the qualifiers are `require:` (mandatory minimum — the LLM MUST apply each listed marker when applicable; OTHER MARKERS STAY AVAILABLE) and `allow:` (additive emphasis — encouraged, not enforced). When no qualifier is present, the list is treated as `allow:`. **The subset header NEVER suppresses unlisted markers.** Writing `[Aoven v0.1 | require: FACT, HYP]` does not turn off LIMIT, INTERPRET, NOSRC, etc. — they still apply when their definition fits.
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Formats > Prompt format (v0.1.3 subset-header qualifiers; D10).*
+
+### Pause / Off (v0.1.3, new)
+
+Need to drop into free-form for a few turns? Type `[Aoven: pause]` at the start of the turn. The brackets stay quiet until you (or the LLM) emit `[Aoven: resume]`, re-state the `[Aoven v0.1.x]` header, OR drop a marked claim like `[FACT] ...`. For a full-session exit, use `[Aoven: off]` — re-entering then requires a fresh `[Aoven v0.1.x]` header. **Pausing is NOT abandonment.** Bare sentences inside a paused turn are NOT treated as implicit FACT.
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Anti-slippage rules > UR-8 (D12, v0.1.3 additive).*
+
+### Response format — concrete example
+
+User: `[Aoven v0.1] Is Python suitable for high-frequency trading?`
+
+LLM:
+```
+[FACT] Python's GIL prevents true CPU-parallelism in Python threads.
+[FACT, CONF(medium)] HFT latency requirements are typically sub-millisecond.
+[INTERPRET] "Suitable" depends on whether latency or development speed is prioritized.
+[REC] For latency-critical execution, prefer C++ or Rust. For strategy prototyping, Python is adequate.
+[HYP] Python with compiled extensions (Cython/Numba) can approach C-level performance in specific bottlenecks.
+[LIMIT] I cannot assess your specific system's performance profile without benchmarks.
+```
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Formats > Response format (example reproduced verbatim).*
+
+### 10 common slippages and how Aoven blocks them
+
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Anti-slippage rules (13 transitions) + v0.1.3 additions from sprint-1 input bucket. Bullets 1-6 are chosen as the most common failure modes in everyday LLM use [design choice — UsageDesigner judgement, no frequency study filed]; bullets 7-10 are added per sprint-1 evidence (slippage rows #5, #12, #3, #6+#17). The remaining canonical anti-slippage rules are in `AOVEN_PROTOCOL_v0.1.md` §Anti-slippage rules.*
+
+1. **Confident belief stated as fact.** BELIEF cannot upgrade to FACT without an external source; if challenged, it must drop to NOSRC or UNCERTAIN — silent withdrawal counts as slippage (UR-7).
+2. **"Most experts agree…" treated as a citation.** Attributed-consensus phrasings do not meet FACT; correct label is NOSRC or BELIEF (UR-4).
+3. **Hallucinated recall presented as memory.** Anything the model "remembers" that is not in the actual conversation transcript is NOSRC, not MEMORY (UR-3). v0.1.3: MEMORY claims must quote the prior text verbatim — see "MEMORY quoting" note above.
+4. **Analogy doing the work of an argument.** Any conclusion *derived* from an ANALOGY must carry HYP or SPEC on the derived claim — truth-status does not transfer across domains (UR-5). v0.1.3: see "ANALOGY pairing — strike test" sub-block below.
+5. **High confidence treated as factual status.** `[CONF(high)]` does not imply FACT; even `[HYP, CONF(high)]` remains a hypothesis until externally verified.
+6. **Speculation pitched directly as a recommendation.** SPEC cannot convert to REC without an intermediate HYP plus a stated test path.
+7. **Unmarked sentences inside a marked response.** Once an LLM turn carries any marker, every sentence in that turn is implicitly carrying a marker too. A bare sentence inside a marked turn reads as implicit `[FACT]` and counts as a slippage. The format does not silently exempt sentences from marker discipline mid-turn. *Worked example: a turn that opens with `[BELIEF] / [NOSRC]` markers and then drops "Auckland's 2016 upzoning produced ~4% rent reduction" with no marker — the bare sentence is implicit `[FACT]` and almost certainly should have been `[NOSRC]`. The slip is only visible because surrounding text was marked; in a fully unmarked response it would have read as ordinary prose.* (Pause exception: bare sentences inside a `[Aoven: pause]` turn are NOT implicit FACT.)
+8. **`[FACT]` smuggling framework prescriptions.** When citing a named framework, distinguish two claims: *(a) the framework exists* (verifiable; `[FACT]` is correct) from *(b) the framework's prescriptions are correct* (a held position, often unsourced; `[BELIEF]` or `[NOSRC]` if the model is endorsing the prescription). A single `[FACT]` marker on a sentence that does both work conflates them and lets prescriptive authority ride on factual existence. *Worked example (mis-applied): `[FACT] Save the Cat identifies a "midpoint" beat where stakes escalate` — the framework's existence is verifiable, but the prescriptive content (that midpoints should escalate stakes) is being smuggled under the same FACT marker. Correct form: `[FACT] Save the Cat identifies a "midpoint" beat. [BELIEF] Many genre-screenwriters apply the rule that stakes escalate at the midpoint.*`
+9. **Strict-NOSRC over-tagging on common knowledge.** A reader can mark every unsourced claim as `[NOSRC]` under strict reading, but doing so on stable common-knowledge facts ("the current stable release of X is Y") makes the format pedantic and unusable. Apply the FACT-row common-knowledge threshold above before downgrading. *Worked example (acceptable): `[FACT] App Router has been stable since Next 13.4` — release notes are publicly verifiable in seconds, a domain-literate reader would not ask for a cite, no quantitative claim involved. Worked example (NOT acceptable): `[FACT] App Router typically reduces TTFB by 30–40% on content-heavy pages` — quantitative effect-size claim, fails the threshold; correct marker is `[NOSRC]` until a benchmark is cited.*
+10. **CONF stacking — legitimacy rule.** CONF refines the *strength* of a claim within a class; it cannot change the class's epistemic direction. **Down-laundering** is illegitimate: marking a verified claim with low or medium confidence (e.g. `[FACT, CONF(medium)]`) keeps FACT-authority while signaling doubt that should drop the class to BELIEF, NOSRC, or HYP. **Up-laundering** is illegitimate: marking a hedged or uncertain claim with high confidence (e.g. `[HYP, CONF(high)]` on a near-tautology, or `[SPEC, CONF(high)]`, `[INTUIT, CONF(high)]`, `[ANALOGY, CONF(high)]`) keeps the hedged class while signaling certainty that contradicts it. **Test:** if removing CONF would force you to change the class, the class was wrong — re-class, do not re-hedge. CONF is legitimate on BELIEF, HYP(low/medium), INTERPRET, and REC. CONF is generally redundant or incoherent on FACT, MEMORY, LIMIT, NOSRC, UNCERTAIN, SPEC, INTUIT, ANALOGY, and EMOTION; default to dropping CONF on those classes.
+
+### ANALOGY pairing — strike test (v0.1.3, sharpens slippage 4)
+
+**ANALOGY pairing — when an analogy needs a partner marker.** Apply the **strike test** to every `[ANALOGY]`: imagine the ANALOGY sentence is struck from the turn. If at least one independent stated warrant remains for every downstream claim, the analogy is *illustrative* and may stand alone. If a downstream claim has no independent stated warrant remaining after striking, the analogy is *argumentative* — that claim MUST carry its own `[HYP]` or `[SPEC]` marker (or `[INTERPRET]` if the derived claim is a reading). A `[REC]` derived from an argumentative ANALOGY is only legal when preceded by `[HYP]` with a stated test path (mirrors UR-6). The pairing applies to any claim in the same turn whose warrant is the analogical mapping — not necessarily the syntactically next claim — so an unrelated `[FACT]` between an `[ANALOGY]` and the `[REC]` it warrants does not break the pairing requirement.
+
+**Worked examples — five contrasted cases.**
+
+*Illustrative — legal (analogy stands alone, no derived claim takes its warrant from the mapping):*
+```
+[ANALOGY] Memory pressure on a small VPS feels a bit like a kitchen during dinner service: lots of small things contending for the same counter space.
+```
+Strike test: nothing downstream depends on the kitchen mapping → at least one independent warrant remains for every other claim in the turn → illustrative.
+
+*Argumentative bare — ILLEGAL (no dependent marker on the claim warranted by the analogy):*
+```
+[ANALOGY] tRPC without strict types is like Express without middleware: technically possible, structurally regrettable.
+[REC] Don't ship tRPC without enabling strict typing.
+```
+Strike test: strike the analogy sentence; the `[REC]` has no independent stated warrant remaining → argumentative → `[REC]` derived directly from an argumentative ANALOGY is illegal under UR-5 (must go via `[HYP]` + test path per UR-6 chain).
+
+*Argumentative paired — legal (HYP-via-test path):*
+```
+[ANALOGY] tRPC without strict types is like Express without middleware: technically possible, structurally regrettable.
+[HYP] Strict typing on the tRPC client/server boundary will catch ≥80% of contract-mismatch bugs in CI before they ship — testable by enabling `strict: true` and re-running the type-checker against the existing test suite.
+[REC] Don't ship tRPC without enabling strict typing.
+```
+Strike test: strike the analogy; `[HYP]` carries its own stated test path → independent stated warrant remains → `[REC]` legal via UR-6 chain.
+
+*Argumentative paired — legal (interpretation, no prediction):*
+```
+[ANALOGY] Reading the protocol "as if it were a contract" foregrounds enforceability over teaching.
+[INTERPRET] On that reading, UR-5 is a constraint on the speaker, not a teaching aid for the user.
+```
+Strike test: strike the analogy; the `[INTERPRET]` reading collapses → argumentative → `[INTERPRET]` is the correct dependent marker because the derived claim is a reading of the protocol, not a falsifiable prediction.
+
+*Argumentative paired — legal (extrapolation, no test path available):*
+```
+[ANALOGY] Marker-class compatibility resembles type compatibility in a structural type system.
+[SPEC] If that mapping holds, the hedge-laundering risk likely scales with the number of compatible classes a marker can stack into.
+```
+Strike test: strike the analogy; the scaling claim has no independent stated warrant remaining → argumentative → `[SPEC]` is the correct dependent marker because the derived claim extrapolates beyond evidence with no clear test path.
+
+*Source: `AOVEN_PROTOCOL_v0.1.md` §Anti-slippage rules > UR-5 (v0.1.3 strike-test sharpening; per AOV-110 d4 audit-cleared via AOV-114).*
+
+---
+````
+
+### Audit checklist (for AOV-116 — Logician)
+
+**Coverage check (DOD item 4 from AOV-106):**
+- [x] Item 1 (INTUIT/BELIEF/NOSRC wedge teaching, §4 item 1 source) — covered in Wedge-clarification sub-block worked-examples.
+- [x] Item 2 (bare-unmarked-sentence rule, §4 item 3 source) — covered in slippages bullet 7.
+- [x] Item 3 (ANALOGY worked example, §4 item 4(a) source) — covered in ANALOGY pairing sub-block (5 contrasted cases).
+- [x] Item 4 (FACT-on-framework-prescription, §4 item 5 source) — covered in slippages bullet 8 + FACT-row caveat below marker table.
+- [x] Item 5 (common-knowledge boundary, §4 item 10 source) — covered in slippages bullet 9 + FACT-row threshold note below marker table.
+- [x] Item 6 (BELIEF/NOSRC wedge sharpening, §4 item 11(a) source) — covered in Wedge-clarification sub-block decision tree.
+- [x] Item 7 (subset header, AOV-111 D1) — covered in Subset-header v0.1.3 clarification note (Prompt format extension).
+- [x] Item 8 (MEMORY quoting, AOV-111 D2) — covered in MEMORY-row note below marker table + slippages bullet 3 cross-reference.
+- [x] Item 9 (Pause / Off, AOV-111 D3) — covered in Pause / Off sub-block.
+- [x] Item 10 (CONF stacking-legitimacy, AOV-109 D3) — covered in slippages bullet 10 + CONF-row cross-reference.
+
+**Anti-aura discipline (DOD item 5):**
+- Every additive paragraph cites either a sprint-1 source-row, a CTO-authored verbatim cheatsheet patch, or a canonical protocol surface. No fabricated examples; every worked example is sprint-1 grounded or canonical-protocol grounded.
+- Pre-stubbing constraint preserved: items 7/8/9 are verbatim CTO-authored (not UD authorship); item 10 is verbatim from `aov109_conf_compat_rule.md` §4 lines 83-85 post-M-1 (not UD authorship); items 1, 6 worked examples + decision tree are UD-authored against post-AOV-71 surface but every example is pilot-sourced or canonical-sourced.
+- Companion-patch verbatim block: items 7/8/9/10 are verbatim CTO-authored cheatsheet text — UsageDesigner does not edit (per AOV-115 PASS + AOV-113 PASS-WITH-MOD ratifications).
+
+**Binding-constraints check (CEO-routed, must survive any audit-mod fold):**
+- Item 10 bidirectional framing (down-launder + up-launder both named) — preserved in slippages bullet 10. Re-class operational test ("if removing CONF would force you to change the class, the class was wrong — re-class, do not re-hedge") — preserved verbatim. Per AOV-113 auditor point 4: compression for one-page form permitted but cannot collapse to single direction or soften the test (preserved).
+- Item 7 "subset header NEVER suppresses unlisted markers" — preserved verbatim in subset-header v0.1.3 clarification.
+- Item 8 verbatim quote requirement — preserved verbatim.
+- Item 9 "Pausing is NOT abandonment" + bare-sentence-not-implicit-FACT-while-paused — preserved verbatim, with cross-reference from slippage bullet 7.
+- Item 1 INTUIT→HYP laundering rule cross-reference — preserved (within INTUIT worked-example "Do not retag" callout).
+- Item 6 decision-tree common-pitfall (BELIEF dead-zone) — preserved verbatim.
+
+**Wedge-collapse out-of-scope flag (per AOV-106 B2):** items 1 + 6 are teaching-only; the BELIEF↔NOSRC collapse decision is explicitly v0.1.4 carry-over. The wedge-clarification sub-block does NOT propose merging the markers; it sharpens the teaching to test whether the structural concern is teaching or marker-set. Confirmed in independence justifications above.
+
+**Out-of-scope v0.1.4 carry-over (NOT audited here, flagged for future):** AOV-115 Logician's three non-blocking inferences (qualifier composition, cross-session quoting boundary, off-consent semantics) — captured in companion-patches block as v0.1.4 boundary note. Also: BELIEF↔NOSRC collapse decision; INTUIT survival decision; MATH/DEFN marker; AOV-A2 strike-test promotion to `[validated]` via mini-A/B.
+
+---
+
+*End of draft. Ready for AOV-116 Logician audit. On audit PASS: UsageDesigner pushes Part E POST-PATCH text above to `docs/usability_sprint1.md` lines 12-72 and PATCHes AOV-112 to `done`.*
