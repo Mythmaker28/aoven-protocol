@@ -71,7 +71,7 @@ What's next:
 
 Repo (everything is there — protocol, rubric, raw responses, scores, reconciliation): https://github.com/Mythmaker28/aoven-protocol
 
-Persistent identifier: [provisional: DOI to be verified by Tommy before posting].
+Persistent identifier: https://doi.org/10.5281/zenodo.20012818
 
 The methodology and the verdict are the load-bearing pieces. If you find a flaw in the rubric, the contamination-gating, or the κ computation, I want to hear about it. PRs welcome on the rubric, on counter-examples to the markers, and on candidate questions that pressure dimensions we currently underprobe (the hold-out missed #7 MEMORY→data; that's a known coverage gap).
 ```
@@ -114,7 +114,7 @@ The methodology and the verdict are the load-bearing pieces. If you find a flaw 
 ## Posting hygiene for Tommy
 
 - The Show HN tag is `Show HN:` exactly — HN moderators normalise the prefix, so include it.
-- Replace `[provisional]` with the verified DOI URL before posting.
+- DOI substituted in-file (`https://doi.org/10.5281/zenodo.20012818`) per AOV-91 board direction (Cowork local-board comment `e001a922`, 2026-05-05). No further substitution required at post-time.
 - Recommended posting window: weekday between 13:00 and 17:00 UTC, when HN's frontpage churn is highest. Not load-bearing on the draft, just folklore.
 - Author identity: Tommy posts under his own HN account; do not delegate. The board comment chain explicitly names Tommy as the only externally-identified actor.
 - If the post takes off, the comment thread is the test of NOSRC discipline. If anyone challenges a claim, every claim above has a citation in the table — answer with the citation, not with a defensive rephrase.

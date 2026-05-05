@@ -3,19 +3,19 @@
 **Channels:** Mastodon (≈ 500 char limit, threadable) + X / Twitter (280 char per post).
 **Status:** draft — Logician audit returned BLOCK on Toot 1 v1 (519 chars literal, over 500); v2 in this file is the revision. Pending Logician re-audit + CEO sign-off.
 **Posting actor:** Tommy (board, not delegated).
-**Char-count basis:** literal Python `len()` on UTF-8 string; post-DOI-substitution simulated by replacing `[provisional]` (13 chars) with a representative Zenodo DOI URL `https://doi.org/10.5281/zenodo.1234567` (38 chars), i.e. +25 chars per occurrence. Stricter than Mastodon/X's documented "URL-counts-as-23" platform rule, so a block that passes here will pass on the platform.
+**Char-count basis:** literal Python `len()` on UTF-8 string. **DOI now substituted in-file** (per AOV-91 board direction, Cowork local-board comment `e001a922`, 2026-05-05): concept DOI `https://doi.org/10.5281/zenodo.20012818` (39 chars) replaces every `[provisional]` (13 chars) in DOI-bearing blocks, i.e. +26 chars per occurrence. The literal counts below are post-substitution actuals (no simulation). Stricter than Mastodon/X's documented "URL-counts-as-23" platform rule, so a block that passes here will pass on the platform.
 
 ---
 
 ## A. Mastodon (single toot, threadable, ≤ 500 chars)
 
-### Toot 1 — main (revised v2; literal 439 chars; post-DOI-substitution 464 chars)
+### Toot 1 — main (revised v2, DOI substituted; literal 465 chars)
 
 ```
-Aoven v0.1.2: a 14-marker protocol that asks an LLM to label its own claims (FACT / HYP / NOSRC / LIMIT…), scored by 2 raters AFTER markers stripped — can't earn credit from marker presence alone. Sealed hold-out reconfirmed the primary-set criterion: 91.7% / 100% aggregate L1 score reduction; κ = 0.759 substantial. 1 LLM, 16 Qs, 2 LLM raters — not "Aoven works in general." Repo: github.com/Mythmaker28/aoven-protocol DOI: [provisional]
+Aoven v0.1.2: a 14-marker protocol that asks an LLM to label its own claims (FACT / HYP / NOSRC / LIMIT…), scored by 2 raters AFTER markers stripped — can't earn credit from marker presence alone. Sealed hold-out reconfirmed the primary-set criterion: 91.7% / 100% aggregate L1 score reduction; κ = 0.759 substantial. 1 LLM, 16 Qs, 2 LLM raters — not "Aoven works in general." Repo: github.com/Mythmaker28/aoven-protocol DOI: https://doi.org/10.5281/zenodo.20012818
 ```
 
-[FACT] In-file literal length 439 chars (Python `len()`). Post-DOI-substitution length 464 chars assuming a 38-char Zenodo DOI URL. Both ≤ 500. Margin to the 500-char Mastodon limit: 36 chars.
+[FACT] In-file literal length **465 chars** (Python `len()`, post-substitution actual with 39-char concept-DOI URL `https://doi.org/10.5281/zenodo.20012818`). ≤ 500. Margin to the 500-char Mastodon limit: **35 chars**. Pre-substitution literal was 439 chars with 13-char `[provisional]` placeholder; +26 chars from the substitution as predicted at the basis line.
 
 [FACT] Differences from v1: tightened opening ("Aoven v0.1.2:" instead of "Aoven v0.1.2 results out:"); dropped "(claude-opus-4-7)" parenthetical; replaced "Sealed hold-out (Q11–Q16) confirmed the criterion derived on Q1–Q10" with "Sealed hold-out reconfirmed the primary-set criterion"; collapsed double-space before "DOI:" to single space. Net saving from v1: 80 chars (519 → 439).
 
@@ -47,13 +47,13 @@ Numbers: hold-out Q11–Q16 (CTO didn't preview before generation, raters didn't
 
 [FACT] Literal length 277 chars. ≤ 280. (v1 claimed 280; recount shows 277 — Logician audit confirmed.) Margin to 280: 3 chars. Slim — copy verbatim, no emoji, no extra punctuation.
 
-### Tweet 3 — revised v2 (literal 232 chars; post-DOI-substitution 257 chars)
+### Tweet 3 — revised v2, DOI substituted (literal 258 chars)
 
 ```
-Scope: 1 LLM (claude-opus-4-7), 16 Qs, 2 LLM raters. NOT "Aoven works in general." NOT "Aoven reduces hallucinations" without scoping. Repo: github.com/Mythmaker28/aoven-protocol — DOI: [provisional]. v0.2 + human raters in pre-reg.
+Scope: 1 LLM (claude-opus-4-7), 16 Qs, 2 LLM raters. NOT "Aoven works in general." NOT "Aoven reduces hallucinations" without scoping. Repo: github.com/Mythmaker28/aoven-protocol — DOI: https://doi.org/10.5281/zenodo.20012818. v0.2 + human raters in pre-reg.
 ```
 
-[FACT] In-file literal length 232 chars. Post-DOI-substitution length 257 chars (38-char Zenodo DOI URL replaces 13-char `[provisional]`). Both ≤ 280. Margin to 280: 23 chars.
+[FACT] In-file literal length **258 chars** (Python `len()`, post-substitution actual with 39-char concept-DOI URL `https://doi.org/10.5281/zenodo.20012818`). ≤ 280. Margin to 280: **22 chars**. Pre-substitution literal was 232 chars with 13-char `[provisional]` placeholder; +26 chars from the substitution.
 
 [FACT] Differences from v1: dropped "Honest tone is mandatory." sentence (24 chars); reframed "claude-opus-4-7" as parenthetical to "1 LLM"; tightened "v0.2 expansion + human raters in pre-reg" → "v0.2 + human raters in pre-reg". Net saving from v1: 28 chars (260 → 232) — needed because v1 post-DOI-substitution at 285 chars was over the 280 limit (Logician audit did not flag this; Scribe self-flagged on re-recount per Logician mod #4).
 
@@ -82,13 +82,12 @@ Scope: 1 LLM (claude-opus-4-7), 16 Qs, 2 LLM raters. NOT "Aoven works in general
 
 ## Posting hygiene for Tommy
 
-- Replace `[provisional]` with the verified DOI URL before posting.
+- DOI substituted in-file (`https://doi.org/10.5281/zenodo.20012818`) per AOV-91 board direction. No further substitution required at post-time. Copy the toot/tweet bodies verbatim.
 - Mastodon: post Toot 1 first, then Toot 2 as a reply within 30 s so the thread is indexed together.
 - X: post Tweet 1 first, then Tweet 2 and Tweet 3 as replies in order. Tweet 2 has only 3 chars of margin to the 280-char limit — copy verbatim, no emoji, no extra punctuation, no auto-correct surprises.
-- The post-DOI-substitution simulation in this file uses a representative 38-char Zenodo URL. If the verified DOI URL is shorter (e.g. `doi.org/10.5281/zenodo.NNNNNNN` at 30 chars), the actual posted length will be 8 chars less than reported here. If the verified DOI is *longer* than 38 chars, recount before posting Toot 1.
+- Margins to platform limit (post-substitution actual): Toot 1 35 chars, Toot 2 88 chars (no DOI), Tweet 1 10 chars (no DOI), Tweet 2 3 chars (no DOI), Tweet 3 22 chars. If you edit any block on-platform before posting, recount first.
 - Optional cross-link: after both posts are up, edit the LinkedIn post to include the Mastodon URL + X thread URL as second-degree visibility (LinkedIn does not penalise external links the way Mastodon and X do).
-- Do **not** post if the DOI is not yet verified — the load-bearing claim is "we have a public, citable artefact." Without the DOI the post weakens to a repo announcement, which is fine but should then drop the `DOI: [provisional]` text rather than post a placeholder.
 
 ---
 
-*Drafted by CanonicalScribe (`e19c696f`) under AOV-91. Char counts above are mechanical recounts (Python `len()`); post-DOI substitution simulated against a 38-char representative DOI URL. v2 revision incorporates Logician audit verdict on AOV-96 (BLOCK on Toot 1 v1, FLAGs on char-count [FACT] claims throughout). Pending Logician re-audit + CEO sign-off.*
+*Drafted by CanonicalScribe (`e19c696f`) under AOV-91. Char counts above are mechanical recounts (Python `len()`) post-DOI-substitution with the 39-char concept-DOI URL `https://doi.org/10.5281/zenodo.20012818`. v2 revision incorporates Logician audit verdict on AOV-96 (BLOCK on Toot 1 v1, FLAGs on char-count [FACT] claims throughout) cleared by AOV-129 verdict `a0ce2e04` PASS. CEO countersign comment `ee385304` (2026-05-05). DOI substitution applied per AOV-91 board direction (Cowork local-board comment `e001a922`, 2026-05-05).*

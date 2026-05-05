@@ -40,7 +40,7 @@ I'm writing to share Aoven v0.1.2, an open-source protocol that asks an LLM to p
 The v0.1.2 result is a confirmatory pass on a sealed hold-out (Q11–Q16): aggregate Layer-1 score reduction of 91.7 % (Logician rater) and 100.0 % (independent rater) Test B vs Test A, with quadratic-weighted κ = 0.759 (substantial, Landis–Koch) on the 12 hold-out cells. Both raters PASS the three-part criterion independently. Scope is one model (claude-opus-4-7), 16 questions, two LLM raters — explicitly NOT a "works in general" claim.
 
 Repo with the protocol, rubric, raw responses, and reconciliation files: https://github.com/Mythmaker28/aoven-protocol
-DOI: [provisional — to be added once verified]
+DOI: https://doi.org/10.5281/zenodo.20012818
 
 I would value methodological critique, particularly on (a) the stripped-prose Layer-1 design, (b) the sealed-hold-out anti-contamination discipline, (c) the κ computation and the sparse-distribution artefacts on D3/D4/D6. If any part of the rubric, the contamination-gating, or the κ pipeline does not stand up, I want to know.
 
@@ -79,7 +79,7 @@ What I want to flag for Apollo specifically is the scoring discipline: the marke
 I am writing because Apollo's deception-evaluation work touches the same surface as Aoven's marker discipline (stated epistemic status vs. underlying behaviour). The honest question is whether the marker scheme is gameable — whether a model could learn to PREFIX confident claims with HYP or NOSRC to evade a sycophancy / overclaiming penalty without any genuine epistemic concession. The v0.1.2 design did not stress that adversarial direction.
 
 Repo: https://github.com/Mythmaker28/aoven-protocol
-DOI: [provisional — to be added once verified]
+DOI: https://doi.org/10.5281/zenodo.20012818
 
 A pointer to whether Aoven would be useful or counter-productive in your eval stack would be welcome.
 
@@ -116,7 +116,7 @@ Two independent LLM raters scored every Test B response AFTER the markers were m
 Scope is the honest part: one model, 16 questions across 5 domains, 2 LLM raters. The two biggest gaps — human raters and cross-LLM generation — are scoped into v0.2 (in pre-registration). Cross-LLM matters most to Anthropic specifically: until v0.2, the v0.1.2 result is a "Claude-opus-4-7 can do this" result, not a Claude-family or general-LLM result.
 
 Repo: https://github.com/Mythmaker28/aoven-protocol
-DOI: [provisional — to be added once verified]
+DOI: https://doi.org/10.5281/zenodo.20012818
 
 I would value Anthropic alignment's view on (a) whether internal model variants would be a useful cross-LLM stress test for v0.2, and (b) whether any of the markers conflict with internal Claude policy or constitutional documents in ways the public protocol would benefit from knowing.
 
@@ -158,7 +158,7 @@ I would value Anthropic alignment's view on (a) whether internal model variants 
 ## Posting hygiene for Tommy
 
 - Send the three emails on **separate days** (suggested: METR Mon, Apollo Wed, Anthropic Fri) to avoid the appearance of mass-blast outreach. Each org should see the email as a directed, scoped contact, not a list-blast.
-- Replace `[provisional — to be added once verified]` with the verified DOI URL in all three emails before sending.
+- DOI substituted in-file (`https://doi.org/10.5281/zenodo.20012818`) per AOV-91 board direction (Cowork local-board comment `e001a922`, 2026-05-05). No further DOI substitution required at send-time. Contact-detail `[provisional]` placeholders below remain operational and are resolved by Tommy at send-time per the boundary statement in `e001a922`.
 - Replace every `[provisional]` contact-detail flag with a verified address. If verification fails for any of the three, **send via the public contact form for that org** rather than guess. Do NOT send to a personal address Tommy is not certain is current.
 - If a reply lands, the response must hold the same NOSRC discipline as the cold email: every empirical claim in any follow-up email cites either an issue ID or a canonical file path. If you cannot cite, flag as `[provisional]` or do not send.
 - If no org replies within 14 days, do **not** re-send. Cold-outreach hygiene is one shot; a follow-up at 14+ days that adds no new information is spam. Wait until v0.2 has a published result, then send a new email referencing the new result, not the old one.
