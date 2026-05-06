@@ -1,11 +1,11 @@
-# Aoven Phase-3.5 — Recruitment Log Schema v0.1
+# Aoven Phase-3.5 — Recruitment Log Schema v0.1.1
 
 **Author:** UsageDesigner (`397b1873-e038-466e-8103-7b180699b074`) — AOV-152
 **Authorization:** CEO comment `adbf1c1c` (Route A, 2026-05-06 00:04Z) — re-authorized logging-schema work as independent of participant-outreach hard-gate.
 **Sign-off route:** CEO countersign as named-reviewer (Mod-2.A is reviewer-required per `feedback_passwithmod_no_ceo_downgrade.md`); not a board-gate.
-**Status:** v0.1 — pre-countersign.
+**Status:** v0.1.1 — Mod-A folded, awaiting CEO single-pass close per `5ed338ab` sign-off conditions.
 **Source artifact (binding):** `docs/usability_phase3_5_real_human_pilot_scope.md` @ `8dde742` on `origin/main`.
-**Mod traceability:** AOV-119 Mod-2.A (BLOCKING forward requirement).
+**Mod traceability:** AOV-119 Mod-2.A (BLOCKING forward requirement); CEO countersign `5ed338ab` Mod-A (PASS-WITH-MOD, 2026-05-06) folded in v0.1.1.
 
 ---
 
@@ -37,7 +37,11 @@ Tier is the deterministic recruitment-channel-class label. Channel detail is the
 | `T2` | `twitter`, `bluesky`, `linkedin` (one Tommy-authored public post per channel per scoping §2.4) | Recorded at first response-from-public when a candidate self-replies to the public post. `channel_detail` = the platform of the post that triggered the candidate's reply. |
 | `T3` | `prolific` (only if T1+T2 yield <8 at day-14 AND board approves T3 budget per scoping §7.2 ask #2) | Recorded at Prolific session-acceptance event. |
 
-Determinism rule: `tier` is fixed at first-contact event and never updated. If a candidate appears in two tiers (e.g., DMed by Tommy AND replies to public Bluesky post), the EARLIEST contact wins; the second-tier event is logged as a free-text note in `notes` but does NOT mutate `tier`. This preserves Mod-2.A's no-post-hoc-inference guarantee.
+Determinism rule (relationship-class priority): `tier` is fixed by **relationship-class priority `T1 > T2 > T3`**, not by event-timestamp ordering. If a candidate appears in T1 AND T2 (e.g., DMed by Tommy AND also replies to a public Bluesky post), `tier = T1` regardless of which contact-event timestamp came first. Symmetric for T2 vs T3 (T2 wins). The cross-tier appearance is still logged as a free-text disclosure in `notes` for audit (no audit-trail loss), but does NOT mutate `tier`.
+
+Rationale for relationship-class priority over earliest-event-wins (per CEO countersign `5ed338ab` Mod-A): T2 public-post publish-time reliably pre-dates T1 DM-send timestamps, so an earliest-event rule would route Tommy-network candidates who happened to reply to a public post into T2 — contaminating the §2.4 stratified-by-tier analysis with mis-classified T1 candidates. Relationship-class priority guarantees that the social-desirability-bias signal that Mod-2.A was filed against (T1 candidates with a relationship to Tommy) lands in `tier = T1` regardless of which channel they touched first.
+
+This preserves Mod-2.A's no-post-hoc-inference guarantee: priority is a structural rule on `tier`-class membership, not an analyst judgment call.
 
 ---
 
@@ -48,7 +52,7 @@ Determinism rule: `tier` is fixed at first-contact event and never updated. If a
 | 1 | `participant_id` | string | yes | Format: `P\d+` (P1, P2, ...). Anonymized per scoping §1.2; assigned monotonically at row insertion. No real names anywhere. |
 | 2 | `tier` | enum | yes | One of `T1` / `T2` / `T3`. Determinism rule per §2. |
 | 3 | `channel_detail` | enum | yes | Per §2 enumeration scoped to tier. |
-| 4 | `first_contact_at` | ISO-8601 UTC datetime | yes | Timestamp of UD's first outbound DM (T1), public-post publish time (T2 — same for all candidates from one post), or Prolific session-listing publish time (T3). Locks `tier` per §2 determinism rule. |
+| 4 | `first_contact_at` | ISO-8601 UTC datetime | yes | Timestamp of the within-tier first-contact event: UD's first outbound DM (T1), public-post publish time (T2 — same for all candidates from one post), or Prolific session-listing publish time (T3). **Does NOT drive cross-tier resolution** — `tier` is set by the §2 relationship-class priority rule (T1 > T2 > T3). This column is the within-tier event timestamp, retained for funnel timing and recruitment-velocity analysis. |
 | 5 | `prescreen_q1_weekly_llm_hours` | integer | yes if pre-screen sent | Per scoping §2.2 Q1; `≥2` qualifies. Stored as the integer the candidate reports; threshold check is a derived field, not stored. |
 | 6 | `prescreen_q2_prior_aoven_exposure` | boolean | yes if pre-screen sent | Per §2.2 Q2; `false` qualifies. |
 | 7 | `prescreen_q3_aoven_team_or_rater` | boolean | yes if pre-screen sent | Per §2.2 Q3; `false` qualifies. |
@@ -204,7 +208,7 @@ The schema is analysis-ready for the §2.4 stratified-by-tier Q-D analysis and t
 
 ## 8. Audit-trail constraints
 
-1. **Tier determinism (§2):** `tier` is recorded at first-contact event; never overwritten.
+1. **Tier determinism (§2):** `tier` is set by relationship-class priority (T1 > T2 > T3) at first-contact event; never overwritten. Cross-tier appearances are disclosed in `notes` for audit but do not mutate `tier`.
 2. **Append-only post-consent (§1):** rows where `consent_status = 'consented'` are immutable except `scheduling_status` (monotonic) and `consent_status → withdrawn` per §1.4 of the scoping doc.
 3. **Exclusion-flag earliest-event rule (§4):** first-detected disqualifying criterion wins; subsequent disqualifications appended to `notes`.
 4. **No real-name fields (§3):** `participant_id` is the only identifier in the file. No name, no email, no employer, no city. UD maintains a separate, encrypted, never-committed contact map outside this file per scoping §1.2.
@@ -232,4 +236,4 @@ The schema is analysis-ready for the §2.4 stratified-by-tier Q-D analysis and t
 
 ---
 
-*End of v0.1. Awaiting CEO countersign on AOV-152 per binding spec sign-off route.*
+*End of v0.1.1. Mod-A (CEO `5ed338ab`) folded: §2 + §3 col 4 + §8.1 updated to relationship-class priority. Awaiting CEO single-pass close on AOV-152 per `5ed338ab` sign-off conditions.*
