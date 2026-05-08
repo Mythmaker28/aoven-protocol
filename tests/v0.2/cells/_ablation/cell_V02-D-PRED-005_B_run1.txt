@@ -1,0 +1,32 @@
+**Short answer:** Probably not, but the probability is non-trivial — somewhere in the 10–25% range based on current trajectories and expert elicitations.
+
+**The technical bar**
+
+Breaking RSA-2048 with Shor's algorithm requires:
+- ~2,000–4,000 *logical* qubits (post-error-correction), depending on the variant. Regev's 2023 algorithm and follow-ups (Chevignard–Fouque–Schrottenloher 2024) cut this somewhat.
+- Gidney–Ekerå (2021) estimated ~20 million *physical* qubits and ~8 hours of runtime under surface-code assumptions with physical error rates around 10⁻³.
+- Sustained coherent operation across billions of gate cycles.
+
+**Where the field actually is**
+
+- Largest superconducting systems are in the ~1,000–1,500 physical qubit range; roadmaps (IBM, Google) target 10⁵–10⁶ physical qubits in the early 2030s, but roadmaps slip.
+- Logical qubit demonstrations exist (Google's below-threshold result, neutral-atom logical operations), but the count of high-fidelity logical qubits is still in the single digits to low tens.
+- The hardest unsolved engineering problem isn't qubit count per se — it's scaling while maintaining the error rate and cycle time needed for a months-long factoring run without compounding control-system overhead.
+
+**Expert consensus**
+
+The Global Risk Institute's annual quantum-threat survey has consistently put ~15–30% probability on a cryptographically relevant quantum computer by ~2034 (with substantial dispersion). Mosca's "Theorem" framing (migrate before threat × shelf-life > horizon) is why NIST PQC standardization (ML-KEM, ML-DSA finalized 2024) is being pushed *now* even though the threat is probably >10 years out.
+
+**Reasons to revise upward**
+
+- Algorithmic improvements have been steady and substantial; the qubit/gate counts in 2025 estimates are far below 2012 estimates.
+- Neutral-atom and photonic platforms are scaling faster than predicted three years ago.
+- A single architectural breakthrough (e.g., topological qubits at scale, or much better magic-state distillation) could collapse the timeline by 5+ years.
+
+**Reasons to revise downward**
+
+- Every quantum hardware roadmap has slipped.
+- "Stored data, harvested for later decryption" risk is real, but actual on-demand RSA-2048 break by 2035 requires *all* of: scale, fidelity, runtime, and classical co-processing infrastructure to land simultaneously.
+- No public demonstration has factored anything beyond toy numbers using genuine Shor-with-error-correction (the "Shor of 21" results don't generalize).
+
+**My estimate:** ~15% probability by end of 2035. Most likely outcome is that RSA-2048 survives to 2035 but is broken sometime in the 2035–2045 window. The "harvest now, decrypt later" threat already justifies migration regardless.

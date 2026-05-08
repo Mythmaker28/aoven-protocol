@@ -1,0 +1,37 @@
+# Anti-amyloid antibodies in early AD: what the evidence shows
+
+## Statistical efficacy: yes, modest
+
+**Lecanemab (CLARITY-AD, NEJM 2023, n=1795, 18 mo):**
+- CDR-SB: 1.21 vs 1.66 (adjusted difference −0.45; ~27% slowing)
+- Significant on all secondary endpoints (ADAS-Cog14, ADCS-MCI-ADL, ADCOMS)
+- Amyloid PET reduction: ~59 centiloids vs +3 placebo
+
+**Donanemab (TRAILBLAZER-ALZ 2, JAMA 2023, n=1736, 76 wk):**
+- iADRS: ~35% slowing in low/medium tau cohort; ~22% in combined population
+- CDR-SB difference ~−0.7
+- ~17% reached amyloid-negativity allowing discontinuation
+
+Both produce real, replicated, target-engagement-consistent slowing of decline. The amyloid hypothesis has clinical confirmation it previously lacked.
+
+## Clinical meaningfulness: contested
+
+- Absolute CDR-SB differences (~0.4–0.7) sit below most published MCIDs (≈1–2 points). Whether a patient or family would notice is unclear.
+- "Time-saved" reframings suggest 4–7 months delay over 18 months, but extrapolation past trial duration is unvalidated.
+- Functional unblinding via ARIA-driven MRI findings/infusion symptoms likely inflates reported effect size to some unknown degree.
+- No head-to-head trials. Long-term (>2y) trajectory unknown.
+
+## Harms are non-trivial
+
+- **ARIA-E**: lecanemab ~12.6%, donanemab ~24%
+- **ARIA-H**: lecanemab ~17.3%, donanemab ~31%
+- **Symptomatic ARIA**: ~3% lecanemab, ~6% donanemab
+- **APOE4 homozygotes**: substantially elevated ARIA and serious-ARIA risk; EMA initially restricted lecanemab on this basis
+- Deaths in open-label extensions, particularly with concomitant tPA or anticoagulation
+- Burden: q2-week (lecanemab) or q4-week (donanemab) infusions plus serial MRI surveillance
+
+## Bottom line
+
+Effective in the narrow sense (disease-modifying signal, statistically robust, mechanistically coherent). Effectiveness in the patient-relevant sense is genuinely uncertain: the benefit is small, the safety/logistics burden is large, and whether ~25–35% slowing on composite scales translates to outcomes families value has not been demonstrated. Reasonable clinicians and guideline bodies (FDA full approval; EMA restricted; some national bodies declined reimbursement) have reached different conclusions on the same data — that disagreement reflects the underlying signal, not misreading of it.
+
+Candidate selection (early symptomatic AD, biomarker-confirmed, APOE4 status known, no anticoagulation, MRI access, shared decision-making about modest benefit vs. real risk) is doing most of the work.

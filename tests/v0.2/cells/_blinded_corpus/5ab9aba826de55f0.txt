@@ -1,0 +1,9 @@
+I don't have reliable data for the global daily new COVID-19 case count on 2024-12-31.
+
+By late 2024, most countries (including the WHO's primary dashboard) had stopped publishing daily case counts, shifting to weekly or monthly aggregates, and reporting was severely under-counted due to widespread at-home testing and discontinued surveillance programs. Any single-day global figure for that date would be neither comprehensive nor comparable to pandemic-era counts.
+
+If you need a number, the closest defensible sources would be:
+- WHO COVID-19 dashboard (weekly aggregates, divided down — with heavy caveats)
+- Our World in Data's archived dataset (which itself stopped active updates in 2024)
+
+I don't have those specific values memorized, and I won't fabricate one. If you want, point me at a source and I'll work from it.

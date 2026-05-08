@@ -1,0 +1,34 @@
+# Vitamin D Supplements and Cancer Risk
+
+The evidence is **mixed and modest at best**. Here's what the research shows:
+
+## What large trials have found
+
+**VITAL trial (2018, ~25,000 participants):** Daily 2,000 IU vitamin D3 did **not** significantly reduce overall cancer incidence over ~5 years. However, secondary analyses suggested:
+- A possible reduction in cancer **mortality** (~17% lower) when early follow-up years were excluded
+- A possible reduction in advanced/metastatic cancer
+
+**Meta-analyses:** Pooled data generally show:
+- **No clear effect on cancer incidence**
+- **A small reduction (~6–13%) in cancer mortality** with daily (not bolus) supplementation
+
+## Where the signal is strongest
+
+- **Cancer death** rather than cancer occurrence
+- **Daily dosing** rather than large monthly/annual boluses
+- **People with low baseline vitamin D** (deficient/insufficient) — those already replete see little benefit
+- Some evidence is stronger for **digestive-tract cancers**
+
+## Important caveats
+
+1. **Correlation ≠ causation** in observational studies. Low vitamin D often tracks with obesity, low sun exposure, poor health, and inflammation — any of which could independently raise cancer risk.
+2. Mendelian randomization studies (which reduce confounding) have generally **not** supported a causal protective effect on most cancers.
+3. High doses don't appear more protective and can cause harm (hypercalcemia, kidney stones).
+
+## Bottom line
+
+- If you're **deficient**, correcting deficiency is reasonable for general health and may modestly reduce cancer mortality.
+- If you're **already sufficient**, supplementing is unlikely to lower your cancer risk meaningfully.
+- Vitamin D is **not** a proven cancer-prevention strategy — established measures (not smoking, screening, healthy weight, limiting alcohol, HPV vaccination) have far stronger evidence.
+
+For personal decisions, a 25-hydroxyvitamin D blood test and a conversation with your clinician is the right path.

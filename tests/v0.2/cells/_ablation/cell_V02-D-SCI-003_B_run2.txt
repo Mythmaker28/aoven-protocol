@@ -1,0 +1,27 @@
+**Probability estimate: ~5–12%, depending on what "enable" means.**
+
+Resolving the question requires pinning down three things the asker usually conflates:
+
+**1. Technical readiness (high probability, ~70–85% by 2036)**
+Base editing already works in somatic clinical trials (Verve's PCSK9 program, Beam's BEAM-101). Embryo-stage editing with ABE/CBE in non-human primates and human zygotes (research-only) is progressing. Off-target rates and bystander edits are dropping but not solved; mosaicism in embryos remains a real obstacle. Prime editing may overtake base editing for many use cases before 2036, which complicates the question's framing.
+
+**2. Regulatory permission (the binding constraint, ~5–15%)**
+- US: FDA is statutorily barred from accepting heritable-editing INDs by the appropriations rider renewed every year since 2015. Reversal requires Congress.
+- UK: HFEA cannot license heritable editing under current statute; would need primary legislation.
+- EU: Oviedo Convention Article 13 prohibits it.
+- China: tightened post–He Jiankui (2019 criminal code amendment).
+- 2023 Third International Summit reaffirmed "unacceptable at this time."
+
+The 2018 He Jiankui episode hardened, not loosened, the global stance. No major jurisdiction is on a visible path to authorization in the next decade. Plausible "yes" pathways are narrow: UK liberalization for severe mitochondrial-adjacent monogenic cases, or a single compelling indication (e.g., both parents homozygous for a severe dominant disorder) where PGD cannot help.
+
+**3. Medical demand (weak)**
+PGD + IVF handles >95% of plausible indications. The residual case-population is tiny, which weakens the regulatory pressure that would otherwise drive change.
+
+**Decomposition:**
+- First sanctioned clinical pregnancy in *any* jurisdiction by 2036: **~10–15%**
+- Approved therapy in a major Western regulator: **~2–5%**
+- Unsanctioned/rogue use somewhere: **~30–50%** (but this isn't "germline gene therapy" in the regulatory sense)
+
+**Confidence in my own estimate: moderate-low.** The dominant uncertainty is political, not scientific, and political-bioethical shifts have fat-tailed timing distributions. A single high-profile success in a permissive jurisdiction could collapse the timeline; a second He-Jiankui-style scandal could extend it past 2040.
+
+**Headline number, if forced: ~8%** for "first legitimate clinical germline base-editing intervention in humans by May 2036."

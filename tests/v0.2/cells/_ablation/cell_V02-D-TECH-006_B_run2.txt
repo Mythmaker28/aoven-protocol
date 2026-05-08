@@ -1,0 +1,30 @@
+# Business risks of building on a Llama-3-licensed model in 2026
+
+**1. The 700M MAU trapdoor.** The Llama 3 Community License requires you to request a separate license from Meta if your products (or affiliates') monthly active users exceeded 700M at the Llama 3 release date. Meta grants it "in its sole discretion." If you're acquired by, or merge into, a large entity—or your own growth crosses that line—your right to use the model can be withdrawn. This is unusual among "open" licenses and is a real M&A and growth-cap risk.
+
+**2. Unilateral AUP changes.** The Acceptable Use Policy is incorporated by reference and Meta can update it. A use case that's compliant today (ad targeting, certain biometric inferences, regulated-industry deployments, military-adjacent work) can be retroactively non-compliant. You have no negotiated grandfather clause.
+
+**3. Output-use restrictions are still load-bearing.** You can't use Llama outputs (or derivatives) to improve a non-Llama LLM. If your roadmap involves swapping to a different base model later—Mistral, Qwen, an in-house model—any distillation, synthetic-data pipeline, or RLHF dataset built off Llama is contaminated and has to be rebuilt from clean inputs. That's a switching-cost mine.
+
+**4. Naming and attribution drag.** Derivative models must include "Llama" in the name; products must display "Built with Llama." This couples your brand to Meta's and signals your stack to competitors and customers, including enterprise buyers who may have Meta-specific procurement concerns.
+
+**5. No IP indemnity.** Meta disclaims warranties and offers no indemnification for training-data-related IP claims. The active US copyright suits against Meta (Kadrey et al.) flow downstream: a hostile ruling on Meta's training corpus exposes downstream commercial users without contractual cover. Compare to Microsoft/Google/Anthropic enterprise terms that do indemnify.
+
+**6. Meta is a competitor, not a vendor.** Meta has no commercial obligation to you, no SLA, no support, no notice period for license changes on future versions. If your category overlaps Meta's (consumer social, messaging, ads, AR/VR, agents, creator tools), expect terms on Llama 5/6 to tighten where it suits Meta.
+
+**7. Llama 3 is aging by 2026.** Llama 4 (and likely 4.1/5) exists; the frontier has moved. Building today on Llama 3 specifically means: weaker baseline vs. competitors using newer weights, smaller community of fresh fine-tunes, declining tooling/optimisation attention, and pressure to migrate—at which point items 3 and 4 bite.
+
+**8. Export-control and jurisdictional drift.** US BIS rules on advanced AI model weights have tightened through 2024–2025. A future rule that restricts redistribution of certain open-weight models to specified jurisdictions can fragment your deployment footprint (China, Russia, parts of MENA), and Meta's license can be amended to mirror those restrictions.
+
+**9. Sublicense pass-through.** Your customers and integrators inherit the Community License terms. Enterprise legal teams increasingly red-flag the 700M clause and the AUP-by-reference clause during procurement. Expect deal friction, especially with Fortune 500 and public-sector buyers.
+
+**10. Hosting-provider concentration.** "Open weights" in practice often means hosted on Bedrock, Azure, Together, Fireworks, Groq, etc. Each adds its own ToS layer. A "rug" at the hosting layer (price hike, deprecation, region pull-out) is a separate failure mode the license itself doesn't insulate you from.
+
+## Mitigations worth the effort
+- Architect for **model portability**: abstract the inference interface, keep prompts/evals model-agnostic, avoid Llama-specific fine-tunes on critical paths.
+- Keep a **clean-room synthetic-data pipeline** sourced from a model whose license permits competitor-training, so you can leave Llama without burning your data assets.
+- Maintain **dual-model evals** in CI against at least one non-Llama model (Mistral, Qwen, DeepSeek, or a closed API).
+- Get **written legal sign-off** specifically on the 700M clause against your cap table and acquisition scenarios.
+- For enterprise sales, prepare a **license-disclosure pack** so procurement doesn't stall the deal.
+
+Net: Llama 3 in 2026 is viable as a commodity component behind an abstraction layer. It's risky as a strategic dependency or a brand-coupled differentiator.

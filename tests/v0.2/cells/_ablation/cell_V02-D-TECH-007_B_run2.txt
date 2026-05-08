@@ -1,0 +1,22 @@
+Short answer: **Probably not in its current form, but it's a plausible early step toward one.** The honest read, separating the device from the category:
+
+**Against "meaningful new platform" (today)**
+
+- **Sales are weak.** Reported unit volumes are in the low hundreds of thousands, well under Apple's own internal targets. Apple reportedly cut production and paused/slowed work on the Vision Pro 2 in favor of a cheaper variant. That's not the trajectory of iPhone or even Apple Watch.
+- **No killer use case has emerged.** After two years on the market, the dominant uses are "big movie screen" and "Mac virtual display." Both are nice, neither is platform-defining. There's no "Maps + camera + App Store" inflection like 2008.
+- **Developer commitment is shallow.** Major apps (Netflix, YouTube, Spotify) declined to ship native versions. visionOS app counts plateaued. Without third-party gravity, it's a peripheral, not a platform.
+- **Ergonomics still disqualify it for most-of-day use.** Weight, battery tether, social opacity (the EyeSight gimmick hasn't fixed the "person wearing a face computer" problem), and field-of-view limits are not minor polish issues — they're physics and optics that need generational work.
+- **Price.** $3,499 isn't a launch tax that comes down to mass-market in one cycle; the BOM is structurally expensive (micro-OLED, lenses, sensors, dual chips).
+
+**For "yes, eventually"**
+
+- **The interaction model is genuinely new and largely works.** Eye-tracking + pinch as the primary input is the first post-touch UI primitive that doesn't feel like a tech demo. That is the kind of foundational thing platforms get built on.
+- **Spatial video / spatial photos** is a small but real content wedge that compounds — Apple is seeding capture on iPhone, which is the same playbook that bootstrapped Retina, then ProRes, then computational photography.
+- **Apple has the patience and balance sheet** to iterate for a decade at low volumes. Watch took ~3 generations to find its footing (health/fitness). AirPods took two. Vision Pro is gen 1.
+- **The strategic logic is defensive as much as offensive.** If glasses-class spatial computing becomes real (Meta, Google, possibly others), Apple needs an OS, an SDK, a developer base, and a hardware supply chain ready. Vision Pro buys all four, even at a loss.
+
+**Most defensible position**
+
+Vision Pro itself is unlikely to be "the iPhone of spatial computing." It's more analogous to the **Newton, or the original Mac Portable**: directionally right, commercially marginal, useful mostly as the platform that ships the SDK and trains the next team. The meaningful platform — if it arrives — is probably a lighter, glasses-form-factor device 5–8 years out, running a descendant of visionOS, and it will retroactively make Vision Pro look important. If that device doesn't ship, Vision Pro will look like Google Glass with a better OS.
+
+So: not yet a meaningful platform. A credible bet on one. The probability is materially below 50% on the current evidence, and the burden of proof sits with Apple's next two hardware revisions.

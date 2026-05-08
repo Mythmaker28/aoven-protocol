@@ -1,0 +1,23 @@
+# Aspartame and Cancer Risk at Typical Consumption Levels
+
+**Short answer:** The weight of evidence indicates aspartame is **not meaningfully carcinogenic at typical consumption levels**, though the IARC classification has introduced some hedging language into the consensus.
+
+## Key Regulatory/Scientific Positions
+
+**IARC (July 2023)** classified aspartame as **Group 2B — "possibly carcinogenic to humans."** This is the same category as aloe vera extract and pickled vegetables. Group 2B means there is *limited* evidence in humans and *less than sufficient* evidence in experimental animals. It is a hazard identification, not a risk assessment — it does not say aspartame causes cancer at realistic doses.
+
+**JECFA (FAO/WHO Joint Expert Committee, same 2023 review)** reaffirmed the **Acceptable Daily Intake (ADI) of 0–40 mg/kg body weight**, concluding the data did not justify changing it. A 70 kg adult would need to drink roughly **9–14 cans of diet soda per day** to exceed the ADI.
+
+**FDA, EFSA, Health Canada, FSANZ** all maintain that aspartame is safe at current intake levels. EFSA's 2013 full re-evaluation found no carcinogenicity concern.
+
+## What the Evidence Actually Shows
+
+- **Human epidemiology:** A few observational studies (notably the Italian Ramazzini cohort and the French NutriNet-Santé study, 2022) reported modest associations with certain cancers, but these are confounded by reverse causation (people with health concerns switch to diet products) and dietary recall limitations.
+- **Animal studies:** The Ramazzini Institute's rodent studies have driven much of the concern, but their methodology (lifetime exposure, histopathology interpretation) has been criticized by EFSA and others. Standard NTP-style bioassays have been negative.
+- **Mechanistic data:** No consistent genotoxicity signal at relevant doses.
+
+## Bottom Line
+
+At **typical consumption** (a few diet sodas, some sweetener packets), real-world intake is generally an order of magnitude or more below the ADI. The carcinogenicity signal at those exposures is weak, inconsistent, and subject to substantial confounding. The IARC 2B label flags that the question isn't fully closed, not that ordinary use is dangerous.
+
+People with **phenylketonuria (PKU)** should avoid aspartame for unrelated reasons (phenylalanine content).

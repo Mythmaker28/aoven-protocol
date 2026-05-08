@@ -1,0 +1,37 @@
+# Anti-amyloid antibodies in early Alzheimer's: efficacy assessment
+
+## Short answer
+They produce **statistically significant but clinically modest** slowing of cognitive decline in early symptomatic AD (MCI due to AD or mild dementia, amyloid-PET positive). Whether that slope change is **clinically meaningful** to patients is contested. They are not disease-reversing and not curative.
+
+## The pivotal trials
+
+**Lecanemab — CLARITY-AD (van Dyck et al., NEJM 2023)**
+- 1,795 participants, 18 months
+- CDR-SB: adjusted mean change 1.21 (lecanemab) vs 1.66 (placebo) — difference **−0.45** (27% relative slowing)
+- Significant effects on ADAS-Cog14, ADCS-MCI-ADL, amyloid PET clearance
+- ARIA-E 12.6% (vs 1.7%); ARIA-H 17.3% (vs 9.0%); symptomatic ARIA-E ~2.8%
+- Three deaths during open-label extension plausibly linked to ARIA, particularly with anticoagulation or APOE ε4 homozygosity
+
+**Donanemab — TRAILBLAZER-ALZ 2 (Sims et al., JAMA 2023)**
+- 1,736 participants, 76 weeks, stratified by tau PET
+- iADRS: −6.02 (donanemab) vs −9.27 (placebo); CDR-SB difference of similar magnitude (~0.7 point) in low/medium-tau population
+- ARIA-E 24.0%; ARIA-H 31.4%; three trial deaths attributed to ARIA
+- Larger absolute amyloid removal, dosing can stop after plaque clearance
+
+## What the magnitude actually means
+- The **minimal clinically important difference** on CDR-SB is generally cited as ~1.0–2.0 points. Both drugs fall below that threshold over the trial duration.
+- Modeled time-saved estimates: ~5–7 months of delay to next disease stage over 18 months, with wide uncertainty.
+- No trial has yet demonstrated long-term preserved independence, delayed institutionalization, or mortality benefit. Open-label extensions are ongoing.
+
+## Where efficacy is weakest / unknown
+- **APOE ε4 homozygotes**: smaller signal, much higher ARIA risk — net benefit unclear.
+- **Moderate or later-stage AD**: not studied; no efficacy claim.
+- **Pre-symptomatic amyloid-positive individuals**: AHEAD 3-45 and TRAILBLAZER-ALZ 3 still reading out.
+- **Real-world populations** (older, more comorbid, on anticoagulants) underrepresented in trials.
+
+## Regulatory state
+- Lecanemab: FDA traditional approval (Jul 2023); EMA approved with restriction excluding APOE ε4 homozygotes (2024).
+- Donanemab: FDA approval Jul 2024; EMA initially negative, later limited approval excluding ε4 homozygotes.
+
+## Bottom line
+"Effective" depends on the threshold. Against placebo on validated cognitive scales: yes, replicated across two molecules and two sponsors, with biomarker confirmation. Against a clinically meaningful threshold for an individual patient over 18 months: borderline at best, and offset by a non-trivial ARIA risk profile that requires MRI surveillance and APOE genotyping. The class establishes amyloid as a modifiable target but does not vindicate the strong form of the amyloid hypothesis.

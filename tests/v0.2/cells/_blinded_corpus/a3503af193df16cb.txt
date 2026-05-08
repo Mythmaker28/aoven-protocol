@@ -1,0 +1,30 @@
+# CRISPR base editing → germline gene therapy in humans by 2036
+
+The answer hinges sharply on what "enable" means. Three readings, three very different probabilities:
+
+## 1. Technical capability demonstrated in research embryos (no implantation)
+**~85–95%.** Arguably already crossed: base editing has been done in non-viable human embryos and in non-human primate embryos. Within 10 years, base editing of viable-stage human embryos in research settings (under permitted frameworks like the UK 14-day rule, now extended in some proposals) is highly likely. Prime editing and improved adenine/cytosine base editors will keep maturing.
+
+## 2. Sanctioned clinical germline therapy resulting in live births
+**~3–8%.** The blockers are not primarily technical, they are:
+- **Regulatory:** US Dickey–Wicker + FDA appropriations rider blocks IND review of heritable edits; UK HFEA prohibits implantation; China criminalized it post-He Jiankui (2019); WHO 2021 framework opposes clinical use.
+- **Scientific consensus:** NASEM (2017) and ISSCR (2021) require resolution of safety, efficacy, and "broad societal consensus" — none of which is close.
+- **Need:** PGD + IVF already addresses most monogenic cases for prospective parents who have unaffected embryos available, narrowing the legitimate clinical niche to a small set (e.g., both parents homozygous for a dominant disorder).
+- **Base-editing-specific safety gaps:** Bystander edits, Cas9-independent off-target deamination, and guide-independent RNA edits are still being characterized; long-term data in somatic trials (Verve, Beam) will be the gating evidence and won't fully de-risk germline by 2036.
+
+## 3. Unsanctioned / rogue clinical use producing live births
+**~15–30%.** He Jiankui's 2018 CCR5 work proved the bar to entry is low for a determined clinician with IVF access. Base editing actually lowers the technical risk profile (no DSBs), which paradoxically makes another unsanctioned attempt more likely, not less. Whether it would be *disclosed* is a separate question.
+
+## Aggregate
+If "enable germline gene therapy in humans" means **a clinically legitimate pathway exists and is used** — I'd put it at roughly **5–10%** by 2036. The 10-year window is short relative to how regulatory and consensus-building processes have historically moved on heritable editing, and the somatic base-editing trials that would supply the safety substrate are themselves only at Phase 1/2.
+
+### Key things that would move my estimate up
+- A sustained safety record (>5 years, >1000 patients) from somatic base-editing trials with no oncogenic or off-target signal.
+- A tractable indication where PGD genuinely cannot help (e.g., mitochondrial replacement-style cases extended to nuclear edits).
+- Convergence of at least one major regulator (UK HFEA most plausible) toward a structured pathway.
+
+### Things that would move it down
+- Any serious adverse event in current somatic CRISPR/base-editing trials.
+- A second He Jiankui-style scandal triggering tighter international prohibitions.
+
+**Bottom line:** Technical readiness is plausible within 10 years; clinical/regulatory enablement is not. Bet against, but not strongly.

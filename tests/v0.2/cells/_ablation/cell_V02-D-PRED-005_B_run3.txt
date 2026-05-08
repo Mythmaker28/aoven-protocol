@@ -1,0 +1,31 @@
+Probably not, but it's not negligible. My rough estimate: 10–25% by 2035.
+
+**What breaking RSA-2048 actually requires**
+
+Gidney & Ekerå (2021) showed RSA-2048 needs roughly 20 million noisy physical qubits running for ~8 hours, assuming surface-code error rates around 10⁻³ per gate. More recent optimizations (Chevignard, Fouque, Schrottenloher, 2024) cut the logical-qubit count to ~1,700 but still demand millions of physical qubits and deep, coherent circuits. The bottleneck is not qubit count alone — it's the product of physical qubits × gate fidelity × wall-clock coherence.
+
+**Where the frontier is in 2026**
+
+- IBM's roadmap targets ~200 logical qubits by 2029 (Starling), ~2,000 by ~2033 (Blue Jay). That's the published plan, not the delivery.
+- Google's Willow (2024) demonstrated below-threshold surface-code scaling — a real milestone, but on ~100 physical qubits per logical qubit with one logical qubit at distance 7.
+- Quantinuum, IonQ, PsiQuantum, Atom Computing all have credible paths but none are within two orders of magnitude of Shor-on-RSA-2048.
+
+The gap from "below threshold demonstrated" to "millions of physical qubits with sustained 8-hour coherent operation" is enormous and historically these scaling steps take longer than roadmaps claim.
+
+**What would push probability up**
+
+- A factor-of-10+ algorithmic improvement (Regev's 2023 variant already cut depth; further wins plausible).
+- A photonic or neutral-atom architecture leapfrogging superconducting scaling.
+- An undisclosed program (NSA, PLA) running ahead of public state of the art — historically the classified gap on cryptanalytic hardware has been 5–15 years.
+
+**What pushes it down**
+
+- Every prior quantum roadmap has slipped.
+- Magic-state distillation overhead remains the dominant cost and has resisted dramatic compression.
+- Engineering a million-qubit cryogenic system is a wholly unsolved systems problem, not just a qubit problem.
+
+**Practical implication**
+
+NIST finalized ML-KEM, ML-DSA, SLH-DSA in August 2024 precisely because the tail risk is non-trivial and harvest-now-decrypt-later attacks make 2035 the wrong deadline anyway — long-confidentiality data encrypted today is already exposed. If you're asking for migration-planning purposes, the 10–25% number is high enough that the answer is "migrate now," independent of whether the median estimate is 2035 or 2045.
+
+If you want a single number: ~15% by 2035, ~50% by 2045. Wide error bars on both.

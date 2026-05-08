@@ -1,0 +1,25 @@
+Short answer: probably not — or at least, the evidence through early 2026 leans against it, and the burden of proof is now on the bull case.
+
+**What would have to be true for "yes"**
+A new computing platform needs three things historically: (1) a use case the incumbent platforms can't serve, (2) a developer ecosystem with rising marginal returns, (3) a price/ergonomics curve that bends toward mainstream within ~3 product generations. iPhone hit all three by year two. Apple Watch took ~four years. AirPods, ~two.
+
+**Where Vision Pro is failing those tests**
+
+1. *Use case.* The "infinite display + immersive media" pitch is real but narrow — it's a premium accessory for solo knowledge workers and cinephiles, not a category. No spatial-native workflow has emerged that you can't approximate on a Mac + iPad. "Spatial computing" remains a marketing frame more than a job-to-be-done.
+
+2. *Developer signal.* Netflix, YouTube, Spotify declined native apps. Unity/Unreal support exists but flagship spatial titles haven't materialized. App Store revenue per device is reportedly low. This is the inverse of the iPhone trajectory, where developers showed up before Apple paid them to.
+
+3. *Unit economics.* Year-one sales tracked well under 500K against internal targets reportedly closer to 1M. Production was cut. Returns ran elevated for a $3,500 device. The cheaper SKU rumored for 2026–27 will require real sensor/display compromises; it's unclear it preserves the differentiation.
+
+4. *Ergonomics.* 600g+ on the face, tethered battery, social opacity (EyeSight is a workaround, not a fix). These aren't software-fixable in the current industrial design.
+
+**Where the bull case retains some force**
+- Display + passthrough quality is a genuine generational leap; this is the first headset where the hardware isn't the gating factor.
+- Apple's category playbook is to ship v1 expensive and unloved, then compress cost over 3–5 years (Watch is the closest analog).
+- Eye+pinch input is the first headset input paradigm that isn't a regression from touch for non-gaming tasks.
+- The architectural bet — VR hardware running AR-first software — is likely the correct long-term convergence point, even if Apple doesn't win it.
+
+**Calibrated read**
+Vision Pro is a credible *technology* demonstration and a *non-credible product* at current price/ergonomics. Whether it becomes a meaningful platform depends almost entirely on whether Apple ships a sub-$1,500, sub-400g version with the same display fidelity before developer attention fully decays. That's a hardware roadmap question, and the public evidence as of May 2026 doesn't yet show that device exists in a shippable form.
+
+If forced to a probability: ~25–30% that the Vision line becomes a meaningful platform (≥10M annual units, distinct developer ecosystem) by 2030. Higher than zero because of Apple's distribution and patience; well under 50% because nothing in the year-one data points up and to the right the way a new platform should.

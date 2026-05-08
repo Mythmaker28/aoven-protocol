@@ -1,0 +1,22 @@
+Short answer: For most people in wealthy countries in 2026, factory-farmed meat is hard to defend on any ethical framework that grants nontrivial weight to animal suffering. Other categories (subsistence, hunted game, well-regulated pasture systems, individuals with genuine medical constraints) are defensible to varying degrees. The blanket question hides a category error.
+
+Breaking it down:
+
+**Where the defense fails**
+- ~70–80 billion land animals and ~1–2 trillion fish are killed per year, the overwhelming majority in conditions any honest observer would call cruel if inflicted on a dog.
+- The traditional "necessity" defense (protein, B12, iron, complete amino acids) is empirically weak in 2026: precision-fermented and plant-based substitutes are nutritionally adequate, broadly available, and price-competitive in most OECD markets. "I prefer the taste/texture" is a preference claim, not a moral one.
+- Climate/land-use externalities (~14–20% of anthropogenic GHGs, ~30% of habitable land) impose costs on third parties who didn't consent.
+- The "animals lack moral status" move requires a coherent criterion (sentience, sapience, species membership) that either (a) excludes infants and the cognitively disabled, or (b) doesn't actually exclude pigs, cattle, and chickens.
+
+**Where the defense survives**
+- Subsistence contexts (Inuit, pastoralist communities, food-insecure regions) where alternatives are unavailable or culturally/ecologically destructive to impose.
+- Hunted game from healthy populations: the animal had a wild life and one bad day; arguably better than the wild baseline of starvation/predation.
+- Bivalves (mussels, oysters, clams): no plausible sentience, often net-positive for ecosystems.
+- Genuine medical cases — narrow but real (e.g., severe allergen profiles, certain GI conditions). Self-reported "I feel better on meat" is weaker evidence than people treat it as.
+- Pasture-raised ruminants on land that can't grow crops: defensible on land-use grounds, still has the killing problem.
+
+**The honest cruxes**
+1. How much moral weight do you assign to a chicken's suffering relative to a human's? If your answer is "zero," you owe an argument. If it's "nonzero," the math on 70 billion lives is brutal.
+2. Are you willing to apply the same standard to your own consumption that you'd apply to a stranger's? Most meat-eaters' stated principles don't survive that test.
+
+So: defensible in narrow cases, not defensible as the default Western diet. The interesting move in 2026 isn't whether to eat meat — it's whether the people who already think factory farming is wrong will act on it, or keep paying for it.

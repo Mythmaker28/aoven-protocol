@@ -1,0 +1,27 @@
+# Microplastics and Human Health: Current State of Evidence
+
+**Short answer:** As of mid-2026, the honest answer is *not yet established with confidence*. There are biologically plausible mechanisms, mounting associative findings, and a few stronger signals — but causal, dose-response evidence at current real-world exposure levels remains thin.
+
+## What we can say with reasonable confidence
+
+- **Exposure is ubiquitous and measurable.** Microplastics (MPs) and nanoplastics (NPs) have been detected in human blood, placenta, lung tissue, testes, breast milk, atherosclerotic plaque, and stool. This part is no longer in serious dispute.
+- **Particles cross biological barriers.** Sub-micron and nanoscale fragments can enter the bloodstream and accumulate in tissues; this is established in animal models and increasingly corroborated in human autopsy/biopsy work.
+- **In vitro and animal studies show harm at high doses.** Oxidative stress, inflammation, gut microbiome disruption, endocrine effects (often via co-contaminants like phthalates and BPA rather than the polymer itself), and reproductive effects have been demonstrated — but typically at exposures well above estimated human intake.
+
+## The strongest human signal so far
+
+The **Marfella et al. (NEJM, 2024)** study on carotid plaque is the most-cited human evidence: patients with detectable MP/NP in plaque had a ~4.5× higher rate of MI/stroke/death over ~34 months. This is **associative**, with plausible confounding (people more exposed to plastics may differ systemically), but it is the closest thing to a hard outcome signal in humans.
+
+## What remains genuinely unsettled
+
+1. **Dose-response at ambient levels.** We do not have good human studies showing harm scales with exposure within the range most people actually experience.
+2. **Disentangling polymer vs. additive vs. adsorbed-contaminant effects.** Much "microplastic harm" may really be plasticizer or sorbed-pollutant harm.
+3. **Particle heterogeneity.** "Microplastics" spans polymer types, sizes, shapes, and weathering states with very different toxicokinetics. Aggregating them obscures effect.
+4. **Measurement validity.** Detection methods (FTIR, Raman, pyr-GC/MS) disagree, and contamination during sampling is a chronic problem; some early human-tissue numbers are likely overstated.
+
+## A calibrated bottom line
+
+- **"Cause measurable harm"** — *probably yes* for some endpoints (inflammation markers, plaque association), but the magnitude attributable specifically to MP/NP exposure at typical levels is not well quantified.
+- **"At current exposure levels"** — *unproven causally*. The mechanistic and animal evidence justifies precaution; it does not yet justify confident statements like "microplastics are causing X disease in the general population."
+
+The defensible position: treat microplastics as a **probable but unquantified** contributor to cardiovascular and inflammatory risk, with the strongest near-term concern being vascular/plaque outcomes, while acknowledging that the field still lacks the dose-response and intervention data needed to move from "associated with" to "causes, by this much."

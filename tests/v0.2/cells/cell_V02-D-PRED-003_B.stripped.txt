@@ -1,0 +1,21 @@
+Best honest answer: uncertain, but not implausible. I'll lay out the reasoning rather than pretend to a number I can't justify.
+
+**Reference points (as of early 2026):**
+- BTC needs roughly a 2–3× move from recent ranges to clear $200k, depending on the spot price at the moment you're reading this.
+- Compounded over ~4 years, that's an annualized return of ~20–30%. BTC has historically delivered well above that on average, but with very fat-tailed dispersion.
+
+**Things that push probability up:**
+- Spot ETF flows institutionalized a buyer base that didn't exist in prior cycles.
+- The 2024 halving's supply shock typically takes 12–18 months to fully express in price.
+- Sovereign and corporate treasury adoption is a real, if small, marginal-buyer story.
+- Persistent fiscal deficits in major economies support the "debasement hedge" narrative.
+
+**Things that push probability down:**
+- $200k implies a market cap near $4T, which would make BTC larger than any single equity. Each doubling gets harder.
+- Regulatory tail risk (custody rules, tax treatment, stablecoin frameworks) hasn't been resolved.
+- A serious recession or liquidity crunch would likely drag BTC with risk assets first, even if it eventually recovers.
+- Historical drawdowns of 70–80% mean a "yes by 2030" path can still include a brutal interim.
+
+**My calibrated estimate:** somewhere in the 35–55% range, with most of my uncertainty in *when* rather than *whether*. I'd weight slightly above 50/50 conditional on no major regulatory crackdown, slightly below conditional on a 2026–2027 recession.
+
+Anyone giving you a confident "yes" or "no" is selling something. Prediction markets (Polymarket, Kalshi) are the most honest gauge of consensus — check them rather than trusting any single pundit, including me.

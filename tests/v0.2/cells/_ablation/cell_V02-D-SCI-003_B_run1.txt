@@ -1,0 +1,43 @@
+# Estimate: CRISPR base editing → human germline gene therapy by 2036
+
+The question is ambiguous on "enable," so I'll split it. Strictest reading first.
+
+## Reading A — clinically delivered heritable edit, approved in at least one jurisdiction
+**~5–10%.**
+
+Binding constraints are regulatory/normative, not technical:
+- US FDA is barred from accepting germline IND applications (appropriations rider, renewed annually since 2016).
+- UK HFEA permits research but not implantation.
+- WHO's 2021 framework explicitly advises against clinical heritable editing.
+- Post-He Jiankui (2018), China tightened its rules; the political cost of being the first mover went up, not down.
+- No serious patient-side demand exists for indications where PGD + IVF can't already select unaffected embryos. The narrow remaining set (both parents homozygous for a dominant disorder; certain polygenic profiles) is small enough that no major sponsor is pushing toward an IND.
+
+A 10-year window is short for that consensus to flip absent a forcing event.
+
+## Reading B — technical capability demonstrated in human embryos with an error profile a regulator could plausibly accept
+**~40–60%.**
+
+Base editing (and prime editing) already mitigates the dominant 2018-era objections — no double-strand breaks, lower indel rates, lower large-deletion risk. Remaining technical issues:
+- Bystander edits within the editing window (ABE/CBE).
+- Guide-independent off-targets (DNA and RNA), partially addressed in newer variants.
+- Mosaicism if editing post-fertilization rather than in gametes.
+- Long-term developmental consequences — unobservable on the relevant timescale, which itself is a regulatory blocker.
+
+Research-scale demonstrations in non-implanted human embryos are likely within the window. That is "enabling" in the engineering sense but not in the clinical sense.
+
+## Reading C — base editing is the modality used, conditional on any germline therapy happening
+**~60–75%**, conditional on Reading A occurring.
+
+If anyone does it, base or prime editing dominates Cas9 nuclease for this use case. The conditional is the load-bearing part; the unconditional probability is still bounded by Reading A.
+
+## Net
+If you want one number for the natural-language reading ("germline gene therapy in humans" = clinical use): **~7%**.
+
+The bottleneck is governance, not the editor. Asking how likely the editor is to be ready understates the answer; asking how likely clinical heritable editing is overstates the editor's role in the blocker.
+
+## Sensitivities that would move the estimate
+- A monogenic indication unreachable by PGD with a vocal patient cohort: +5–10pp.
+- Any state-sponsored program announcing intent (precedent: 2018 was a rogue actor, not state policy): +10–15pp.
+- A second He Jiankui–style event before 2030: −3–5pp (tightens consensus further).
+
+Confidence in the point estimate: low. The 90% interval I'd defend is roughly 2–20%.

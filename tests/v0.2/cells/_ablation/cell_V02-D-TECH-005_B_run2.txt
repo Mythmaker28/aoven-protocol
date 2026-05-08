@@ -1,0 +1,37 @@
+# pgvector first. Switch later only if you measurably outgrow it.
+
+## Why pgvector wins for a support chatbot at startup scale
+
+**1. Your corpus is small and your query pattern is simple.**
+A support chatbot's knowledge base is typically 10K–500K chunks (docs, tickets, KB articles). pgvector with HNSW handles this with sub-50ms p95 latency on a single Postgres instance. You don't need a distributed ANN system.
+
+**2. You need filtered search, and filters are where dedicated vector DBs hurt.**
+Support queries almost always carry metadata predicates: tenant_id, product_version, locale, doc_freshness, access_role. In pgvector you write `WHERE tenant_id = $1 AND lang = 'en' ORDER BY embedding <=> $2`. In Pinecone/Weaviate, metadata filtering is a second-class citizen — high-cardinality filters (per-tenant) degrade recall or force per-namespace indexes that get expensive fast.
+
+**3. One system to back up, monitor, and reason about.**
+You already need Postgres for users, conversations, ticket history, audit logs. Adding a second stateful system doubles the operational surface (separate auth, separate backup story, separate failure modes, sync drift between vector store and source-of-truth).
+
+**4. Transactional consistency.**
+When a doc is updated or deleted, the embedding update happens in the same transaction as the row change. With a separate vector DB you build a CDC pipeline and live with eventual consistency — and stale embeddings in support chatbots produce wrong answers about deprecated features.
+
+**5. Cost.**
+Pinecone serverless is cheap until it isn't; a managed Postgres you already have costs ~$0 marginal for adding a vector column.
+
+## When a dedicated vector DB actually pays off
+
+Switch (or add) when one of these is concretely true, not speculatively:
+
+- **>10–50M vectors** and recall@10 on pgvector HNSW degrades below your bar even after tuning `m`, `ef_construction`, `ef_search`.
+- **>500 QPS sustained** on retrieval, where Postgres connection/CPU contention with your OLTP workload becomes real.
+- **Multi-tenant scale where per-tenant indexes matter** (Turbopuffer, Pinecone namespaces) — but verify pgvector partial indexes or partitioning don't solve it first.
+- **You need hybrid sparse+dense + reranking as a managed primitive** and don't want to assemble it (Weaviate, Vespa).
+
+## Honest caveats
+
+- pgvector HNSW index builds are slow and memory-hungry; plan for it on large initial loads.
+- IVFFlat is cheaper to build but needs reindexing as data shifts; HNSW is the better default now.
+- If you're on a Postgres provider that doesn't support pgvector or pins an old version (<0.7), that changes the calculus.
+
+## Bottom line
+
+Default to pgvector. Treat "do we need Pinecone/Weaviate?" as a question you re-ask at 10M vectors or when a specific measured limitation forces it — not as an architecture decision to make on day one.

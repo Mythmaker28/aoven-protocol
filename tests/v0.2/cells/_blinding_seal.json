@@ -1,0 +1,427 @@
+{
+  "cycle_secret_sha256": "f2e5f6030bab8652689db66d126686e22e987e9775e7ca59769422189b296278",
+  "scheme": "sha256(qid + '||' + condition + '||' + cycle_secret).hexdigest()[:16]",
+  "mapping": {
+    "c2cc36a8fd0b770a": {
+      "question_id": "V02-D-SCI-001",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-001_A.txt",
+      "source_sha256": "fce1c5fbeadae936510fec9d4b8f617e2240f245f52f43dfa7c520660b575479",
+      "byte_length": 2740
+    },
+    "3f5863e65e5d60ab": {
+      "question_id": "V02-D-SCI-001",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-001_B.stripped.txt",
+      "source_sha256": "9c846f24e7e6e25d221b55d4cb5086650c302ac3f37cf74cf613b02c217e7a1e",
+      "byte_length": 2724
+    },
+    "344b0d2978d3721d": {
+      "question_id": "V02-D-SCI-002",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-002_A.txt",
+      "source_sha256": "ca9c693057b19065cd4e42d81d15dd20e5319de93fb168af8d5eae30a614f939",
+      "byte_length": 1997
+    },
+    "1942359375bae0ff": {
+      "question_id": "V02-D-SCI-002",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-002_B.stripped.txt",
+      "source_sha256": "fa9c7656338a6eb507f0a7939bde3dacff9ce373cf734525fd0bba101f68d41a",
+      "byte_length": 2036
+    },
+    "a3503af193df16cb": {
+      "question_id": "V02-D-SCI-003",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-003_A.txt",
+      "source_sha256": "a4a3b9e67b77fc552cfb2d62b890d95fd74b0539ba6604ce7be173eef389dd36",
+      "byte_length": 3194
+    },
+    "7433b2505a5181bf": {
+      "question_id": "V02-D-SCI-003",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-003_B.stripped.txt",
+      "source_sha256": "dab1903baf6fc27bbbbde759ed7abe6fc1006cc7220e3161f7bd28bc7fa3305d",
+      "byte_length": 70
+    },
+    "0a1986b75c0c2d14": {
+      "question_id": "V02-D-SCI-004",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-004_A.txt",
+      "source_sha256": "7a783a38f0b37132041414c12aca1fbe8f6416fa333f15c7fa1b0d575f74a14f",
+      "byte_length": 3293
+    },
+    "145d10491617f29d": {
+      "question_id": "V02-D-SCI-004",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-004_B.stripped.txt",
+      "source_sha256": "a7feaa5c31d6f578b4cefe0379da64aa5d6c6b8df062378db936499600b2aba6",
+      "byte_length": 4791
+    },
+    "140fa328447a45ce": {
+      "question_id": "V02-D-SCI-005",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-005_A.txt",
+      "source_sha256": "9d1967db5858c16fdfdccdc3633576e9405fa319f64d07b6ac971eb8f9294653",
+      "byte_length": 2421
+    },
+    "79b21768e66ac996": {
+      "question_id": "V02-D-SCI-005",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-005_B.stripped.txt",
+      "source_sha256": "de2b430a17a7ebd493cab5ec14c067133c414fc450a6b879f8f576165f651f51",
+      "byte_length": 3369
+    },
+    "5b13d14108e3d117": {
+      "question_id": "V02-D-SCI-006",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-006_A.txt",
+      "source_sha256": "0e82b928ba43c83471106caf45aa8c0e6bd41376b6903ff1a9eea98f9d237152",
+      "byte_length": 1434
+    },
+    "5ab9aba826de55f0": {
+      "question_id": "V02-D-SCI-006",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-006_B.stripped.txt",
+      "source_sha256": "6f07b191c49dff88d5f7ca4e24260fb461ec1a861aba94d107aa62d7d9048fa8",
+      "byte_length": 831
+    },
+    "1687bedb7fbd40e3": {
+      "question_id": "V02-D-TECH-001",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-001_A.txt",
+      "source_sha256": "89ac659b511c05d97dddb10eaa461ec6df1c0150f4edbd04db1cb7049db1f570",
+      "byte_length": 3122
+    },
+    "7b90f025ecfe11ac": {
+      "question_id": "V02-D-TECH-001",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-001_B.stripped.txt",
+      "source_sha256": "176ef18a26afa416e26c7f493bda43533b1731a7b9074358648c27daa58184df",
+      "byte_length": 2476
+    },
+    "13ab39055530a0cd": {
+      "question_id": "V02-D-TECH-002",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-002_A.txt",
+      "source_sha256": "c316a92d9e5cf33c11b7e4843c3fcbc68948594bdf60683b1e2615e4cc156855",
+      "byte_length": 3437
+    },
+    "777c47ea9f9cde0f": {
+      "question_id": "V02-D-TECH-002",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-002_B.stripped.txt",
+      "source_sha256": "a98c1eedc067c21db1fa633a91801491ea801c5dc9b491aa9a0908634328feae",
+      "byte_length": 2897
+    },
+    "d541ac628810eceb": {
+      "question_id": "V02-D-TECH-003",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-003_A.txt",
+      "source_sha256": "017f1d1a14ded4b1194649bcbd6f68a1981f4061912691712612022f8b942a67",
+      "byte_length": 3923
+    },
+    "c1a3ca98c2ff77f7": {
+      "question_id": "V02-D-TECH-003",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-003_B.stripped.txt",
+      "source_sha256": "5f68dbcfe341e181464f6a88389fe3c20f9f397cfcb4f0660619c51218595bc6",
+      "byte_length": 2567
+    },
+    "a404568256a8b5a1": {
+      "question_id": "V02-D-TECH-004",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-004_A.txt",
+      "source_sha256": "7394660cab4e346e5390ce0cd2f51b46b79c84e108bee9262416b058a68cd2ce",
+      "byte_length": 2736
+    },
+    "2a49c3796af83dbc": {
+      "question_id": "V02-D-TECH-004",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-004_B.stripped.txt",
+      "source_sha256": "3247b6b4fa68225894d28c965a13729e2668500ef7c34d051a6598cf0d2ff55a",
+      "byte_length": 2374
+    },
+    "1e03145c1ddbb8d2": {
+      "question_id": "V02-D-TECH-005",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-005_A.txt",
+      "source_sha256": "6a4d2adfcb145dc19d78312c868fe16844eac66934fef299bcf5c1bd9b839d40",
+      "byte_length": 2903
+    },
+    "9e0bbd9685737ae1": {
+      "question_id": "V02-D-TECH-005",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-005_B.stripped.txt",
+      "source_sha256": "79ca575dd4e4b1816073f78a30d3efc8d84939722c6d55ef985b97c12386ab77",
+      "byte_length": 3206
+    },
+    "95f7c8d08f7e53b2": {
+      "question_id": "V02-D-NORM-001",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-001_A.txt",
+      "source_sha256": "3056e52615e87a52f796de4d57fffda41d1746862f756de87e1d846f333e8445",
+      "byte_length": 1771
+    },
+    "843587513f18a83e": {
+      "question_id": "V02-D-NORM-001",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-001_B.stripped.txt",
+      "source_sha256": "fa6281bd83eb2cd036af1664e60fbe120819bbec594d01b63cc0c5e19f99ef75",
+      "byte_length": 1772
+    },
+    "97a705346f51ad70": {
+      "question_id": "V02-D-NORM-002",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-002_A.txt",
+      "source_sha256": "f0efa6481a06fc8c23010ec08ef9d93525a922e3aa7f57f66d29a38d62c3f955",
+      "byte_length": 2184
+    },
+    "4041f2c33b5dc5a1": {
+      "question_id": "V02-D-NORM-002",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-002_B.stripped.txt",
+      "source_sha256": "1c0b2892ee2cb26643b847b878f2420f584b6dd5f730b70ee36f07fa32825931",
+      "byte_length": 2624
+    },
+    "f8bfdfa93c27ccc0": {
+      "question_id": "V02-D-NORM-003",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-003_A.txt",
+      "source_sha256": "095f9e7f634de4de7326ffcdcfb7d342f9294cb5bad51afeb15913bcd74a65b1",
+      "byte_length": 2173
+    },
+    "9a5201b9a5e4d657": {
+      "question_id": "V02-D-NORM-003",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-003_B.stripped.txt",
+      "source_sha256": "d3b12c6b8f9105c7fc7e7292f6d70409aafd7e09149003ada5ddce125af095d6",
+      "byte_length": 1918
+    },
+    "7a3bbfd9ea117be8": {
+      "question_id": "V02-D-NORM-004",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-004_A.txt",
+      "source_sha256": "2b0214b05f15dddc732588bab47ca9087cc9bbc916af6a2233666a99c826b5af",
+      "byte_length": 2271
+    },
+    "3dc8e3e52962c82d": {
+      "question_id": "V02-D-NORM-004",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-004_B.stripped.txt",
+      "source_sha256": "74851351c510e4c54b6e9bc5b668acd5fe0e3530d5abc7d05671abbd197adee7",
+      "byte_length": 2226
+    },
+    "e902bd2d43383ce7": {
+      "question_id": "V02-D-NORM-005",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-005_A.txt",
+      "source_sha256": "be61db993380bca564d6ed46e35b39cd948ce9f5569feb14fb43ba91b2635d79",
+      "byte_length": 3478
+    },
+    "00b710f61eea01a7": {
+      "question_id": "V02-D-NORM-005",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-005_B.stripped.txt",
+      "source_sha256": "4d5577aba0b750449395ce7a0a9996b9fd5a2cc446d8c42dc1f8ce8adf842a5f",
+      "byte_length": 2280
+    },
+    "9fa0d5e84792cab0": {
+      "question_id": "V02-D-PRED-001",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-001_A.txt",
+      "source_sha256": "4b99cc7a165b803544c8e0f948f624d0b256695ae405ed505da8af2b1540720f",
+      "byte_length": 2218
+    },
+    "72f282c5217f682a": {
+      "question_id": "V02-D-PRED-001",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-001_B.stripped.txt",
+      "source_sha256": "cc16f6f621b180fae4032cd5d436cba791aa43950da6df96b31a45a70fcbf03e",
+      "byte_length": 1837
+    },
+    "b7996d4ba5ad1eae": {
+      "question_id": "V02-D-PRED-002",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-002_A.txt",
+      "source_sha256": "19971c319408ce233582f1c4b140989b7013fe92cd134f63a9d7d2c86c5212ae",
+      "byte_length": 2265
+    },
+    "60f74680c98abe0b": {
+      "question_id": "V02-D-PRED-002",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-002_B.stripped.txt",
+      "source_sha256": "ede7c9b97af44aec431ee2f3e55234116b97e723329e8bbe14c5a0b28f2ff402",
+      "byte_length": 1828
+    },
+    "9af00f1068db6c6e": {
+      "question_id": "V02-D-PRED-003",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-003_A.txt",
+      "source_sha256": "2bada95bacc608fddcb6d3da0215527d3d510ffc9cc4b08c7e5ef824560d5b00",
+      "byte_length": 1665
+    },
+    "18c03aab24e98baf": {
+      "question_id": "V02-D-PRED-003",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-003_B.stripped.txt",
+      "source_sha256": "8a07cd63d821ed3f9521ba5c8be467f900eaa520b0cf2aa8415630d304e957a3",
+      "byte_length": 1804
+    },
+    "b1359e0058913f01": {
+      "question_id": "V02-D-PRED-004",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-004_A.txt",
+      "source_sha256": "6d27720db3382e80797ac70c7a2a1026ebf97c9225929b44854a722dfd1ed02e",
+      "byte_length": 3139
+    },
+    "aff6f5f6ee26f0af": {
+      "question_id": "V02-D-PRED-004",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-004_B.stripped.txt",
+      "source_sha256": "e1590461d0b6ff1747a9c33fbdd55a65037ef32fcef315ec2d7f706b059f6481",
+      "byte_length": 2784
+    },
+    "6ff05ed0d5475391": {
+      "question_id": "V02-D-SCI-007",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-007_A.txt",
+      "source_sha256": "ab24d20a21876e0475422951af1fc1dc57a91b11ad18c56d63637adeac3631ce",
+      "byte_length": 3166
+    },
+    "f4f5beff229eae00": {
+      "question_id": "V02-D-SCI-007",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-007_B.stripped.txt",
+      "source_sha256": "02786c13f14c53d0cb2ef05509c2413cb445f009849abca4deaa25c3d9bb18c2",
+      "byte_length": 2738
+    },
+    "94308c59df34c9c4": {
+      "question_id": "V02-D-SCI-008",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-008_A.txt",
+      "source_sha256": "2406d0cbce195890f5a6da4acd629a7aabed8d5bb22fe5ba9f382d781aeecb65",
+      "byte_length": 2339
+    },
+    "e4f7e34a27741c86": {
+      "question_id": "V02-D-SCI-008",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-008_B.stripped.txt",
+      "source_sha256": "60d86eb2c4c1f5a0e6c811364d8b087f997fbbbe455d746d5e87e7604d70c22d",
+      "byte_length": 2058
+    },
+    "bda2fa7830caafbc": {
+      "question_id": "V02-D-SCI-009",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-009_A.txt",
+      "source_sha256": "47c643861680131b871c742c76237dda7680c6e5aeefb34a112b4c62545e3c3c",
+      "byte_length": 2320
+    },
+    "016c459b79251315": {
+      "question_id": "V02-D-SCI-009",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-SCI-009_B.stripped.txt",
+      "source_sha256": "c0e1112660f53991c71db3f64f6125c97487d67e72e163ae7ec6f10798aca9c9",
+      "byte_length": 2845
+    },
+    "7062f26eda86fc18": {
+      "question_id": "V02-D-TECH-006",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-006_A.txt",
+      "source_sha256": "f51952b844135d3ecd45ba28307c67f4cca60f433b9735332791845627ed9d2e",
+      "byte_length": 4453
+    },
+    "9858027082a3688f": {
+      "question_id": "V02-D-TECH-006",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-006_B.stripped.txt",
+      "source_sha256": "63cb60769453b9e71c5d4862501cc3347ede0d058390dc940916480aaf848f88",
+      "byte_length": 4175
+    },
+    "96f497a827f596c3": {
+      "question_id": "V02-D-TECH-007",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-007_A.txt",
+      "source_sha256": "2edc7db28f6859ce179ced12de826b24dad6531440f78044fcf8d242dae2bcf8",
+      "byte_length": 2961
+    },
+    "91e068363872b26e": {
+      "question_id": "V02-D-TECH-007",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-TECH-007_B.stripped.txt",
+      "source_sha256": "9f08b2e650e06701aff90b97b14d7578a7a77370281ff4c621049b161f640b8e",
+      "byte_length": 3016
+    },
+    "924c21b88b8065ce": {
+      "question_id": "V02-D-NORM-006",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-006_A.txt",
+      "source_sha256": "c2446351303056ffba55cdf0ae5ce64f58d59db6a8a36f3157800606c87800b2",
+      "byte_length": 2027
+    },
+    "b6924ea37e78a258": {
+      "question_id": "V02-D-NORM-006",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-006_B.stripped.txt",
+      "source_sha256": "208612791f527e37dfc7539359ead91c0f94ac23b395158dee2aa14ad292816b",
+      "byte_length": 1932
+    },
+    "3a9cd1468b39a0bc": {
+      "question_id": "V02-D-NORM-007",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-007_A.txt",
+      "source_sha256": "b7c8765352d0f7727765359ff0a4d0335b9b9b45cf9726b381e83d40a2993a03",
+      "byte_length": 2367
+    },
+    "870f15a410bd3180": {
+      "question_id": "V02-D-NORM-007",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-007_B.stripped.txt",
+      "source_sha256": "b1b042d0040e16319155bd4b03bb3742fef9fe1c21f9716d76739b0960d279e6",
+      "byte_length": 1667
+    },
+    "6fadb9160750beb3": {
+      "question_id": "V02-D-NORM-008",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-008_A.txt",
+      "source_sha256": "8f88291fc7fedd3ff1e470bffa32c1003a910666ddf4c357a13a7e1bb8cd170c",
+      "byte_length": 2219
+    },
+    "6e36246c447dcb4f": {
+      "question_id": "V02-D-NORM-008",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-NORM-008_B.stripped.txt",
+      "source_sha256": "eee8ba07854494e004d105ad0798f735d5569a8a752e212f3884bb5288359e75",
+      "byte_length": 2887
+    },
+    "235d891ad48124f3": {
+      "question_id": "V02-D-PRED-005",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-005_A.txt",
+      "source_sha256": "3e8a073af8b36d20afae150d3011129a72f05b662be5797ff6d03375f597cf62",
+      "byte_length": 2758
+    },
+    "c9c0b4c281e52f31": {
+      "question_id": "V02-D-PRED-005",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-005_B.stripped.txt",
+      "source_sha256": "d5f1b95eae7ae9b01d03765b7b43b5ca78891c9f02ed9d324d6747b336f54246",
+      "byte_length": 3262
+    },
+    "fd69265992ffef1d": {
+      "question_id": "V02-D-PRED-006",
+      "condition": "A",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-006_A.txt",
+      "source_sha256": "66658f1e27d0b20b46eb1091236fa0f864c8ae5f1acfb36bf654f27b907a259c",
+      "byte_length": 2062
+    },
+    "9dc4ef67e2010e3b": {
+      "question_id": "V02-D-PRED-006",
+      "condition": "B",
+      "source_file": "aoven-protocol/tests/v0.2/cells/cell_V02-D-PRED-006_B.stripped.txt",
+      "source_sha256": "ca814d2a98124ed02b35f05fd3007b57578bd638c5ed864155b690d2a384d827",
+      "byte_length": 1860
+    }
+  },
+  "cell_count": 60
+}

@@ -1,0 +1,30 @@
+**Use pgvector unless you have evidence you need otherwise.**
+
+## Why pgvector wins by default for this use case
+
+**Scale reality check.** A customer-support chatbot's corpus is small: help-center articles, past tickets, product docs. Typical size is 10k–500k chunks. pgvector with HNSW handles this comfortably on a single Postgres instance with sub-100ms p95 latency. You are nowhere near the regime where dedicated vector DBs justify themselves (tens of millions of vectors, high write QPS, or multi-tenant isolation at scale).
+
+**Operational surface.** A startup running a chatbot already needs Postgres for users, conversations, ticket metadata, billing, eval logs, feedback. Adding Pinecone/Weaviate means: another service to provision, monitor, pay for, secure, back up, and keep in sync. The sync problem is the real cost — you end up writing dual-write logic and reconciling drift. With pgvector, your embeddings live in the same transaction as the row they describe.
+
+**Filtered search.** Support chatbots almost always need metadata filters: tenant_id, product, locale, doc_version, freshness. Hybrid SQL + vector queries are trivial in pgvector (`WHERE tenant_id = $1 AND lang = 'en' ORDER BY embedding <=> $2`). Dedicated vector DBs handle filtered search, but the semantics around pre- vs post-filtering and recall under filters are vendor-specific footguns. Postgres planner behavior is at least familiar.
+
+**Cost.** Pinecone serverless and Weaviate Cloud bill per dimension-vector and per query. For a startup corpus, you're paying $70–$500/month for something that adds ~1GB to a Postgres instance you already pay for.
+
+## When the answer flips to a dedicated vector DB
+
+- **>10M vectors** with low-latency requirements, or rapid growth past that.
+- **High write throughput** on embeddings (continuous re-embedding of streaming data).
+- **Multi-tenant SaaS** where per-tenant index isolation, namespacing, or per-tenant scaling becomes a first-class concern (Pinecone namespaces are genuinely good here).
+- **Specialized retrieval features** you don't want to build: managed sparse-dense hybrid (Weaviate, Vespa), learned sparse (SPLADE), reranking pipelines, multi-vector ColBERT-style retrieval.
+- **Team has zero Postgres operational competence** and is already on a managed RAG stack.
+
+## Caveats against pgvector you should know
+
+- HNSW index builds are memory-hungry and slow; plan `maintenance_work_mem` and consider building concurrently.
+- Recall tuning (`ef_search`, `m`) is on you. Defaults are mediocre.
+- Vacuum and bloat behavior on heavily updated embedding tables is real; isolate the table and tune autovacuum.
+- If you ever need >2000 dimensions, pgvector's `vector` type historically capped there; use `halfvec` or chunk dimensions.
+
+## Concrete recommendation
+
+Start with pgvector + HNSW on your existing Postgres. Instrument retrieval quality (recall@k, MRR on a labeled eval set) and p95 latency. Migrate to a dedicated vector DB only when you can point to a specific metric pgvector is failing on — not on speculation. The migration is mechanical (re-embed and bulk-load); the premature adoption is not reversible without throwing away operational learning.

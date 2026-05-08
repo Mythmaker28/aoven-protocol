@@ -1,0 +1,17 @@
+Short answer: probably not, on net, for most companies. The evidence is mixed but leans against full-time mandates as a culture lever.
+
+**Where the "yes" case has some merit:**
+- Junior employees genuinely learn faster by osmosis — overhearing how seniors handle calls, escalations, customer pushback.
+- Cross-functional trust forms faster with incidental contact than with scheduled Zooms.
+- New teams in formation phase benefit from co-presence.
+
+**Where the "yes" case usually fails:**
+1. **Compliance ≠ culture.** People showing up resentfully under threat of termination is not a cultural win; it's a measured-attendance metric dressed up as one. Culture is what people do when no one is watching, not what they do when badge data is.
+2. **Adverse selection on attrition.** The people with the most outside options leave first. Mandates disproportionately retain those who can't leave, which is the opposite of the cultural composition most leaders claim to want.
+3. **The signal is "we don't trust you."** Once that signal is sent — especially after years of demonstrated remote productivity — it's expensive to unsend. Surveys consistently show trust scores drop after mandates land.
+4. **Mandates are a blunt instrument for a precise problem.** If the actual issues are weak mentorship, siloed teams, or unclear strategy, requiring 5 days in-office doesn't fix them; it just makes the dysfunction visible in higher-rent square footage.
+5. **Often a stealth headcount tool.** A nontrivial share of full-time mandates are quiet RIFs — leadership knows ~10–20% will self-select out. If that's the actual goal, the "culture" framing is dishonest, and employees can usually tell.
+
+**The honest synthesis.** The benefits of co-presence are real but mostly captured by 2–3 anchor days, team-formation sprints, and offsites — not by a 5-day mandate. Companies citing "culture" as the justification almost always also have cost, real-estate, or control motivations they're not naming, and that gap between stated and actual reasons is itself culturally corrosive.
+
+If a leader wants culture, the higher-leverage moves are: fix mediocre managers, raise the performance bar uniformly, set a clearer strategy, and structure deliberate in-person time. Mandating attendance is the cheap option that looks decisive while doing relatively little of the actual work.

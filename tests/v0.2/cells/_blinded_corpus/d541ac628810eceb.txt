@@ -1,0 +1,40 @@
+# Short answer
+
+**No — not for the median working developer on a defensible productivity metric, with high confidence. Yes — for narrow slices (greenfield prototypes, certain glue-code tasks, specific individuals) on selective metrics, with moderate confidence.** The unqualified claim is almost certainly false.
+
+# Why the question is under-specified
+
+Three load-bearing terms each swing the answer by an order of magnitude:
+
+1. **"10× productive"** — measured how? Lines of code, PRs merged, features shipped, defect-adjusted business value, time-to-first-working-prototype? LOC and PR-count inflate easily; defect-adjusted shipped value barely moves.
+2. **"Developers"** — population median, top decile, or best-case demo? Greenfield solo coders or maintainers of a 15-year-old enterprise codebase?
+3. **"Within 3 years"** — the claim must hold *in deployed practice across the field*, not in a benchmark or a launch keynote.
+
+A claim that is true under (best-case dev, LOC, demo) and false under (median dev, shipped value, production codebase) is not one claim — it's two, and conflating them is where most of the hype lives.
+
+# Evidence that pushes against 10×
+
+- **METR (2025) RCT** on experienced OSS maintainers found AI assistance made them ~19% *slower* on tasks in familiar codebases, despite their belief they were faster — direct counter-evidence to even 2× on that population.
+- **GitHub/Copilot studies** report ~55% speedups on isolated, well-scoped tasks — i.e., ~1.55×, not 10×, and on the easiest slice of the work.
+- **Amdahl ceiling**: coding is a fraction of a developer's wall-clock time (design, review, meetings, debugging production, comprehension, coordination). Even if code-typing went to zero, total throughput cannot 10× unless the non-coding fraction also collapses — and there is no current evidence it is collapsing at that rate.
+- **Historical priors**: prior step-changes (compilers, IDEs, version control, Stack Overflow, package ecosystems) each delivered roughly 1.5–3× over years, not 10× in three. The base rate for "next tool will be 10×" is very low.
+- **Defect and review tax**: AI-generated code shifts effort to review, verification, and debugging of unfamiliar code — costs that are systematically underweighted in self-reported productivity gains.
+
+# Evidence that leaves a door open
+
+- For **bounded subtasks** (scaffolding, boilerplate, test stubs, one-shot scripts, language translation, documentation), 5–10× on that subtask is already plausible.
+- For **specific developers in specific contexts** (early-career devs on familiar-domain greenfield work; senior devs using agents to parallelise low-stakes chores), aggregate gains in the 1.5–3× range look achievable and may extend further by 2029.
+- If "productivity" is redefined as *features attempted* rather than *features correctly shipped and maintained*, the bar drops substantially.
+
+# Calibrated probabilities (subjective, by 2026-05-08 + 3y)
+
+| Claim | P(true) |
+|---|---|
+| Median professional dev sustainably 10× on shipped, defect-adjusted output | ~2% |
+| Median dev 2–3× on the same metric | ~25% |
+| Top-decile / greenfield niches reach 10× on selective metrics | ~55% |
+| Industry consensus *declares* "10× achieved" regardless of measurement rigour | ~40% |
+
+# Bottom line
+
+Treat any unqualified "10× in 3 years" claim as a **category error or marketing**. The honest version is: *"For some tasks and some developers, AI assistants will plausibly deliver order-of-magnitude speedups on the coding subtask; whole-job productivity will rise meaningfully but nowhere near 10× for the median developer on rigorous metrics."* The interesting research question is not whether the headline number is true, but **which slices of the work and which populations** the gains concentrate in — and what the review/defect tax looks like once the novelty curve flattens.

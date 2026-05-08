@@ -1,0 +1,28 @@
+**Use pgvector. Switch later only if you hit a concrete wall.**
+
+### Why pgvector first
+
+- **Operational surface area.** A support chatbot's hard problems are retrieval quality, prompt design, eval, and handoff to humans — not vector indexing. One Postgres instance is one backup, one auth model, one migration tool, one on-call runbook.
+- **Joins matter more than you think.** Support retrieval is rarely "find similar vector." It's "find similar vector *filtered by* tenant_id, product, language, doc freshness, entitlement tier, and not-deprecated." pgvector does this in a single SQL statement with real indexes on the metadata columns. Dedicated vector DBs force you to either denormalize aggressively into payload filters or do two-stage filtering with worse plans.
+- **Scale headroom is larger than the marketing implies.** With HNSW (pgvector ≥ 0.5) and reasonable hardware, ~1–10M vectors at 768–1536 dims is comfortable. Most support corpora (KB articles, macros, past tickets) are well under that, even multi-tenant.
+- **Cost.** Pinecone's serverless pricing gets non-trivial fast; Weaviate self-hosted is another stateful service to babysit. pgvector is free on a DB you already need.
+- **Transactional consistency.** When a KB article is edited or deleted, the embedding update lives in the same transaction. With an external store you build a sync pipeline and inherit its failure modes (staleness, orphaned vectors, replay logic).
+
+### When the dedicated DB actually wins
+
+Switch (or add) if you hit one of these, not before:
+
+1. **>~50M vectors** or sustained high write throughput where HNSW build/maintenance in Postgres becomes a vacuum/bloat problem.
+2. **Latency budget <30ms p99** at high QPS with large k and reranking — purpose-built engines (and their memory-resident indexes) pull ahead.
+3. **Hybrid sparse+dense + learned reranking as a first-class feature** (Weaviate, Vespa, Qdrant ship this; pgvector requires gluing BM25/`tsvector` + vector + a reranker yourself — doable, but more code).
+4. **Multi-region active-active read replicas of the index** with tight RPO. Postgres can do it; managed vector DBs make it a checkbox.
+
+### Honest caveats to the "use pgvector" answer
+
+- pgvector HNSW index **builds are slow and memory-hungry**; plan `maintenance_work_mem` and consider building concurrently.
+- **Filtered ANN recall** in pgvector can degrade when the filter is highly selective; test with your real filters, not synthetic ones.
+- If your team has zero Postgres operational experience but does have a managed-services budget, Pinecone removes a class of work — that's a legitimate reason, just name it as such.
+
+### Decision rule
+
+Default to pgvector. Re-evaluate when you have (a) measured retrieval latency that's actually blocking UX, or (b) a corpus growth curve that projects past ~10M vectors within 12 months. Picking Pinecone/Weaviate on day one is usually premature optimization paid for in integration tax and a second system of record.

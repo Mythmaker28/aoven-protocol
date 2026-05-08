@@ -1,0 +1,25 @@
+Material risks, roughly in order of how often they bite:
+
+**1. The 700M MAU trigger.** The Llama 3 Community License requires a separate license from Meta if the licensee (or its affiliate) had >700M monthly active users at the Llama 3 release date. Practical effects: (a) constrains exit options — acquirers above the threshold can't inherit your license, (b) if your distribution partner crosses it, your stack relicenses on Meta's terms.
+
+**2. Unilateral AUP changes.** Meta's Acceptable Use Policy is incorporated by reference and can be revised. Compliance is a moving target, and a future tightening (e.g., on agentic, biometric, or political-content uses) can retroactively make a shipped product non-compliant.
+
+**3. Not OSI-approved.** Llama 3 is "open weights," not open source. Enterprise procurement, public-sector RFPs, and some regulated buyers (EU public sector in particular post-AI-Act) treat the license as proprietary-with-restrictions. This costs deals you won't see lost.
+
+**4. Naming + attribution entanglement.** "Built with Llama" attribution and the "Llama-" prefix on derivative model names tie your brand to Meta's. If Meta's reputation moves against you in a target market, you carry it.
+
+**5. No meaningful indemnification.** Meta does not indemnify downstream users for IP infringement in training data or outputs. Contrast with OpenAI/Anthropic/Google enterprise tiers, which do. Kadrey v. Meta and related copyright suits are still tail risk; an injunction touching Llama 3 distribution or derivative outputs would land directly on you.
+
+**6. Patent posture is weak.** The license terminates if you initiate IP litigation against Meta or allege Llama infringes. There is no broad patent grant. Your freedom-to-operate analysis cannot lean on Meta.
+
+**7. Export and jurisdictional restrictions.** The license carries US export-control compliance obligations and the AUP excludes certain uses/territories. By 2026 the BIS AI diffusion framework and successor rules add another layer — you own that compliance.
+
+**8. Lifecycle obsolescence.** Llama 4 shipped in 2025; Llama 3 is now the prior generation. Security/safety patches, ecosystem tooling (quantizations, inference kernels, fine-tune recipes), and third-party eval coverage migrate to the current generation. Choosing Llama 3 in 2026 means accepting a depreciating asset unless you have a specific reason (e.g., a frozen eval, a fine-tune you've already amortized).
+
+**9. Termination is unilateral.** Meta can terminate for breach; cure provisions are limited. Already-downloaded weights you keep, but redistribution and updates stop, which is fatal for any product that ships the model to customers or relies on Meta-hosted variants.
+
+**10. Strategic dependency on a competitor.** Meta is a product company, not a model vendor. License terms, release cadence, and feature direction follow Meta's interests (consumer AI, ads, Reality Labs), not yours.
+
+**Mitigations worth pricing in:** abstraction layer over inference so you can swap to Mistral/Qwen/Gemma/Llama 4; legal review of the MAU clause against plausible acquirers; written record of the AUP version you compiled against; third-party indemnification via your inference host (e.g., Together, Fireworks) if available; and a documented migration plan off Llama 3 specifically before its security-patch cadence dies.
+
+If you want, I can compare the specific clause language against Llama 4's license or against Mistral/Apache-2.0 alternatives.

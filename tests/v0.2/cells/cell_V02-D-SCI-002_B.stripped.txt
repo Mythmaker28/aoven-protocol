@@ -1,0 +1,22 @@
+**Short answer: No clear effect on cancer *incidence*; possible modest reduction in cancer *mortality*.**
+
+**What the better evidence shows:**
+
+- **VITAL trial** (NEJM 2019, n≈25,871, 2000 IU/d, 5.3 y): primary cancer incidence HR 0.96 (95% CI 0.88–1.06) — null.
+- **D-Health trial** (Australia, n≈21,300, 60,000 IU/month, 5 y): no reduction in total cancer incidence or cancer mortality.
+- **Meta-analyses of RCTs** (Keum 2019/2022, Zhang 2019): consistent null for incidence; ~10–13% reduction in cancer *mortality* (statistically significant in pooled data), driven mainly by daily-dosing trials and longer follow-up.
+- **VITAL extended/secondary analyses**: reduced cancer death after excluding the first 1–2 years (HR ~0.75); larger apparent benefit in normal-BMI participants and Black participants. These are secondary endpoints — hypothesis-generating, not confirmatory.
+
+**Mechanistic / dosing notes:**
+
+- Daily physiologic dosing (1,000–2,000 IU/d) outperforms large monthly/annual boluses in the mortality signal; bolus dosing trials are essentially flat.
+- Benefit, if real, plausibly concentrates in people who were *deficient* at baseline (25(OH)D <20 ng/mL). Trials enrolled mostly replete populations, which dilutes any true effect.
+- No RCT shows reduction in any specific cancer's incidence with high confidence. Colorectal cancer mortality has the most consistent (still modest) signal.
+
+**Practical read:**
+
+- If you are not deficient, supplementation has not been shown to lower your risk of getting cancer.
+- If you are deficient, correcting deficiency is reasonable on general grounds; whether it lowers cancer risk specifically remains unproven.
+- High doses (>4,000 IU/d sustained) carry hypercalcemia and possibly fall/fracture risks at the extremes, with no added cancer benefit.
+
+**Bottom line:** The current RCT evidence does not support taking vitamin D to prevent cancer in a vitamin-D-replete person. There is a plausible, small mortality signal that has not been definitively confirmed.

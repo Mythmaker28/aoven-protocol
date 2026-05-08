@@ -1,0 +1,16 @@
+Probably not, but it's not negligible. My calibrated estimate: ~15–25% by end of 2030.
+
+Reasons it's plausible:
+- Scaling has continued to deliver capability gains faster than most 2020-era forecasters expected; frontier models in 2025–2026 already match or exceed median human performance on a wide span of cognitive benchmarks.
+- Compute, data-curation, and inference-time-search investments are still climbing roughly an order of magnitude every ~18–24 months.
+- Agentic scaffolding, tool use, and long-horizon planning are improving qualitatively, not just on benchmarks.
+
+Reasons it likely won't hit "AGI" by 2030:
+- "AGI" has no agreed operational definition. Under strict readings (Morris et al.'s "competent" or "expert" general AI across most economically valuable tasks, or Metaculus-style resolution criteria) current systems still fail on robust long-horizon autonomy, sample-efficient learning, reliable causal reasoning, and out-of-distribution generalization.
+- Hardware, energy, and fab-capacity constraints make another 2–3 orders of magnitude of training compute by 2030 non-trivial.
+- Diminishing returns on pretraining loss are already visible; the field is betting on RL-from-verifiers and synthetic data, which are unproven at the scale needed.
+- Deployment-grade reliability (the gap between "can do it once" and "can do it for 10⁶ tasks unsupervised") historically takes longer than capability demos suggest.
+
+Reference class: aggregated forecasts as of early 2026 (Metaculus, AI Impacts, expert surveys) cluster medians for "human-level AI" / "transformative AI" somewhere in the 2030s–2040s, with a long right tail. Putting non-trivial mass on 2030 is reasonable; putting majority mass there is not.
+
+Bottom line: more likely than a coin flip that 2030 arrives without something most careful observers would call AGI. But "definitely not" would also be overconfident — the distribution has tightened toward earlier dates over the past three years, not loosened.

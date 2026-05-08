@@ -1,0 +1,13 @@
+Short answer: at typical consumption levels, no — the available evidence does not support a carcinogenic effect.
+
+Specifics:
+
+- **IARC (July 2023)** classified aspartame as **Group 2B, "possibly carcinogenic to humans."** This is the weakest positive tier and is a *hazard* classification, not a *risk* statement. Group 2B sits alongside aloe vera whole-leaf extract and pickled vegetables. It signals "limited evidence in humans, limited evidence in animals," not a quantified dose-response.
+- **JECFA (same 2023 review)** reaffirmed the **ADI of 40 mg/kg body-weight/day** and concluded there was no convincing evidence of harm at intake within that limit.
+- **Typical exposure is well under the ADI.** A 70 kg adult would need on the order of ~9–14 cans of aspartame-sweetened diet soda *every day* to reach 40 mg/kg. Population intake studies (EFSA, FDA) put the 95th-percentile adult consumer at a small fraction of the ADI.
+- **The human evidence IARC weighed** came primarily from a few observational cohorts (notably NutriNet-Santé, 2022) reporting modest associations with hepatocellular carcinoma and some other cancers. These are susceptible to residual confounding (diet quality, BMI, reverse causation in people switching to diet drinks). RCT-grade evidence does not exist at relevant exposures.
+- **No established mechanism** of carcinogenicity at physiological doses. Aspartame metabolizes to phenylalanine, aspartate, and methanol in quantities smaller than those obtained from common foods (fruit juice yields more methanol).
+
+Bottom line: the strongest defensible statement is "possible hazard at unspecified dose, no demonstrated risk at typical intake." If you wanted a confidence number, I'd put P(meaningful cancer risk at ≤1–2 diet sodas/day) at low single digits, dominated by model uncertainty rather than positive signal.
+
+Caveat on my limits: I'm not tracking literature published between my training cutoff and 2026-05-08; if a large prospective cohort or mechanistic study has landed since, this assessment could shift.

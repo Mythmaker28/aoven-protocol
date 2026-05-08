@@ -1,0 +1,19 @@
+Short answer: **probably not, on current evidence.** A >30% lifetime-risk reduction is at the optimistic edge of observational estimates and shrinks once you correct for the obvious biases.
+
+What the literature actually supports:
+
+1. **Observational meta-analyses** (Hamer & Chida 2009; Guure 2017; Santos-Lozano 2016) put the relative risk reduction for "high" vs "low" physical activity at roughly **20–30%** for all-cause dementia and Alzheimer's. That's the source of the 30% figure floating around in popular writing.
+
+2. **Bias correction shrinks it.** The Iso-Markku et al. 2022 meta-analysis stratified by follow-up length to address reverse causation (prodromal dementia *causes* people to become sedentary 5–10 years before diagnosis). Restricted to studies with ≥10-year follow-up, the protective association attenuates substantially — closer to **10–15%**, and some subsets are null.
+
+3. **Mendelian randomization** studies (Baumeister 2020; Huang 2021) using genetic instruments for physical activity find mostly null or weak effects on Alzheimer's risk. Accelerometer-based MR is slightly more positive but still modest. This is the cleanest causal evidence we have, and it does not support a 30%+ effect.
+
+4. **The Lancet Commission (2020, updated 2024)** attributes ~2% of population dementia cases to physical inactivity as a modifiable risk factor — a population-attributable fraction, not an individual one, but it's a sanity check on the size of the lever.
+
+5. **Dose–response.** Most of the apparent benefit accrues by ~150 min/week of moderate activity. Going from sedentary to 30 km/week running (≈3 hours of vigorous activity, well above guidelines) probably gives you near-maximal benefit, but the marginal gain over, say, 15 km/week is small.
+
+6. **"Lifetime risk" framing.** Baseline lifetime dementia risk for a 35-year-old male is ~10–13%; female ~17–20%. A 30% relative reduction would mean dropping, e.g., 12% → ~8%. That's a 4-percentage-point absolute change — not impossible, but the causal evidence isn't strong enough to assert it.
+
+**Best-calibrated answer:** expected lifetime risk reduction from sedentary → 30 km/week running, attributable specifically to the running, is more plausibly in the **5–20% relative range**, with wide uncertainty and a non-trivial probability the true causal effect is near zero for dementia specifically. The cardiovascular, metabolic, and all-cause mortality benefits are much better established than the dementia-specific ones.
+
+If you want to maximize the dementia-relevant signal, the evidence is somewhat stronger for: controlling midlife hypertension, hearing loss correction, not smoking, and limiting alcohol — each of which has larger Lancet-Commission PAFs than inactivity.

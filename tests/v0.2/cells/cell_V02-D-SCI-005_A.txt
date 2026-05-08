@@ -1,0 +1,36 @@
+# Anti-Amyloid Antibodies in Early Alzheimer's Disease
+
+**Short answer:** Yes, they show statistically significant effects on disease progression, but the clinical magnitude is modest and comes with meaningful safety trade-offs. Whether that constitutes "effective" depends on how you weight those factors.
+
+## What the pivotal trials showed
+
+**Lecanemab (Clarity AD, n≈1,795, 18 months)**
+- Slowed decline on CDR-SB by **0.45 points** vs. placebo (27% relative reduction)
+- Significant effects on secondary cognitive/functional measures (ADAS-Cog14, ADCS-MCI-ADL)
+- Substantial amyloid PET clearance
+
+**Donanemab (TRAILBLAZER-ALZ 2, n≈1,736, 76 weeks)**
+- Slowed decline on iADRS by ~**3 points** (~35% relative reduction in low/medium tau population)
+- Slowed CDR-SB decline by ~0.7 points
+- ~70% of low/medium tau participants achieved amyloid clearance
+
+Both received FDA traditional approval (lecanemab 2023, donanemab 2024).
+
+## Important caveats
+
+1. **Clinical meaningfulness is debated.** A 0.45-point CDR-SB difference is below most proposed minimum clinically important difference (MCID) thresholds (~1.0–2.0 points). Patients and families may not perceive the change.
+
+2. **ARIA (amyloid-related imaging abnormalities) is common:**
+ - Lecanemab: ~21% any ARIA (12.6% ARIA-E, 17.3% ARIA-H)
+ - Donanemab: ~36% any ARIA (24% ARIA-E)
+ - Symptomatic ARIA is less common but rare deaths have occurred, especially in **APOE ε4 homozygotes** (highest risk group).
+
+3. **Narrow eligibility.** Benefit is established only in **MCI or mild dementia due to AD with confirmed amyloid pathology**. APOE genotyping is now recommended before treatment.
+
+4. **Practical burden.** IV infusions (biweekly for lecanemab, monthly for donanemab), serial MRI monitoring, and high cost (~$26K–$32K/year before ancillary costs).
+
+5. **Long-term and real-world effects** beyond 18 months remain uncertain; open-label extensions suggest sustained separation but no plateau in decline.
+
+## Bottom line
+
+These are the **first disease-modifying therapies** with replicated evidence of slowing AD progression — a genuine scientific milestone. But the effect size is small, ARIA risk is non-trivial (especially in ε4 homozygotes), and the eligible window is narrow. Reasonable clinicians disagree on whether the benefit-risk-burden balance favors routine use; shared decision-making with attention to APOE status is now standard.

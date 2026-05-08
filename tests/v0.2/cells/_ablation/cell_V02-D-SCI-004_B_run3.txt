@@ -1,0 +1,32 @@
+True 10+ year cardiovascular outcome data for either drug does not exist yet. Here is what the evidence actually supports as of May 2026, and what remains unknown.
+
+## What's actually been measured
+
+**Semaglutide**
+- SUSTAIN-6 (T2D, ~2 yr median follow-up): 26% relative reduction in 3-point MACE vs placebo, driven mainly by nonfatal stroke.
+- SELECT (overweight/obese without diabetes, mean ~3.3 yr): 20% reduction in MACE; benefit appeared early and persisted through follow-up; absolute risk reduction ~1.5 percentage points.
+- FLOW (diabetic kidney disease): 18% MACE reduction, 20% reduction in major kidney events.
+- Open-label extensions and registry data now extend to roughly 5–7 years for the earliest trial cohorts. No signal of late attenuation, no signal of late harm, but cohorts are small and selected.
+
+**Tirzepatide**
+- SURPASS-CVOT readout (vs dulaglutide, T2D) reported 2025: non-inferior for MACE; numerical edge but not powered for superiority over an active GLP-1 comparator.
+- SUMMIT (HFpEF + obesity): improved KCCQ score, reduced HF events over ~2 yr.
+- SURMOUNT-MMO (obesity MACE trial): still accruing; primary readout not expected until ~2027.
+- No human data exists beyond ~5 years of continuous exposure.
+
+## What is genuinely unknown at 10+ years
+
+1. **Durability after discontinuation.** STEP-1 extension and SURMOUNT-4 show ~two-thirds of weight regain within a year of stopping. Whether the cardiovascular benefit decays on the same curve, faster, or slower is unmeasured.
+2. **Effect of intermittent / cyclical use**, which is how most real-world patients actually take these drugs given cost and supply. CVOTs studied continuous dosing.
+3. **Lean mass loss consequences.** ~25–40% of weight lost is lean tissue. Long-term implications for sarcopenia, frailty, falls, and cardiovascular reserve in patients who take these drugs from age 50 to 70+ are not characterized.
+4. **Cardiac structural effects.** Short-term MRI substudies show reductions in epicardial fat and LV mass; whether this translates to reduced incident HF, AF, or sudden death over a decade is inferred, not demonstrated.
+5. **Arrhythmia signal.** Modest heart-rate increase (~3–5 bpm) is consistent across trials. No clear AF signal short-term, but 10-year exposure data are absent.
+6. **Population-level effects on atherosclerosis progression** independent of weight — i.e., does sustained GLP-1 agonism slow plaque biology, or only mediate risk through weight, glucose, and BP? Imaging substudies (e.g., semaglutide carotid IMT work) are suggestive but underpowered for hard endpoints.
+7. **Tirzepatide-specific GIP-axis effects** over a decade are entirely uncharacterized in humans. The GIP component is mechanistically distinct from semaglutide and the long-term vascular consequences are extrapolation.
+8. **Pregnancy-cohort offspring outcomes**, relevant given off-label use in reproductive-age women.
+
+## Honest summary
+
+For 3–5 year horizons, the cardiovascular signal is consistent, mechanistically plausible, and reproduced across two drug classes and multiple populations. Anyone claiming to know the 10-year cardiovascular profile is extrapolating. The two specific extrapolation risks worth flagging are (a) benefit-decay if adherence is intermittent, and (b) net effect of cumulative lean-mass loss in older users — neither has been measured at the durations being asked about.
+
+Definitive 10-year data will not be available until roughly 2032–2035 for semaglutide and later for tirzepatide.

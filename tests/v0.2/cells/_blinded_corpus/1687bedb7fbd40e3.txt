@@ -1,0 +1,46 @@
+# Start with a monolith.
+
+For a 5-engineer team building a new B2B SaaS, this isn't really a close call. The reasoning:
+
+## Why monolith wins at this stage
+
+**1. Microservices solve organizational problems, not technical ones.**
+The original case for microservices (Amazon, Netflix) was about letting dozens of independent teams ship without coordinating. With 5 engineers, you have *one* team. You don't have the coordination problem microservices exist to solve.
+
+**2. Your domain isn't stable yet.**
+Pre-PMF B2B SaaS means service boundaries will move. Refactoring a function call is cheap; refactoring a network boundary (with its own deploy pipeline, schema, auth, retries, observability) is expensive. You'll pay the integration tax before you know where the seams should be.
+
+**3. Operational overhead doesn't scale down.**
+Microservices imply: service discovery, distributed tracing, per-service CI/CD, secrets management across N services, network policies, on-call for N runtimes, eventual-consistency bugs. That's roughly 1–2 FTE of platform work you don't have.
+
+**4. Latency and debuggability degrade.**
+A request that was one stack trace becomes a distributed trace across 4 hops. With 5 engineers, every hour spent debugging cross-service issues is an hour not shipping features customers will pay for.
+
+## The nuanced answer: "modular monolith"
+
+Don't build a *ball of mud* monolith. Build with discipline:
+
+- **Clear module boundaries** in code (e.g., `billing/`, `accounts/`, `notifications/`) with explicit interfaces between them
+- **One database**, but separate schemas/tables per module, no cross-module joins
+- **No shared mutable state** across modules; modules talk through defined APIs even in-process
+- **Async boundaries via a queue** (one queue, not Kafka) for things that genuinely need to be async
+
+This gives you ~80% of the architectural cleanliness of microservices with ~10% of the operational cost — and lets you carve off a true service later when (a) a module has stable boundaries, (b) it has independent scaling needs, or (c) team size demands it.
+
+## When to start carving off services
+
+Reasonable triggers, in rough order:
+1. A subsystem has fundamentally different scaling profile (e.g., a CPU-heavy ML inference path)
+2. A subsystem has different compliance/security requirements (e.g., PCI scope)
+3. Team grows past ~15–20 engineers and coordination cost on the monolith repo/deploy is real
+4. A specific module's deploy cadence genuinely needs to differ
+
+Until one of those is true, you're paying complexity tax for an option you aren't exercising.
+
+## The honest counter-case
+
+The only scenarios where I'd reconsider for a 5-person team:
+- The team already has deep microservices ops experience *and* a paved-road platform from day one
+- A core part of the product is genuinely a different runtime (e.g., a Python ML service alongside a TypeScript app) — but that's "two services," not "microservices"
+
+**Bottom line:** Modular monolith, one database, one deploy pipeline, clean internal seams. Optimize for shipping and learning. Earn the right to distribute later.

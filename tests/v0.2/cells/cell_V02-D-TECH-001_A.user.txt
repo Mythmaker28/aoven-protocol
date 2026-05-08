@@ -1,0 +1,1 @@
+Should a 5-engineer team building a new B2B SaaS start with microservices or a monolith?

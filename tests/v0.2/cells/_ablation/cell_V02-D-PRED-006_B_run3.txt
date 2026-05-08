@@ -1,0 +1,15 @@
+**Calibrated answer: roughly 35–45% probability, with wide error bars.**
+
+Reasoning, stripped:
+
+1. **Base rate.** Post-WWII US recessions arrive on a ~6–7 year cadence. An arbitrary 18-month window therefore carries a ~25–30% unconditional prior. Anything above that has to be earned by current-conditions evidence.
+
+2. **What I cannot do from here.** My training data does not give me reliable real-time readings on the May 2026 yield curve, unemployment trend, ISM, credit spreads, or the current tariff/fiscal regime. Any number I give without those is base-rate-plus-narrative, not a model output. Treat the 35–45% as a prior-anchored estimate, not a forecast.
+
+3. **Why I tilt slightly above base rate rather than below.** The conditioning facts I do have — sustained restrictive policy through 2023–24, a tariff-shock regime reintroduced in 2025, elevated sovereign debt service costs, and commercial real estate stress still working through bank balance sheets — are the kind of slow-burn frictions that historically raise 18-month recession odds rather than lower them. None individually forces a recession; collectively they shift the prior up modestly.
+
+4. **What would move me.** Down toward 25%: continued non-farm payroll growth >100k/month, 10y–3m re-steepening with no inversion-uninversion recession trigger fired, HY spreads <400 bps. Up toward 55–60%: sub-50 ISM for two quarters, initial claims trending >260k, Sahm rule triggered, credit spreads >550 bps.
+
+5. **Definitional caveat.** "Recession" here means NBER-dated. A growth scare or a single negative GDP print without NBER designation is a different question and more likely (~50–55%).
+
+Bottom line: I would not bet confidently either direction at current odds. If a market were pricing it at <25% I'd buy; at >55% I'd sell. In between, no edge from where I sit.

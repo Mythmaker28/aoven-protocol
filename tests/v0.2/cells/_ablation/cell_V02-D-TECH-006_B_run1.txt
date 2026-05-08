@@ -1,0 +1,23 @@
+# Business risks of building on Llama-3-licensed models in 2026
+
+**1. License is not OSI-open-source.** The Llama 3 Community License is a source-available license with use restrictions. Treating it as "open" in legal/procurement diligence is a recurring failure mode that surfaces during M&A or enterprise sales reviews.
+
+**2. The 700M MAU acceleration clause.** Cross 700M monthly actives and you must request a separate license from Meta, which they can grant or deny at their discretion. If your product succeeds, your license can effectively be revoked at the moment it matters most.
+
+**3. Unilateral AUP changes.** The Acceptable Use Policy is incorporated by reference and Meta can update it. Use cases that are compliant today (certain biometric, agentic, high-risk decision-support patterns) may not be tomorrow, and your existing deployment inherits the change.
+
+**4. Naming and attribution drag.** Derivative models must carry a "Llama" prefix; products must display "Built with Llama." This constrains brand strategy and signals dependency to competitors and acquirers.
+
+**5. Output-use restriction.** You cannot use Llama outputs to train or improve a non-Llama LLM. That forecloses a common exit strategy: distilling a smaller proprietary model from your production traffic.
+
+**6. Training-data IP overhang.** Meta is a defendant in active copyright litigation (Kadrey et al., authors' suits). An adverse judgment or settlement requiring data purges/retraining could force model withdrawal or version migration on your stack. Meta indemnifies nothing; downstream users carry the residual risk.
+
+**7. Staleness by 2026.** Llama 3 shipped in April 2024. By mid-2026 it is two generations behind frontier-equivalent open-weight competitors (Llama 4/5, Qwen 3, DeepSeek, Mistral Large 3). Capability gap compounds against you on every customer benchmark.
+
+**8. Regulatory burden falls on the deployer.** Under EU AI Act, GPAI obligations sit upstream but high-risk system obligations sit on you. Meta's model card and evals are not a substitute for your conformity assessment, and Meta has no contractual duty to supply what you need.
+
+**9. Geographic carve-outs.** The license has historically excluded or constrained certain jurisdictions (notably some EU multimodal variants were withheld). If your roadmap is global, you inherit Meta's geopolitics.
+
+**10. Substitution cost is real but bounded.** Genuinely permissive alternatives exist (Apache-2.0 Qwen, Mistral, Gemma-with-caveats, etc.). The risk is not "no alternative" — it is the migration cost (fine-tunes, evals, prompt regressions, infra) you'll eat when one of risks 1–9 forces a move.
+
+**Net:** the dominant risk is not technical performance — it is that you do not control the license, the AUP, the litigation exposure, or the upgrade cadence, and all four can change against you without notice. Plan for portability from day one (abstraction layer, eval harness, parallel candidate model in CI) and treat the Llama dependency as a contract you have not negotiated.

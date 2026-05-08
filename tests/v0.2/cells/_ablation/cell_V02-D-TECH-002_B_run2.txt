@@ -1,0 +1,27 @@
+# Rust vs Go for a High-Throughput API Gateway (2026)
+
+Short answer: **Go is the default correct choice; pick Rust only if you have specific, measured reasons.**
+
+## Where Go wins for API gateways
+
+- **Domain fit.** API gateways are I/O-bound: TLS termination, header parsing, routing, auth, rate-limiting, fan-out. Go's runtime (goroutines + netpoller) is purpose-built for this. The marginal CPU you'd reclaim with Rust is small relative to syscall + network time.
+- **Ecosystem.** Envoy aside (C++), the production-proven gateway ecosystem is overwhelmingly Go: Traefik, Kong's Go plugins, KrakenD, Tyk, APISIX's Go runner, all major service-mesh control planes. gRPC, OpenTelemetry, and most cloud SDKs have first-class Go support and lagging-but-improving Rust support.
+- **Iteration speed.** Compile times, simpler concurrency model, lower onboarding cost. For a piece of infra you'll extend with auth providers, plugins, observability, this matters more than throughput on a benchmark chart.
+- **GC is not the bottleneck people think.** Go 1.22+ GC pause times are sub-millisecond at gateway-typical heap sizes. Cloudflare, Discord, and Uber post-mortems show tail latency issues are almost always allocation patterns or lock contention, both fixable in Go.
+
+## Where Rust legitimately wins
+
+- **Per-core throughput and tail latency floor.** With `tokio` + `hyper`/`pingora`, you can hit lower p99.9 latency and 1.5–3× requests/sec/core. Cloudflare's Pingora (replacing nginx) is the public proof point.
+- **Memory footprint at extreme scale.** If you're running tens of thousands of instances or edge POPs where RAM × fleet-size dominates cost, Rust's lack of GC and tighter memory model pays off.
+- **Embedding into non-Go runtimes.** WASM filters, FFI into C++ data planes, sidecars with hard memory ceilings.
+- **Safety guarantees on untrusted input paths.** Header/protocol parsers benefit from the borrow checker; this is exactly why Pingora and Linkerd2-proxy chose Rust.
+
+## Decision rule
+
+- Single-team, < ~50k RPS/instance, standard cloud deploy → **Go.**
+- Edge/CDN scale, p99.9 SLO in single-digit ms, fleet cost dominated by gateway tier, or you need WASM/FFI embedding → **Rust.**
+- Greenfield with no Rust experience on the team → **Go**, even if Rust looks better on paper. The bug-class differences won't outweigh the velocity loss.
+
+## Caveat
+
+"High-throughput" is doing a lot of work in your question. If you mean "high for our company" (low tens of thousands of RPS), the language won't be your bottleneck — your auth provider, Redis hop, or upstream service will be. Pick the language your team will ship and operate well.

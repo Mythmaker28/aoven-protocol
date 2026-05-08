@@ -1,0 +1,42 @@
+# Rust vs Go for a High-Throughput API Gateway (2026)
+
+Both are defensible choices. The right answer depends on which axes of "high-throughput" matter most to you.
+
+## Go — pick this if you value shipping velocity and ops simplicity
+
+**Strengths**
+- **Fastest path to a working gateway.** The stdlib `net/http`, `httputil.ReverseProxy`, and HTTP/2 + HTTP/3 (via `quic-go`) story is mature. You can have a credible prototype in a day.
+- **Goroutine model fits gateways perfectly.** A connection-per-goroutine model with cheap stack growth is essentially the canonical workload Go was designed for.
+- **GC has gotten very good.** Sub-millisecond pauses on modern Go (1.22+) are realistic for typical gateway heap sizes. For p99 latency in the low-single-digit milliseconds, GC is rarely the bottleneck.
+- **Operational ergonomics.** Single static binary, excellent pprof/trace tooling, trivial cross-compilation, huge talent pool.
+- **Ecosystem precedent.** Traefik, Kong's new core, Caddy, Tyk, and a lot of internal gateways at hyperscalers are Go. Lots of patterns to copy.
+
+**Weaknesses**
+- **Tail latency under heavy allocation.** If you do lots of per-request JSON parsing, header rewriting, or buffer churn, GC pressure can show up at p99.9.
+- **Less control over memory layout / zero-copy.** Harder to do truly zero-allocation hot paths.
+
+## Rust — pick this if p99.9 latency, memory footprint, or per-core throughput is the product
+
+**Strengths**
+- **No GC, predictable tail latency.** With `tokio` + `hyper` (or the newer `pingora` from Cloudflare), p99.9 numbers are typically 2–5× tighter than equivalent Go for the same workload.
+- **Higher per-core throughput.** Cloudflare's published Pingora numbers vs. their old NGINX/Go stacks are the headline example; you'll generally see 1.5–3× more RPS per core.
+- **Better at CPU-heavy middleware.** TLS termination, compression, WAF rule evaluation, JWT verification at scale — Rust pulls ahead measurably.
+- **Smaller memory footprint** at high connection counts, which matters at the edge.
+- **Pingora, `tower`, `axum`, `hyper` 1.0** are all production-grade in 2026.
+
+**Weaknesses**
+- **Async Rust still has sharp edges.** Lifetimes across `.await` points, `Pin`, and `Send + Sync` bounds slow down feature work — especially for engineers new to it.
+- **Slower iteration.** Compile times and the borrow-checker tax are real, even with `cargo-watch` and incremental builds.
+- **Smaller hiring pool**, though much improved since ~2023.
+
+## My recommendation
+
+- **Default: Go.** For the vast majority of internal/B2B gateways doing tens of thousands of RPS per node, Go gets you 90% of Rust's performance at 50% of the engineering cost. You will not regret it.
+- **Choose Rust when at least one of these is true:**
+  1. You're at edge / CDN scale (millions of concurrent connections, hundreds of thousands of RPS per node).
+  2. p99.9 latency is contractually or product-critical (HFT-adjacent, real-time bidding, gaming).
+  3. Your gateway does heavy in-process compute (WAF, ML-based routing, complex transforms).
+  4. You already have the Rust expertise on the team — half the cost disappears.
+- **Hybrid pattern worth knowing:** Go control plane + Rust data plane (à la Envoy's xDS model, but with Pingora as the data plane) is a real option if you want both.
+
+If you can share the expected RPS/node, p99 SLO, and team composition, I can sharpen this further.

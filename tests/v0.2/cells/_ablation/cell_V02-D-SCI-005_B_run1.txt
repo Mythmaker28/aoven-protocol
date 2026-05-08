@@ -1,0 +1,42 @@
+# Anti-amyloid antibodies in early AD: calibrated read
+
+**Short answer:** They produce statistically significant slowing of cognitive/functional decline on group-level scales, but the effect size is small, likely below most minimum clinically important difference (MCID) thresholds, and is bought with non-trivial harm. Whether that constitutes "effective" depends on the threshold you require.
+
+## What the pivotal trials actually show
+
+**Lecanemab — Clarity AD (van Dyck et al., NEJM 2023, n=1795, 18 mo)**
+- CDR-SB: 1.21 (lecanemab) vs 1.66 (placebo); adjusted difference −0.45 (~27% slowing). p<0.001.
+- ADAS-Cog14, ADCOMS, ADCS-MCI-ADL all significant in same direction.
+- Amyloid PET cleared in most treated patients.
+
+**Donanemab — TRAILBLAZER-ALZ 2 (Sims et al., JAMA 2023, n=1736, 76 wk)**
+- iADRS: ~22–35% slowing depending on tau subgroup (low/medium tau population favored).
+- CDR-SB difference ~−0.7.
+- Stopped dosing once amyloid cleared (a meaningful design feature).
+
+## Why "effective" deserves scare quotes
+
+1. **MCID problem.** Commonly cited MCIDs for CDR-SB are ~1.0–2.5. Observed between-group deltas (~0.45–0.7) are well below. A patient or family is unlikely to detect the difference at the individual level over 18 months.
+2. **Time-shift framing.** The benefit is roughly equivalent to a 4–7 month delay in reaching a given decline milestone, not a halt or reversal.
+3. **Functional unblinding.** ARIA rates differ markedly between arms; infusion reactions (~26% lecanemab) are conspicuous. This plausibly contaminates rater/caregiver-reported endpoints.
+4. **Harm is real.**
+   - Lecanemab: ARIA-E 12.6%, ARIA-H 17.3%; symptomatic ARIA ~3%. Deaths in open-label extension associated with anticoagulation.
+   - Donanemab: ARIA-E ~24%, ARIA-H ~31%; 3 trial deaths attributed to treatment.
+   - **ApoE4 homozygotes** carry substantially higher ARIA risk; FDA labeling (and EMA's initial refusal, later qualified approval for non-homozygotes) reflects this.
+5. **External validity.** Trial populations were highly selected (amyloid-positive, MCI/mild dementia, limited comorbidity, restricted anticoagulation). Real-world cohorts differ.
+6. **Burden.** IV q2wk (lecanemab) or q4wk (donanemab), serial MRIs, ~$26K–$32K/yr drug cost, plus infrastructure.
+
+## Where the evidence is genuinely strong
+
+- **Biological target engagement is unambiguous.** Both clear amyloid plaques on PET, often to negative thresholds. This validates the amyloid hypothesis as *causally relevant* in a way prior failed trials had left open.
+- **Disease-modification signal** (as opposed to symptomatic effect) is plausible given plaque clearance + sustained divergence of curves.
+- Donanemab's tau-stratified design suggests benefit concentrates in earlier (low-tau) disease — consistent with the upstream biology.
+
+## Bottom line
+
+- **Group-level efficacy: yes, modest, replicated across two molecules.**
+- **Individual-level clinically meaningful benefit: unproven and probably small for most patients.**
+- **Net benefit-risk: defensible only with rigorous selection** (early disease, amyloid-confirmed, ApoE4 genotyping, no anticoagulation, MRI access, informed consent about modest expected benefit).
+- **Open questions:** durability beyond 18–24 months, post-clearance dosing strategy, performance in ApoE4 homozygotes, and whether earlier (preclinical) treatment shifts the benefit-risk meaningfully — AHEAD 3-45 and TRAILBLAZER-ALZ 3 will inform.
+
+Calling them "effective for early AD" is technically defensible against placebo on prespecified endpoints. Calling them "clinically transformative" is not supported by current data.

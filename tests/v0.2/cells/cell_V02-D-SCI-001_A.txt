@@ -1,0 +1,29 @@
+# Does the gut microbiome cause depression?
+
+**Short answer:** The evidence supports an *association* and plausible *bidirectional influence*, but a clean causal claim ("the microbiome causes depression") is not yet supported.
+
+## What the evidence actually shows
+
+**1. Robust associations (correlational)**
+- People with major depressive disorder show altered gut microbial composition compared to controls — typically lower diversity and shifts in taxa like *Faecalibacterium*, *Coprococcus*, *Eggerthella*, and *Bacteroides*.
+- Replicated in several large cohorts (e.g., Valles-Colomer et al., 2019; the Dutch Microbiome Project / Rotterdam Study, 2022).
+
+**2. Mechanistic plausibility (the "gut-brain axis")**
+- Vagal signaling, short-chain fatty acids, tryptophan/serotonin metabolism, HPA-axis modulation, and immune/inflammatory pathways all give microbes a route to influence mood circuits.
+
+**3. Causal evidence — limited and mostly preclinical**
+- **Fecal microbiota transplant (FMT) in rodents:** Transferring stool from depressed humans into germ-free or microbiota-depleted rodents reproduces depression-like behaviors (Kelly et al., 2016; Zheng et al., 2016). This is the strongest causal-direction evidence, but rodent behavioral assays ≠ human depression.
+- **Human RCTs:** Probiotic and FMT trials for depression exist but are small, heterogeneous, and show modest, inconsistent effects. Meta-analyses (e.g., probiotics for depressive symptoms) report small effect sizes with high risk of bias.
+- **Mendelian randomization** studies have produced mixed signals; recent ones suggest some taxa may have causal effects on depression risk, but instruments for microbiome traits are weak.
+
+## The honest epistemic state
+
+- **Direction of causation is unresolved.** Depression itself changes diet, sleep, exercise, and medication use — all of which reshape the microbiome. Reverse causation is a serious confounder.
+- **Confounders are large.** Diet, antibiotics, BMI, and SSRIs (which have antimicrobial effects) all affect microbial composition.
+- **"Cause" is the wrong frame.** Depression is heterogeneous; it's more defensible to say the microbiome is one *contributing modifier* in some subset of cases than a singular cause.
+
+## Best current statement
+
+The gut microbiome is **plausibly contributory and bidirectionally linked** to depression in humans, with **causal sufficiency demonstrated only in animal models** and **causal necessity not demonstrated** in either. Calling it "a cause" overstates the evidence; calling it "just correlation" understates the mechanistic and rodent-FMT data.
+
+If you want, I can drill into any one strand — the FMT studies, the MR results, or the SSRI-microbiome interaction.

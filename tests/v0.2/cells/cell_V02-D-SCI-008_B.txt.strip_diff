@@ -1,0 +1,7 @@
+# strip_test_b_markers.py v0.2-strip-1.0
+# input         : C:\Users\tommy\.paperclip\instances\default\workspaces\2ae117a1-f490-4e8e-a693-0f1d8d1d675b\aoven-protocol\tests\v0.2\cells\cell_V02-D-SCI-008_B.txt
+# input_sha256  : 60d86eb2c4c1f5a0e6c811364d8b087f997fbbbe455d746d5e87e7604d70c22d
+# output_sha256 : 60d86eb2c4c1f5a0e6c811364d8b087f997fbbbe455d746d5e87e7604d70c22d
+# input_lines   : 13
+# output_lines  : 13
+# (no differences -- stripped output is byte-identical to input)

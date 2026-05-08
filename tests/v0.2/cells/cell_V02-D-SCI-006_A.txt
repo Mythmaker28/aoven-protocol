@@ -1,0 +1,13 @@
+I don't have reliable data on the specific global daily new COVID-19 case count for 2024-12-31. A few important caveats:
+
+1. **WHO reporting changes**: By 2024, the WHO had transitioned away from daily global case reporting. In mid-2023, WHO ended the COVID-19 Public Health Emergency of International Concern (PHEIC), and many countries stopped reporting daily figures, shifting to weekly or monthly aggregated reports.
+
+2. **Johns Hopkins CSSE**: The widely cited Johns Hopkins dashboard stopped collecting/reporting data on March 10, 2023, so it wouldn't have a figure for that date either.
+
+3. **Data quality**: Even where late-2024 figures exist (e.g., via WHO's weekly dashboard), they substantially undercount real infections because most countries had wound down testing and surveillance programs. A "daily" number for 2024-12-31 would mostly reflect reporting cadence rather than actual disease incidence.
+
+If you need a figure for a specific purpose, I'd recommend:
+- **WHO COVID-19 Dashboard** (covid19.who.int) — for their weekly aggregated number covering the week containing 2024-12-31, which you could divide by 7 for a rough daily average.
+- **Our World in Data** (ourworldindata.org/covid-cases) — for any country-level series still being maintained.
+
+Would you like me to help interpret a number you've already pulled from one of those sources, or are you looking for context on COVID surveillance in late 2024?

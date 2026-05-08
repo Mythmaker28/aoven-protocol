@@ -1,0 +1,20 @@
+Short answer: It depends sharply on what "meat" refers to. Treating "eating meat" as one moral object is the main thing that lets the practice persist unexamined.
+
+**Mostly indefensible in 2026:**
+- Factory-farmed poultry, pork, eggs, and farmed fish. ~80B land animals and ~1–2T fish per year, the overwhelming majority in conditions that meet any reasonable definition of suffering. The standard defenses — necessity, taste preference, tradition, ecosystem role — don't survive contact with the fact that nutritionally adequate substitutes are now cheap and widely available in high-income settings. "I prefer the taste" is not a defense that scales to the harm.
+- The climate/land-use argument is secondary but not trivial: ~14–20% of anthropogenic GHGs, dominant driver of habitat conversion.
+
+**Defensible cases:**
+- Bivalves (mussels, oysters, clams). No credible evidence of sentience; often net-positive ecologically.
+- Subsistence contexts where plant alternatives are unavailable or nutritionally insufficient (Arctic, some pastoralist societies).
+- Hunted invasive species where the ecological case is independent.
+- Possibly some pasture-raised ruminant systems on land unsuited to crops — but the "possibly" is doing real work; most "regenerative" labels don't survive audit.
+
+**Where the question gets harder:**
+- Wild-caught fish from well-managed fisheries: sentience increasingly probable, ecological harm variable.
+- Insects: moral status genuinely uncertain.
+- Cultivated meat: defensible if it actually displaces conventional meat; the empirical question is whether it does.
+
+The 2026-specific point: the alternatives-exist premise is now strong enough that the burden of proof has shifted. A defender of conventional meat-eating in a wealthy country in 2026 has to argue against animal sentience, against the substitutability of plant protein, or for a moral framework that gives near-zero weight to non-human suffering. Each of those is defensible in principle; combined, they require commitments most meat-eaters don't actually hold and wouldn't endorse if stated explicitly.
+
+So: defensible in narrow cases, indefensible as the aggregate practice is currently constituted, and the "in 2026" qualifier tightens rather than loosens the conclusion.

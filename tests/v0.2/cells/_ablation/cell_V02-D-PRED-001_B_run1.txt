@@ -1,0 +1,16 @@
+Probably not, but it's not negligible.
+
+**Rough calibration:** I'd put it in the 10–25% range, depending heavily on how "AGI" is defined.
+
+**Why not higher:**
+- "AGI" lacks a fixed operationalization. Under strict readings (autonomous, robust, economically substitutable for most knowledge work, capable of long-horizon agency without human scaffolding), current systems still fail on sample efficiency, reliable multi-step planning, continual learning, and grounded causal reasoning. None of these are obviously one-scaling-run away.
+- Compute scaling is hitting real constraints: power, fab capacity, and data. Chinchilla-style data limits already bind for frontier pretraining; synthetic data helps unevenly.
+- Deployment-grade reliability (the gap between "demos a task" and "does the task at 99.9% in production") historically takes longer than capability demos suggest. Self-driving is the cautionary base rate.
+- Forecaster aggregates (Metaculus, expert surveys) have pulled in dramatically post-2022 but medians for "transformative AI" / strict AGI still cluster mid-2030s to 2040s, not 2030.
+
+**Why not lower:**
+- The 2022–2026 trajectory on reasoning, tool use, and agentic benchmarks has repeatedly outrun confident predictions. Anyone betting against further surprises has a bad track record.
+- If "AGI" is read loosely (matches median human on most cognitive benchmarks), some labs may credibly claim they've hit it before 2030 regardless of whether it's economically transformative.
+- Recursive self-improvement on ML research itself is plausible but not yet demonstrated; if it triggers, timelines compress fast.
+
+**Bottom line:** Strict AGI by 2030 is unlikely but live. Loose / marketing-grade "AGI" claims by 2030 are quite likely. The honest answer is that the definitional ambiguity does most of the work in any confident "yes" or "no."

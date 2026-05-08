@@ -1,0 +1,36 @@
+# Short answer: No, not as a population-wide claim.
+
+## Why the 10× framing fails
+
+**Amdahl's law kills it.** Coding-the-act-of-typing is roughly 20–40% of a working developer's time. The rest is requirements, design, debugging, code review, meetings, deployment, incident response, onboarding to unfamiliar code. Even if an AI assistant drove the typing-and-syntax portion to zero, the ceiling on total productivity gain is ~1.4–1.7×, not 10×.
+
+## What the evidence actually shows
+
+- **METR (2025)** randomized trial on experienced OSS developers in mature repos: AI tools made them ~19% **slower** on real tasks, despite a self-reported ~20% speedup. Perception ≠ throughput.
+- **GitHub/Microsoft Copilot studies**: 26–55% speedups on isolated, greenfield tasks (e.g., write an HTTP server). These are task-level, not job-level, and the tasks are unrepresentative.
+- **DORA 2024**: AI adoption correlated with small individual productivity gains but **decreased** delivery stability and throughput at the team level.
+- Enterprise rollouts (Accenture, ANZ Bank) report 10–20% cycle-time improvements, not order-of-magnitude.
+
+## Where large multipliers do appear
+
+- Greenfield prototypes and throwaway scripts.
+- Boilerplate-heavy CRUD work.
+- Developers working outside their primary language.
+- Junior developers on well-scoped tasks.
+
+These are real but narrow. They don't generalize to maintaining a 500k-LOC system with regulatory constraints.
+
+## Three-year horizon (to 2029)
+
+Even granting aggressive model improvement, the binding constraints are:
+1. **Context and verification cost** — agents that confidently produce wrong code shift work from writing to reviewing, which doesn't compound to 10×.
+2. **Organizational latency** — review processes, security/compliance gates, deployment pipelines don't scale with model capability.
+3. **The bottleneck moves** — when coding gets cheap, the bottleneck becomes specification, testing, and integration, which AI helps with less.
+
+## Calibrated forecast
+
+- Probability the **median** professional developer is 10× more productive end-to-end by mid-2029: **~3–7%**.
+- Probability of a 10× gain on **narrow task categories** (greenfield prototyping, simple web apps): **~50–70%** — already partially true.
+- Probability of 1.5–2× median end-to-end gain: **~40%**. This is the realistic optimistic case.
+
+The honest claim isn't "10× productivity" — it's "AI assistants reshape what developers spend time on, with modest aggregate throughput gains and large variance by task type."

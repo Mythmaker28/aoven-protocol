@@ -1,0 +1,36 @@
+# Statins for primary prevention in adults >70
+
+**Short answer: uncertain; default is "no automatic prescription," decision should be individualized.**
+
+## What the evidence actually shows
+
+- **Direct RCT evidence in this population is thin.** The major statin primary-prevention trials (JUPITER, HOPE-3, WOSCOPS, AFCAPS, ASCOT-LLA) enrolled few participants over 70 and almost none over 75. Subgroup analyses are underpowered.
+- **STAREE** (statins in the elderly, ≥70, primary prevention) was designed to answer exactly this question. Final results published 2024–2025 are the first reasonably direct data; they suggest modest event reduction without a clear mortality signal, but effect sizes are smaller than in younger cohorts.
+- **CTT meta-analysis (2019, Lancet)** found statin benefit per mmol/L LDL reduction attenuates with age and is statistically uncertain above 75 for primary prevention, while remaining clear for secondary prevention.
+- **Observational data (e.g., Mortensen & Nordestgaard 2020)** suggest benefit persists, but confounding by indication and healthy-user bias is severe.
+
+## What pushes toward treating
+
+- 10-year ASCVD risk in a healthy 70-year-old is almost always >7.5% on age alone, so risk-calculator thresholds (ACC/AHA, ESC) trigger automatically.
+- Absolute risk is high, so even a modest relative risk reduction yields a low NNT.
+- Coronary artery calcium (CAC) score >100 in this group strengthens the case considerably.
+
+## What pushes away from treating
+
+- Competing mortality: non-cardiovascular causes dominate later in life, shrinking achievable benefit.
+- Time-to-benefit for primary prevention is roughly 2.5–5 years; less useful if life expectancy is shorter than that.
+- Adverse effects (myalgia, modest diabetes incidence, drug interactions, polypharmacy burden) are more consequential in older adults.
+- Frailty, cognitive concerns, and falls reframe the risk-benefit calculus.
+
+## Reasonable framework
+
+1. **CAC = 0** in a healthy 70-year-old: defer or omit. Negative predictive value is strong even at this age.
+2. **CAC 1–99**: shared decision; lean toward statin if life expectancy >5 years and patient tolerates polypharmacy.
+3. **CAC ≥100 or strong family history**: treat, absent contraindication.
+4. **Frailty, life expectancy <5 years, or significant polypharmacy**: usually do not start; consider deprescribing if already on one for primary prevention.
+
+## Bottom line
+
+A blanket "yes" is not supported. A blanket "no" is also not supported. The honest answer is that for a robust 70-year-old with reasonable life expectancy, statins probably help a little; for a frail one, they probably don't help and may harm. CAC scoring is the single most useful tiebreaker and is underused in this age group.
+
+This is general information, not medical advice for any specific person.

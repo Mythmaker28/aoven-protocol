@@ -1,0 +1,19 @@
+Short answer: probably not for incidence; possibly a small effect on cancer mortality. Evidence is mixed and modest.
+
+**What the best evidence shows**
+
+- **VITAL trial (Manson et al., NEJM 2019)**, ~25,000 US adults, 2000 IU/day vit D3 vs placebo, ~5.3 yrs: no significant reduction in total invasive cancer incidence (HR 0.96, 95% CI 0.88–1.06). Cancer death showed a non-significant signal, which strengthened in analyses excluding the first 1–2 years (HR ~0.75).
+- **D-Health (Neale et al., Lancet Diabetes Endocrinol 2022)**, ~21,000 Australians, 60,000 IU/month (~2000 IU/day): no reduction in total cancer incidence or mortality.
+- **Meta-analyses (e.g., Keum 2019, 2022; Zhang BMJ 2019)**: consistent finding of **no effect on cancer incidence** but a **~6–13% relative reduction in cancer mortality**, mainly when daily (not bolus) dosing is used.
+- **USPSTF 2018** and follow-ups: insufficient evidence to recommend vit D for cancer prevention in community-dwelling adults.
+
+**Caveats that matter**
+
+- Trials largely enrolled vitamin-D-replete populations; effect in truly deficient people (25(OH)D < ~25 nmol/L) is undertested and could differ.
+- Bolus/intermittent high-dose regimens look less effective than daily moderate doses.
+- BMI interaction in VITAL: benefit clustered in lower-BMI participants — biologically plausible but post hoc.
+- Mortality benefit, if real, suggests effects on tumor progression rather than initiation.
+
+**Bottom line**
+
+Routine vit D supplementation does not meaningfully reduce the chance of *getting* cancer. There is a plausible but unconfirmed small reduction in *dying from* cancer with daily moderate-dose supplementation. If you are deficient, supplementing is reasonable on other grounds (bone, all-cause mortality signal); using cancer prevention as the primary justification is not supported.

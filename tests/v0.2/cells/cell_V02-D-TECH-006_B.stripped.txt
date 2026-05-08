@@ -1,0 +1,36 @@
+# Business risk of shipping on a Llama-3-licensed model in 2026
+
+## License-text risks (the contract itself)
+
+1. **The 700M MAU trigger.** If your products (or affiliates') hit 700M monthly active users in the calendar month before Llama 3's release, you must negotiate a separate license from Meta — at Meta's discretion. Acquisition/merger paths into a large parent flip this without warning.
+2. **Output-use restriction.** You may not use Llama 3 or its outputs to improve any other LLM (other than Llama 3 or derivatives). This forecloses distillation to a non-Llama base, synthetic-data bootstrapping of an in-house model, or migration to Mistral/Qwen/Gemma later. It is a vendor lock-in clause dressed as a license term.
+3. **Naming + attribution obligations.** Derivative models must lead with "Llama 3" in the name, and "Built with Meta Llama 3" must appear in your product. Brand teams routinely miss this; quiet noncompliance is grounds for termination.
+4. **Patent-retaliation clause.** If you (or an affiliate) bring an IP claim against Meta alleging Llama 3 infringes, the license auto-terminates. Counts even against unrelated Meta products you might later litigate.
+5. **Termination-at-breach with no cure period spelled out for AUP violations.** Meta can revoke; you have no contractual right to keep weights running in prod.
+6. **Acceptable Use Policy is unilaterally amendable.** Meta can broaden prohibited uses; you inherit the new version.
+
+## Indemnification and IP-litigation exposure
+
+7. **No meaningful indemnity from Meta** for training-data IP claims. The NYT v. OpenAI line of cases, the *Bartz v. Anthropic* settlement framework, and ongoing music-publisher suits are pushing toward damages allocation against deployers, not just trainers. You are downstream and exposed.
+8. **No warranty of non-infringement** on outputs. If Llama 3 reproduces copyrighted text or code, the liability is yours.
+
+## Regulatory risk (2026-specific)
+
+9. **EU AI Act GPAI obligations** are in force as of August 2025 for new models and August 2027 for pre-existing. If you fine-tune materially, you may yourself become a "provider of a GPAI model" with documentation, copyright-policy, and (above the systemic-risk threshold) evaluation obligations. Llama 3's upstream technical documentation may be insufficient to satisfy your downstream Article 53 transparency duties.
+10. **U.S. export-control posture** on model weights tightened through 2024–2025 (the diffusion framework). Llama 3 weights are open, but your re-distribution to restricted jurisdictions is your problem, not Meta's.
+11. **"Open source" marketing claim is contested.** OSI's Open Source AI Definition (1.0, Oct 2024) does not classify Llama as open source. FTC/consumer-protection risk if you market as such.
+
+## Strategic / commercial risk
+
+12. **Frontier gap.** Llama 3 in 2026 is ~2 years old. Llama 4 ships under potentially different terms; staying on 3 means you're competing with products on stronger bases. Migrating is contractually constrained by clause (2).
+13. **Meta-as-competitor risk.** Meta ships consumer AI products and ads-targeting AI. A successful vertical built on Llama 3 is a feature-roadmap target.
+14. **Support and security patches.** Community license is "as is." No SLA on safety patches, no committed support timeline, no contractual right to weight updates.
+
+## What materially reduces these risks
+
+- A negotiated commercial agreement with Meta (replaces the community license; rewrites MAU, indemnity, output-use).
+- Architectural decoupling so the model is swappable behind an inference interface, even though clause (2) limits where you can swap *to*.
+- A second-source plan with a non-Llama-derived base trained from scratch or sourced from Apache-2.0/MIT-weighted models, to defuse the output-use lock-in argument.
+- Indemnified inference via a hyperscaler (AWS Bedrock, Azure) — shifts some liability but does not override the community-license restrictions on you as the application provider.
+
+The dominant risk is not technical capability; it is the combination of clause (2) lock-in and clause (4)/(5) termination optionality held entirely by Meta.

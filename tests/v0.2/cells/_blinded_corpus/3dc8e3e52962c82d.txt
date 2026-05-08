@@ -1,0 +1,27 @@
+Short answer: maybe, but probably not in the legal sense, and you don't have enough information yet to tell.
+
+**What "discrimination" actually means**
+
+In the legal/HR sense, discrimination requires the unequal treatment to be based on a protected characteristic (race, sex, age, religion, disability, national origin, etc., depending on jurisdiction). A manager playing favorites, having poor judgment, or simply misreading your strengths is unfair — but it isn't unlawful discrimination on its own.
+
+**Questions that actually decide it**
+
+1. Is there a pattern correlated with a protected class? E.g., do the women on the team get the boring work while the men get the visible work? Do you differ from your colleagues on a protected axis?
+2. Have you explicitly asked for the higher-profile work and been refused, while peers who asked got it?
+3. What reason does the manager give? "You're reliable on this," "you're newer," "your bandwidth," etc., are legitimate even if annoying.
+4. Is "boring" code for lower-visibility, lower-promotion-value work? That matters more than whether the tasks are fun.
+
+**More likely explanations than discrimination**
+
+- You're competent at the unglamorous work, so it gets routed to you (the "reliability tax").
+- Your colleagues have negotiated their assignments and you haven't.
+- The manager has a mental model of your strengths that's outdated or wrong.
+- Affinity bias — they socialize more with the others — which shades into discrimination only if the affinity tracks a protected trait.
+
+**What to do before escalating**
+
+1. Document: list the last ~10 assignments, who got what, and the stated reason if any.
+2. Have a direct conversation: "I've noticed I've been getting X-type work and not Y. I want Y. What do I need to do to get it on the next cycle?" Their response is data.
+3. If the answer is vague or the pattern continues after an explicit ask, then escalate — to skip-level or HR — and at that point frame it around the pattern, not the label.
+
+Calling it "discrimination" to HR without the protected-class element will get the complaint dismissed and may damage your standing. Calling it "inequitable assignment distribution" with documentation gets traction.

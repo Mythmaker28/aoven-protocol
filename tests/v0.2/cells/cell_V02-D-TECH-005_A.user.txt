@@ -1,0 +1,1 @@
+Should a startup building a customer-support chatbot use a dedicated vector database (e.g., Pinecone, Weaviate) or pgvector on Postgres?

@@ -1,0 +1,39 @@
+# Long-Term (10+ Year) Cardiovascular Effects of Semaglutide and Tirzepatide
+
+## The Direct Answer: True 10+ Year Data Does Not Yet Exist
+
+As of May 2026, neither drug has accumulated a full decade of post-market cardiovascular outcomes data in its currently used formulations:
+
+- **Semaglutide**: First approved (Ozempic, T2D) in late 2017; obesity indication (Wegovy) in 2021. The longest randomized cardiovascular outcome trial, **SELECT** (n≈17,600), reported at ~3-year mean follow-up.
+- **Tirzepatide**: First approved (Mounjaro) in 2022; obesity indication (Zepbound) in 2023. The dedicated CV outcomes trial **SURPASS-CVOT** is still ongoing, with primary completion expected later in the decade.
+
+So any "10+ year" claim should be treated skeptically — it's currently extrapolation, not evidence.
+
+## What the Available Evidence Suggests (3–5 Year Horizon)
+
+**Semaglutide:**
+- **SUSTAIN-6** (T2D, ~2 yr): 26% reduction in MACE (nonfatal MI, nonfatal stroke, CV death).
+- **SELECT** (overweight/obese without diabetes, ~3 yr mean): 20% reduction in MACE; benefits on heart failure symptoms (per **STEP-HFpEF**) and reductions in atrial fibrillation incidence in secondary analyses.
+- Sustained reductions in BP, LDL, triglycerides, CRP, and visceral adiposity — the mechanistic substrate for presumed long-term benefit.
+
+**Tirzepatide:**
+- **SURMOUNT-1/4** and **SURPASS** trials show greater weight loss and HbA1c reduction than semaglutide head-to-head (SURMOUNT-5).
+- **SUMMIT** trial: improved exercise capacity and reduced HF events in HFpEF + obesity.
+- CV outcome signal is favorable but trial-confirmed mortality/MACE data at population scale is pending SURPASS-CVOT.
+
+## Reasonable Inferences for the 10+ Year Question (Caveats Required)
+
+1. **Durability of benefit depends on continued use.** STEP-1 extension and observational data show rapid weight regain and metabolic reversion within 1–2 years of discontinuation. Long-term CV protection likely requires sustained therapy.
+2. **Plausible long-term gains** if therapy is maintained: reduced incident HF, lower stroke incidence, slower progression of atherosclerotic disease, and possibly reduced AF burden — but the magnitude beyond year 5 is modeled, not measured.
+3. **Open uncertainties at 10+ years:**
+   - Sarcopenia / lean-mass loss and its downstream frailty/falls/CV consequences in older cohorts.
+   - Effects on coronary plaque composition (imaging substudies are early).
+   - Whether mortality benefit accumulates linearly or plateaus.
+   - Rare adverse signals (e.g., NAION, gastroparesis sequelae, pancreatic outcomes) that need decade-scale pharmacovigilance.
+   - Cohort effects in adolescents and pregnancy-exposed offspring (currently very limited data).
+
+## Bottom Line
+
+For decisions framed around "10+ year CV effects," the honest position is: **short- and mid-term data are strongly favorable for both drugs, but a true decade-long randomized or large-registry readout will not exist for semaglutide until roughly 2027–2030 and for tirzepatide until the early-to-mid 2030s.** Anything more confident than that is extrapolation from mechanism and 2–5 year trials.
+
+If you want, I can pull together the specific trial endpoints (HR, CI, NNT) or the mechanistic rationale in more depth.

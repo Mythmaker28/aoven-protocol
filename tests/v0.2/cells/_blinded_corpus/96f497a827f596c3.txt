@@ -1,0 +1,24 @@
+Short answer: **probably yes as a platform seed, but not yet as a mass platform** — and the distinction matters.
+
+Here's how I'd separate the two questions that usually get conflated:
+
+## 1. Is the *device* a meaningful product right now?
+No, by Apple's standards. ~$3,500 price, ~400k–500k unit sales in its first year (vs. ~50M+ for the original iPhone class of platform device by year three), heavy/uncomfortable form factor, thin third-party app catalog, and a content story that leans on repurposed iPad apps. It's a halo/dev kit being sold at consumer prices.
+
+## 2. Is it the start of a meaningful *platform*?
+That's the more interesting question, and the answer leans yes for a few non-obvious reasons:
+
+- **Input model is genuinely new.** Eye-tracking + pinch is the first input scheme since multi-touch that feels like it could *replace*, not supplement, a prior paradigm. That is the real platform-defining bet, more than the displays.
+- **visionOS is a real OS, not a shell.** Apple is building a separate SDK lineage (RealityKit, ARKit, spatial SwiftUI) — that's the kind of investment they only make when they expect a 10–20 year arc. Compare to the Touch Bar, which got no platform.
+- **Passthrough AR, not VR, is the strategic frame.** Meta spent years convincing the market VR was the platform; Apple reframed the category as "spatial computing" with the real world visible by default. That framing is now industry-standard, including at Meta.
+- **The economics will follow the optics.** The path from Vision Pro → Vision (cheaper, lighter, tethered to iPhone) → eventually glasses-form-factor mirrors the iPod → iPhone → Watch progression. The first device's job is to anchor developers and define the interaction grammar.
+
+## Where the bear case is strongest
+- **No killer use case yet.** Productivity ("infinite monitors") is real but niche; media is impressive but not habit-forming at that price; gaming is conspicuously absent.
+- **Social/wearability problem is unsolved.** A platform you can't wear in front of other people has a ceiling.
+- **AI may eat the runway.** Voice + ambient AI assistants on phones/earbuds may absorb the "ambient computing" demand before headsets get cheap enough. This is the genuine strategic risk, not Meta.
+
+## My read
+Vision Pro is most analogous to the **Newton or the original Mac**, not the iPhone — a directionally correct platform bet released before the components (weight, battery, cost, AI integration) were ready. The platform survives if Apple ships a sub-$1,500 lighter device within 2–3 generations and if at least one genuinely new app category emerges that *can't* exist on a phone. Without both, it becomes a respected dead end like the Newton. With both, it's the third major Apple platform.
+
+Probability-weighted: I'd say ~55–60% it becomes a meaningful platform on a 10-year horizon, ~25% it's a sustained niche (pro/enterprise), ~15–20% it's quietly wound down.

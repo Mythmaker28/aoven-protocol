@@ -1,0 +1,45 @@
+# Long-term (10+ year) cardiovascular effects of semaglutide and tirzepatide
+
+**Direct answer: No 10+ year cardiovascular outcome data exists for either drug as of May 2026.** Anything framed as "long-term effects" at that horizon is extrapolation, not evidence.
+
+## What the actual evidence horizon is
+
+**Semaglutide**
+- First approved 2017 (Ozempic, T2DM) / 2021 (Wegovy, obesity).
+- Longest CV outcome trials:
+  - SUSTAIN-6 (T2DM): median follow-up ~2.1 years; 26% relative reduction in MACE.
+  - SELECT (obesity, no diabetes): mean follow-up ~3.3 years; 20% MACE reduction (HR 0.80).
+  - FLOW (CKD + T2DM, 2024): ~3.4 years; reductions in MACE and renal events.
+- Maximum continuous human exposure data: roughly 5–6 years in trial extensions and post-marketing pharmacovigilance.
+
+**Tirzepatide**
+- Approved 2022 (Mounjaro) / 2023 (Zepbound).
+- SURPASS-CVOT vs. dulaglutide: median follow-up ~4 years, primary results expected late 2024–2025; full long-term safety data still maturing.
+- SUMMIT (HFpEF + obesity, 2024): improved KCCQ-CSS and 6-min walk, 1-year follow-up.
+- Real-world exposure beyond ~3 years is thin.
+
+## What is *known* (short/mid term, mechanistically suggestive)
+
+- MACE reduction in T2DM and in obese non-diabetic populations (semaglutide).
+- Reductions in BP (~3–6 mmHg systolic), LDL, triglycerides, hsCRP, and visceral adiposity.
+- HFpEF symptom and functional improvement (semaglutide STEP-HFpEF; tirzepatide SUMMIT).
+- Resting heart rate increase of ~2–4 bpm — clinical significance over decades is unknown.
+- Stable safety signal for arrhythmia in trial populations to date (no excess AF signal beyond what weight/diabetes status predicts).
+
+## What is *unknown* at the 10+ year horizon
+
+1. **Durability of MACE benefit on continuous therapy** — whether the relative risk reduction persists, attenuates, or grows with sustained exposure.
+2. **Discontinuation trajectories** — STEP-4 and SURMOUNT-4 show rapid weight, BP, and metabolic regain after stopping; CV consequences of cycling on/off across a decade are uncharacterized.
+3. **Lean mass and cardiac mass effects** — substantial fat-free mass loss is documented; long-term implications for myocardial mass, cardiac reserve, and sarcopenia-related CV mortality are unstudied.
+4. **Sustained sympathetic/heart-rate elevation** — chronic ~3 bpm elevation has theoretical adverse implications; no decade-scale data.
+5. **Atherosclerotic plaque composition over time** — imaging substudies are short; whether effects are primarily risk-factor-mediated or include direct vascular effects remains debated.
+6. **Off-target / pleiotropic effects** of chronic GLP-1 (and GIP) receptor agonism on autonomic tone, vascular endothelium, and conduction system over decades.
+7. **Effects in populations under-represented in trials** — older adults with frailty, advanced HFrEF, severe CKD, and very long pre-treatment disease duration.
+8. **Tirzepatide-specific GIP-axis chronic effects** on lipid handling, adipose biology, and vasculature — these have no human decade-scale precedent.
+
+## Bottom line
+
+For a clinician or patient asking this question today:
+- 3–4 year CV benefit in eligible populations is well supported.
+- 10+ year claims — positive or negative — are not supported by direct evidence and should be presented as inference from mechanism + intermediate-term trials, not as established fact.
+- The first true 10-year readouts from continuous-use cohorts will not be available until roughly the early-to-mid 2030s, and only if registry/extension follow-up is maintained.

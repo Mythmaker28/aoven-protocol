@@ -1,0 +1,16 @@
+Honest answer: I can't forecast this with confidence, and anyone who claims to is selling something. I don't have live access to current macro data (yield curve, unemployment trend, claims, ISM, credit spreads as of May 2026), and recession-calling has a poor track record even among people who do.
+
+What I can give you is a structured estimate, not a prediction.
+
+**Base rate.** Since 1945 the US has been in recession ~14% of months. The unconditional probability of a recession starting within any 18-month window is roughly 30–35%. That is the floor for "I know nothing."
+
+**Adjustments I'd want to make but can't verify from in here:**
+- Yield-curve signal: 2s10s and 3m10y inversions in 2022–2024 already "fired." If a recession didn't arrive by mid-2026, the signal is either late or wrong; conditioning on "didn't happen yet" actually lowers the forward probability somewhat.
+- Labor market: the relevant question is whether unemployment has triggered the Sahm rule (+0.5pp from trough on 3-mo avg). If yes, near-term probability climbs sharply; if no, it stays near base rate.
+- Policy stance: real Fed funds vs. neutral, and whether cuts have begun. Restrictive-and-holding is the recession-prone configuration.
+- Credit and corporate: HY spreads, C&I lending standards, delinquency trends.
+- Shocks: oil, geopolitics, tariff regime, any banking stress — unforecastable but historically the proximate cause more often than slow drift.
+
+**My estimate, with wide error bars:** 30–45% probability of an NBER-dated recession beginning before November 2027. I would not move off that range without current data. Anyone giving you a single number tighter than ±10pp on an 18-month macro call is overconfident.
+
+If you want a sharper answer, tell me what the current unemployment rate, Sahm indicator, and Fed funds path look like and I'll update.

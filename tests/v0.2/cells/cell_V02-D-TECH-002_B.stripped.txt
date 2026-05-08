@@ -1,0 +1,36 @@
+# Rust vs Go for a High-Throughput API Gateway (2026)
+
+Short answer: **Go is the more defensible default; Rust wins only if you have specific tail-latency, memory, or per-core throughput targets that Go can't hit.**
+
+## Where Go is the better choice
+
+- **Operational fit.** API gateways are I/O-bound proxies with lots of concurrent connections. Goroutines + `net/http` (or `fasthttp`) are essentially purpose-built for this shape of workload.
+- **Time-to-correct.** A working, observable gateway in Go takes weeks. In Rust it takes months, mostly fighting `Pin`, lifetimes across async boundaries, and trait-object ergonomics in `tokio`/`hyper`/`tower`.
+- **Ecosystem.** Envoy/Kong/Traefik/Caddy patterns, OpenTelemetry, gRPC, mTLS, xDS — all mature in Go. Rust has equivalents (`pingora`, `tower`, `axum`) but fewer reference deployments.
+- **Hiring.** Go talent pool is roughly an order of magnitude larger and onboarding is days, not quarters.
+- **Throughput is usually enough.** A tuned Go gateway will saturate 25–40 Gbps NICs before the language is the bottleneck. GC pauses in modern Go (sub-millisecond, often sub-100µs) are a non-issue for almost all gateway SLOs.
+
+## Where Rust wins
+
+- **p99.9 latency budgets under ~1 ms** with hard tail guarantees — no GC variance, no allocator surprises if you're careful.
+- **Per-core throughput / cost.** Cloudflare's `pingora` reportedly cut CPU and memory ~70% vs their nginx fleet. At hyperscale that pays for the engineering tax.
+- **Memory ceilings.** Long-lived connections with large per-connection state (e.g., WebSocket fan-out, QUIC at scale) are cheaper in Rust.
+- **Embedded filter logic / WASM hosts.** If the gateway runs untrusted plugins, Rust's `wasmtime` integration and zero-cost FFI are cleaner.
+- **Crypto/parsing hot paths.** TLS termination, HPACK/QPACK, custom protocol parsing — Rust's zero-copy story is materially better.
+
+## The honest decision rule
+
+| Condition | Pick |
+|---|---|
+| You are building one of N internal gateways, team < 20, RPS in the 10k–500k range | Go |
+| You are Cloudflare/Fastly-scale, or latency SLO is sub-ms p99.9, or you ship the gateway as a product to others | Rust |
+| You need WASM filter sandboxing as a first-class feature | Rust |
+| You need to ship in Q1 and iterate | Go |
+
+## What's changed by 2026 that's worth noting
+
+- Go's PGO and the post-1.22 routing/`net/http` improvements narrowed the gap further; arena/region work is still experimental.
+- Rust async is more livable than it was in 2022 (`async fn` in traits stabilized, `tower` ecosystem matured), but compile times and the learning cliff haven't really moved.
+- `pingora` being open source means you can adopt Rust without writing the core — that tilts marginal cases toward Rust if you'd otherwise build from scratch.
+
+If you don't already have a concrete reason Go fails your SLO on paper, default to Go.

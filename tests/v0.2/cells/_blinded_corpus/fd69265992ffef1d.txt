@@ -1,0 +1,20 @@
+I can't reliably forecast whether the U.S. will enter a recession in the next 18 months — that's a genuinely uncertain macroeconomic question, and I also don't have live access to current data (rates, yield curve, labor market, GDP nowcasts, etc.) in this conversation. Anyone claiming a confident yes/no answer is overstating what's knowable.
+
+What I can offer is a structured way to think about it as of early May 2026:
+
+**Indicators worth checking before forming a view**
+- **Yield curve**: 10y–3m and 10y–2y spreads. Inversions historically precede recessions by ~6–18 months; un-inversions often coincide with the onset.
+- **Labor market**: Sahm rule (3-mo avg unemployment minus prior 12-mo low ≥ 0.5pp), nonfarm payrolls trend, jobless claims, hiring rate.
+- **Leading indicators**: Conference Board LEI 6-mo annualized change, ISM manufacturing/services new orders, building permits.
+- **Credit conditions**: SLOOS bank lending standards, HY credit spreads, delinquency rates on credit cards/auto loans.
+- **Consumer**: Real disposable income growth, savings rate, retail sales ex-autos.
+- **Policy stance**: Real fed funds rate vs. neutral, fiscal impulse, any 2026 election-year fiscal shifts.
+
+**Base-rate framing**
+- Since WWII, the U.S. has been in recession roughly 13–15% of months. An 18-month unconditional base rate of "at least one month of recession" is roughly 25–35%.
+- Conditional on specific signals (sustained Sahm trigger, deeply inverted then steepening curve, tightening credit), the probability rises materially.
+
+**Honest answer**
+Without me pulling current readings on those series, the most defensible statement is: the probability is non-trivial but not dominant — somewhere in a wide band around the historical base rate, adjustable up or down based on indicators you can pull today.
+
+If you'd like, share the latest readings on a few of the indicators above (or paste a recent FOMC summary / LEI release) and I can help reason through what they imply — without pretending to a forecast I can't actually make.

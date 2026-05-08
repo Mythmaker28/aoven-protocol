@@ -1,0 +1,21 @@
+Short answer: probably no, at least not in the way "meaningful new platform" usually means (i.e., iPhone-class).
+
+The honest read as of mid-2026:
+
+**What argues for it being a platform start**
+- visionOS is a real OS lineage, not a skin on iOS, and Apple controls the full stack.
+- Passthrough quality and micro-OLED density set a reference bar competitors are still chasing.
+- The category needed someone to anchor "spatial computing" as a legible label, and Apple did that.
+
+**What argues against**
+- Install base is small — credible estimates put cumulative Vision Pro sales under ~1M, with a sharp post-launch drop. Apple cut production within months.
+- The software story never escaped "iPad apps in a window + a few demos." No category of native software exists that you can't approximate on a phone, laptop, or Quest.
+- Developer enthusiasm cooled fast. The third-party app count and update cadence are not what you see on a platform that's compounding.
+- Comfort, weight, and battery remain unresolved at the $3,500 tier; the cheaper SKU keeps slipping in reporting.
+- Meta has more units in the wild, faster iteration, and a clearer (if grubbier) consumer use case in social/gaming.
+- Apple's own org signals — reduced Vision Pro 2 ambition, focus shifted to a lower-cost variant — read as a company hedging, not doubling down.
+
+**The more defensible framing**
+Vision Pro is closer to Lisa or Newton than to iPhone: a credible reference design that establishes vocabulary, tooling, and a few interaction primitives (eye+pinch, EyeSight-style social affordances) that the actually-successful device — Apple's or someone else's — will inherit in 3–5 years. Whether *that* successor counts as "the Vision Pro platform" is a definitional choice. If you require continuity of SKU and ecosystem, the answer is likely no. If you accept "the lineage Apple started here," maybe.
+
+The test to watch: does a sub-$2,000 visionOS device ship with native software that has no good phone/laptop equivalent? Until both halves are true, calling it a meaningful new platform is forecasting, not observation.

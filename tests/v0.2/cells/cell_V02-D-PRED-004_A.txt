@@ -1,0 +1,45 @@
+# Short answer
+
+**Probably not by 30% on a lifetime basis, but a meaningful reduction (~10–25%) is plausible.** The headline "30%+ risk reduction" figures you may have seen are mostly relative-risk numbers from observational cohorts, and they shrink considerably once you account for confounding, your starting age, and the difference between *incidence* and *lifetime* risk.
+
+---
+
+## What the evidence actually shows
+
+**Observational meta-analyses** (e.g., Hamer & Chida 2009; Guure et al. 2017; Iso-Markku et al. 2022) typically find:
+- ~20–30% lower relative risk of all-cause dementia in physically active vs. inactive adults
+- ~30–45% lower relative risk for Alzheimer's specifically
+- A dose-response that **plateaus** around 150–300 min/week of moderate-vigorous activity
+
+30 km/week of running is roughly **180–240 minutes of vigorous activity** — already on the plateau. Going beyond doesn't seem to add much.
+
+**But three big caveats pull the real effect downward:**
+
+1. **Reverse causation.** People in early prodromal dementia reduce activity years before diagnosis. Studies that exclude the first 10+ years of follow-up (e.g., Sabia et al. 2017, BMJ, ~28 years follow-up) find the effect **shrinks substantially** — sometimes to non-significance.
+
+2. **Mendelian randomization** studies (using genetic variants for activity) generally fail to find a causal effect on Alzheimer's risk, suggesting much of the observational signal is confounding.
+
+3. **RCTs of exercise interventions** (e.g., LIFE, FINGER, EXERT) show modest or null effects on cognition over 1–5 years. No RCT has run long enough to measure dementia incidence definitively.
+
+---
+
+## Lifetime vs. relative risk — the math matters
+
+- Baseline lifetime dementia risk for a 35-year-old man ≈ **~13–15%**
+- A 25% relative-risk reduction → absolute lifetime risk drops from ~14% to ~10.5%
+- That's a **3.5 percentage-point absolute reduction**, or about a 25% relative reduction in lifetime risk — *not* 30%+
+
+To clear "30% lifetime risk reduction" you'd need the upper end of the observational estimates to be **fully causal**, which the MR and prodromal-exclusion data argue against.
+
+---
+
+## My honest take
+
+Switching from sedentary to 30 km/week running likely yields:
+- **~10–20% reduction in lifetime dementia risk** (best estimate, accounting for confounding)
+- **Larger and better-evidenced benefits** for cardiovascular mortality, type 2 diabetes, depression, and all-cause mortality — these are where the running really pays off
+- **Cognitive aging benefits** (processing speed, executive function in later decades) that are well-supported even if dementia-incidence effects are modest
+
+So: a worthwhile bet, but I'd frame it as "stacking modest protective effects across many diseases" rather than "30%+ dementia insurance policy."
+
+One caveat for a programmer specifically: at 30 km/week starting from sedentary, **ramp slowly** (10% volume increase per week max) — running injuries in the first 6 months are the single biggest reason people abandon the habit, and an abandoned habit gives you zero of the benefits above.

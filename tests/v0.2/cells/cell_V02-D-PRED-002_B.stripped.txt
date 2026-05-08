@@ -1,0 +1,18 @@
+**Short answer: probably not, but the tail is non-trivial. Rough credence ~3–10% by 2050.**
+
+**Why not higher:**
+- IPCC AR6 (2021) assigns *medium confidence* that AMOC will not undergo abrupt collapse before 2100. No major assessment body gives >50% by 2050.
+- CMIP6 ensemble: weakening (typically 20–40% by 2100) but not full shutdown in this century under most scenarios.
+- Direct observational record (RAPID array, 2004–) is too short to confirm a trend distinguishable from decadal variability.
+
+**Why not lower:**
+- Ditlevsen & Ditlevsen (2023, *Nat. Commun.*) fit early-warning signals to an SST-based AMOC fingerprint and estimated a collapse window of 2025–2095 (central ~2057). A non-trivial mass of that posterior sits before 2050.
+- van Westen et al. (2024, *Sci. Adv.*) showed a physics-based collapse pathway in a CMIP-class model under freshwater forcing, indicating the tipping topology is real, not just a statistical artifact.
+- Boers (2021) reported loss-of-resilience indicators across multiple AMOC fingerprints.
+
+**Main reasons the Ditlevsen number should not be taken at face value:**
+1. The SST fingerprint (subpolar gyre minus global mean) is a *proxy*; its coupling to AMOC strength may be non-stationary.
+2. The statistical model assumes constant forcing rate and noise structure — both are violated under accelerating GHG forcing and meltwater pulses.
+3. Early-warning signals can produce false positives near regime shifts that are not bifurcations.
+
+**Bottom line:** A mainstream calibrated credence for full AMOC collapse before 2050 sits in the low single digits to ~10%. Anyone giving <1% is ignoring the tipping literature; anyone giving >25% is over-weighting one contested statistical paper. The honest epistemic state is wide uncertainty over a low-probability, high-impact event.

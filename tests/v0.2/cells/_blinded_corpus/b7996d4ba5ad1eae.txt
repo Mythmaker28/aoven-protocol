@@ -1,0 +1,31 @@
+# Will the AMOC Collapse Before 2050?
+
+**Short answer: Almost certainly not a full collapse, but the risk is non-trivial and rising.**
+
+## What the science says
+
+**Mainstream IPCC view (AR6, 2021):**
+- AMOC is *very likely* to weaken over the 21st century
+- A full collapse before 2100 is assessed as having *medium confidence* of NOT occurring
+- Pre-2050 collapse is considered very unlikely under most scenarios
+
+**Recent challenger studies pushing the timeline earlier:**
+- **Ditlevsen & Ditlevsen (2023, *Nature Communications*):** Statistical early-warning signals in SST fingerprints suggest a possible tipping window between **2025–2095, central estimate ~2057**, under continued emissions. This was provocative and contested.
+- **van Westen et al. (2024, *Science Advances*):** Found a physics-based early-warning signal in a CMIP-class model, showing AMOC is "on route to tipping" — but did not assign a date.
+- **Smeed et al. / RAPID array observations:** Show weakening trend but high interannual variability; no clear collapse signal yet.
+
+## Key distinctions that matter
+
+1. **Weakening ≠ Collapse.** Substantial weakening (20–30%) by 2050 is plausible. A *shutdown* is a different beast.
+2. **Tipping point ≠ Tipping completion.** Crossing the threshold can happen decades before the circulation actually shuts down.
+3. **Model disagreement is large.** CMIP6 models mostly show gradual decline; some box models and observational reconstructions suggest higher fragility.
+
+## Rough probability estimate (synthesizing the literature)
+
+- **Full collapse by 2050:** ~5–10% (low but not negligible; Ditlevsen-style analyses pull this up, IPCC assessments pull it down)
+- **Significant weakening (>30%) by 2050:** ~30–50%
+- **Crossing an irreversible tipping threshold by 2050 (even if collapse takes longer):** ~10–20%
+
+## Bottom line
+
+A pre-2050 AMOC collapse is unlikely on current evidence, but it is one of the more credible "low-probability, high-impact" climate tail risks — credible enough that several recent peer-reviewed papers have moved the conversation from "centuries away" to "possibly this century." The honest answer is that the uncertainty is genuinely large, and anyone giving you a confident yes or no is overselling.

@@ -1,0 +1,35 @@
+Probably not, but it's not negligible. My rough estimate: 10–20% by Jan 2035.
+
+**What "breaking RSA-2048" actually requires**
+
+Shor's algorithm on RSA-2048 needs roughly:
+- ~2,000–4,000 logical qubits (depending on circuit choice)
+- ~10⁸–10⁹ Toffoli/T gates
+- Logical error rates ~10⁻¹⁰ or better, which under surface-code overhead at physical error ~10⁻³ means roughly 10⁷–2×10⁷ physical qubits and runtime of hours to days
+
+Gidney & Ekerå (2021) put it at ~20M noisy qubits / 8 hours. Recent improvements (Chevignard/Fouque/Schrottenloher 2024, Gidney 2025) have pushed estimates downward — Gidney's 2025 figure is closer to ~1M qubits with better factories — but the core bottleneck is the same: millions of physical qubits running coherently for hours.
+
+**Where the field actually is (mid-2026 vantage)**
+
+- IBM's roadmap targets ~100k physical qubits by ~2033 (Blue Jay), and a "fault-tolerant" demonstration well before that, but the demonstration scale is far below cryptographic relevance.
+- Google's Willow (2024) showed below-threshold scaling on the surface code at the distance-7 level. Real, but a long way from d≈25–27 needed for RSA at the required logical error budget.
+- Neutral atoms (QuEra, Atom Computing), trapped ions (Quantinuum), and photonics (PsiQuantum) all have plausible paths, but none has demonstrated anything near the gate count and qubit count required at the necessary fidelity.
+
+**Why I'm not at <5%**
+
+- Algorithmic improvements have repeatedly cut resource estimates by ~10× per few years. Another such cut combined with a hardware surprise is conceivable.
+- A classified program ahead of public state is possible (NSA/PLA). Hard to price; I'd add maybe 2–3 percentage points for "we don't see it in time."
+- "Harvest now, decrypt later" presumes adversaries believe the timeline is plausible enough to invest — which is itself weak evidence, but not zero.
+
+**Why I'm not at >25%**
+
+- The required engineering jump (current ~10²–10³ physical qubits with useful fidelity → ~10⁶ with surface-code-coherent operation for hours) is two orders of magnitude beyond anything demonstrated, with no current platform showing the manufacturability story.
+- Logical error rate progress is real but slow; most demonstrations are at d=5–7 with seconds of operation, not hours.
+- NIST PQC migration timelines (CNSA 2.0 mandates by 2035) are themselves calibrated against an internal USG estimate that RSA-2048 is unlikely to fall before then, but plausible enough to require pre-emptive migration. That's roughly the same prior I have.
+
+**Caveats**
+
+- "Break" is ambiguous. A one-off lab demonstration factoring a single 2048-bit modulus over weeks of dedicated runtime is more likely than operationally relevant cryptanalysis. If you mean the former, bump to ~15–25%; if you mean "intelligence services routinely decrypt intercepted RSA-2048 traffic," probably <5%.
+- If a non-Shor approach (e.g., a classical algorithmic break, or a hybrid quantum-classical attack with much lower resource requirements) lands, all bets are off. I assign this ~2–3%.
+
+Bottom line: more likely than not RSA-2048 survives to 2035, but the tail is fat enough that the PQC migration mandate is justified.

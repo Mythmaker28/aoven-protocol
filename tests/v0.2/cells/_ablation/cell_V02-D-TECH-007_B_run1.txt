@@ -1,0 +1,17 @@
+Short answer: **Not yet, and probably not in its current form.** It looks more like an expensive proof-of-concept than the seed of a durable platform.
+
+The honest case against:
+
+- **Install base is too small to bootstrap a developer flywheel.** Reported sell-through is in the hundreds of thousands of units, not the tens of millions iPhone hit by year two. Without users, no killer apps; without killer apps, no users.
+- **No category-defining use case has emerged.** Media consumption, a few enterprise verticals (training, design review), and novelty. None of those justify $3,500 + a heavy headset for most people.
+- **Ergonomics still disqualify it for daily computing.** Weight, heat, battery tether, social isolation. These aren't tuning issues; they're physics constraints that need a generational hardware shrink.
+- **visionOS leans heavily on iPad apps in floating windows.** That's a port story, not a new computing paradigm. The genuinely spatial software surface is thin.
+- **Apple itself appears to have pulled back** on the V2 of the high-end SKU and refocused on a cheaper variant — a signal the original thesis isn't compounding.
+
+The honest case for, kept narrow:
+
+- Hand + eye tracking and passthrough fidelity set a real bar competitors now have to clear.
+- visionOS, the tooling, and the developer muscle memory could matter *if* Apple ships a much lighter, cheaper device in the 2027–2029 window.
+- Platforms sometimes look stillborn for years (Apple Watch, AirPods) before a form-factor or use-case unlock.
+
+Best framing: **AVP is to spatial computing what the Newton was to mobile, not what the iPhone was.** Whether spatial computing becomes a meaningful platform depends on a future device — probably glasses-class, probably not from Apple alone — that the AVP is helping fund and de-risk. Treat the AVP itself as infrastructure investment, not as the platform.

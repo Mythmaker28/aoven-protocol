@@ -1,0 +1,26 @@
+# Rust vs Go for a High-Throughput API Gateway (2026)
+
+## Short answer
+**Go** is the better default. Pick **Rust** only if you have a specific reason the answer below doesn't satisfy.
+
+## Why Go wins for the typical case
+- **Workload shape.** API gateways are I/O-bound: TLS termination, header parsing, routing, auth checks, upstream fan-out. Go's runtime + goroutines map directly onto this. The CPU work per request is small enough that Rust's zero-cost abstractions rarely show up in p50/p95.
+- **Ecosystem fit.** Envoy aside, the gateway/proxy ecosystem in Go is dense: `net/http` (now with the routing improvements landed in 1.22), `fasthttp`, `connect-go`, gRPC-go, OTel SDK maturity, Kubernetes client-go, Istio/Linkerd-adjacent tooling. Rust has `hyper`, `tower`, `pingora`, `axum` — strong, but smaller integration surface for the surrounding control-plane work you'll inevitably write.
+- **Iteration cost.** Compile times, hiring pool, on-call debuggability, and the cost of a junior engineer adding a middleware are all materially better in Go. For infrastructure that has to evolve, this compounds.
+- **GC is not the bottleneck most teams think it is.** Go's GC pause budget at gateway-shaped allocation rates is sub-millisecond on modern hardware. If you're not already hitting it in benchmarks, don't pre-optimize against it.
+
+## When Rust is the right call
+- **You are Cloudflare/Fastly-scale**, or your gateway is a hard-realtime or memory-constrained data-plane (sidecar at >100k RPS/core, embedded, eBPF-adjacent userspace). Pingora exists because Cloudflare hit the wall Go puts in front of you at that scale.
+- **Tail-latency SLOs in the low single-digit milliseconds**, where GC jitter and goroutine scheduling variance start mattering.
+- **Heavy per-request CPU work**: WASM filters, on-the-fly crypto, complex policy evaluation, deep packet inspection. Rust + `tower` + `tokio` will out-throughput Go per core, often 1.5–3×.
+- **You need C-level FFI** without cgo's overhead.
+- **The team already writes Rust well.** Rust written by a team learning Rust is slower to ship and not necessarily faster at runtime than idiomatic Go.
+
+## The honest tradeoff
+Rust gives you a higher ceiling and a lower floor on tail latency. Go gives you a higher floor on shipping velocity and operational sanity. For "high-throughput" defined as tens of thousands of RPS with normal middleware, Go reaches the throughput target first and stays there.
+
+## Decision rule
+- If you can't articulate a specific Rust-justifying constraint (tail-latency SLO, per-core throughput target, memory ceiling, FFI), choose Go.
+- If you can, and the team has Rust depth, choose Rust and budget for the ecosystem gaps.
+
+Default: **Go**.

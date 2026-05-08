@@ -1,0 +1,23 @@
+Whether AGI will be achieved by 2030 is genuinely uncertain, and honest answers require distinguishing forecasting from wishful framing on either side.
+
+**What "AGI" means matters a lot.** There's no settled definition. Candidate thresholds include:
+- Matching median human performance across most economically valuable cognitive tasks (OpenAI's working definition).
+- Outperforming expert humans across essentially all cognitive domains.
+- Demonstrating autonomous, open-ended learning and goal-pursuit in novel environments.
+
+A 2030 "yes" under the first definition is much more plausible than under the third.
+
+**Reasons to give meaningful probability to AGI-by-2030:**
+- Scaling has continued to yield capability gains across pretraining, RLHF, and now reasoning/inference-time compute, with no clean wall yet observed.
+- Frontier labs (OpenAI, Anthropic, DeepMind) have leadership publicly forecasting transformative AI within the decade, and they're allocating capital accordingly.
+- Agentic systems, tool use, and long-horizon task performance have improved faster than many 2022-era forecasters predicted.
+
+**Reasons for skepticism:**
+- Current systems still fail at robust long-horizon planning, reliable self-correction, and sample-efficient learning from sparse feedback.
+- Benchmarks have a history of being saturated without delivering the generality the benchmark was meant to proxy for.
+- Compute, energy, and high-quality data constraints may bind before 2030.
+- "Jagged" capability profiles (superhuman at some tasks, subhuman at adjacent ones) suggest the underlying architecture may not be on a smooth path to generality.
+
+**Forecaster aggregates** (Metaculus, expert surveys) have pulled their AGI medians substantially earlier over the last three years, with some now landing in the early 2030s, but these aggregates are sensitive to definitional drift — when the bar moves, the date moves.
+
+**My honest take:** I'd put non-trivial probability (somewhere in the 15–40% range, depending on definition) on something defensibly called AGI by end of 2030, and meaningful probability on a clear "not yet" verdict. Anyone giving you a confident yes or confident no on this question is overclaiming.

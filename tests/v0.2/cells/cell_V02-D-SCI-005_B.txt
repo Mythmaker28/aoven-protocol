@@ -1,0 +1,35 @@
+# Anti-amyloid antibodies in early AD: calibrated answer
+
+**Short answer:** Yes in a statistical sense, contested in a clinical-meaningfulness sense.
+
+## What the pivotal trials showed
+
+**Lecanemab — CLARITY-AD** (n=1795, 18 mo, early symptomatic AD with confirmed amyloid):
+- CDR-SB change: 1.21 (drug) vs 1.66 (placebo). Absolute difference **−0.45**, ~27% relative slowing. p<0.001.
+- ADAS-Cog14, ADCOMS, ADCS-MCI-ADL all moved in the same direction with similar effect sizes.
+
+**Donanemab — TRAILBLAZER-ALZ 2** (n=1736, 76 wk):
+- In low/medium tau population: ~35% slowing on iADRS, ~36% on CDR-SB.
+- Combined population: ~22–29% slowing. Plaque clearance was substantial; many participants stopped dosing on amyloid-PET negativity.
+
+Both drugs replicated the amyloid-clearance → cognitive-slowing chain that prior anti-amyloid agents (bapineuzumab, solanezumab, aducanumab in EMERGE/ENGAGE) had failed to demonstrate convincingly. That is the strongest claim available: the amyloid hypothesis now has positive Phase 3 confirmatory evidence, twice.
+
+## Why "effective" is contested
+
+1. **Magnitude vs. minimal clinically important difference.** Common MCID estimates for CDR-SB in mild AD/MCI sit around 1–2 points. A −0.45 absolute difference at 18 months is below most MCID thresholds. Donanemab's ~0.7-point difference is closer but still inside the disputed band.
+2. **It is slowing, not halting or reversing.** Both arms decline; the drug arm declines less.
+3. **Subgroup heterogeneity.** APOE4 homozygotes show attenuated benefit and markedly higher ARIA risk. Lecanemab's pre-specified sex subgroup showed weaker point estimate in women; FDA/EMA reviewers flagged but did not treat as decisive.
+4. **Safety is non-trivial.**
+   - Lecanemab: ARIA-E 12.6%, ARIA-H 17.3%; symptomatic ARIA-E ~2.8%. Deaths in open-label extension, especially in APOE4/4 and anticoagulated patients.
+   - Donanemab: ARIA-E ~24%, ARIA-H ~31%; 3 trial deaths attributed to ARIA.
+5. **Brain-volume loss** in treated arms is greater than placebo — interpretation (pseudoatrophy from plaque/fluid clearance vs. true volume loss) is unresolved.
+6. **Durability and dosing duration unknown.** Donanemab's stop-on-clearance design hints at finite dosing; lecanemab's needed duration is not established. Long-term (>2 yr) blinded data do not exist.
+7. **Eligibility narrow.** MCI-to-mild-dementia stage, biomarker-confirmed amyloid, MRI-tolerant, manageable APOE4 risk, no anticoagulation conflict. Most diagnosed AD patients fall outside.
+
+## Bottom line
+
+- **Disease-modifying mechanism: supported.** Two independent Phase 3 wins on amyloid clearance + cognitive endpoints.
+- **Patient-level clinical benefit: modest and below standard MCID thresholds**, with measurable harm rates that require MRI surveillance and APOE genotyping.
+- **Reasonable clinician position:** offer to a narrow, well-counseled subset (early symptomatic, amyloid-confirmed, non-APOE4/4 or fully informed APOE4/4, no anticoagulation) where the patient values even a modest delay; not a default standard of care for all early AD.
+
+Calling them "effective" without qualifying magnitude and harm overstates the evidence. Calling them ineffective ignores two positive confirmatory trials. The honest descriptor is **"modestly disease-modifying, with non-trivial safety burden, in a narrow population."**

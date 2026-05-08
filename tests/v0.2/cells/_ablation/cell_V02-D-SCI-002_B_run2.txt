@@ -1,0 +1,24 @@
+Short answer: probably not for cancer incidence; weak and inconsistent signal for cancer mortality.
+
+**What the best trials show**
+
+- **VITAL** (n=25,871, 2,000 IU/day D3, ~5.3 yr): no reduction in total cancer incidence (HR 0.96, 95% CI 0.88–1.06). A pre-specified analysis excluding the first 2 years suggested a modest reduction in cancer death (HR ~0.75), but this is a secondary finding, not the primary endpoint.
+- **D-Health** (Australia, n=21,315, 60,000 IU/month, ~5 yr): no effect on cancer mortality (HR 1.00) or incidence.
+- **VIDA** (New Zealand): no effect.
+- **ViDA / Women's Health Initiative** (400 IU + calcium): no effect on cancer.
+
+**Meta-analyses**
+
+Pooled trial data show no convincing reduction in cancer incidence. Some meta-analyses (e.g., Keum et al., 2019; Zhang et al., 2019) report a ~6–13% reduction in cancer mortality, concentrated in subgroups (daily — not bolus — dosing, normal BMI, longer follow-up). The effect on incidence is null.
+
+**Mendelian randomization**
+
+Genetically predicted 25(OH)D levels generally do not associate with risk of most common cancers (breast, prostate, colorectal, lung, pancreatic, ovarian). This argues against a strong causal effect.
+
+**What this leaves**
+
+- If you are vitamin D deficient (<20 ng/mL / <50 nmol/L), correcting that is reasonable for skeletal reasons, and the cancer-mortality signal — if real — is most plausible in this group.
+- If you are replete, supplementation is unlikely to lower your cancer risk.
+- The "vitamin D prevents cancer" claim that circulated from observational studies has not survived large RCTs; observational associations were largely confounded by reverse causation (illness lowers 25(OH)D) and lifestyle factors.
+
+Bottom line: the randomized evidence does not support taking vitamin D to prevent cancer. There is a contested, small possible benefit for cancer death; it is not established.

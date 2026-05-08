@@ -1,0 +1,38 @@
+# Business risks of building on a Llama-3-licensed model in 2026
+
+The Llama 3 Community License is a *source-available* license, not an OSI-approved open-source license. That distinction is the root cause of most of the risks below.
+
+## License-mechanical risks
+
+1. **700M MAU ceiling.** If, on the product's launch date, monthly active users exceed 700M, you must separately negotiate with Meta — a hard cap on outsized success and an awkward conversation if you're approaching it via a viral feature.
+2. **Output-use restriction.** Outputs cannot be used to train or improve a non-Llama LLM. This forecloses a common hedge (distill into your own architecture to escape the license) and complicates synthetic-data pipelines that touch other base models.
+3. **Naming and attribution constraints.** Derivatives must begin with "Llama" and prominently display "Built with Llama." This is a brand-control concession many enterprise customers and white-label partners dislike.
+4. **AUP-by-reference.** You must comply with Meta's Acceptable Use Policy *as updated*. A future AUP revision can retroactively constrain a use case you've already built and shipped.
+5. **Patent-clause termination.** Bringing any patent claim alleging Llama infringes terminates your license — a meaningful constraint if you later acquire a portfolio or get into a patent skirmish.
+
+## Supply-chain and continuity risks
+
+6. **Generational drift.** By 2026, Llama 4/5 have shifted the frontier. Llama 3 weights are static; the *ecosystem tooling* (quantizers, inference kernels, fine-tuning recipes) optimizes for the newest generation. Staying on Llama 3 means accumulating a tool-debt tax.
+7. **Per-version license drift.** Llama 3.1, 3.2, and 3.3 were each released under their own community license variant; Meta has shown willingness to add geo-restrictions (e.g., EU exclusions on multimodal variants). Future versions you might want to upgrade *to* may carry stricter terms than the one you started on.
+8. **Fine-tune lock-in.** Your fine-tuned weights are derivatives subject to the original license. Migrating off Llama means redoing post-training, eval harnesses, and safety tuning on a new base.
+
+## Legal and regulatory risks
+
+9. **No meaningful indemnification.** Meta does not indemnify you for third-party IP claims arising from training data. Pending suits (Kadrey-class copyright actions and successors) could yield remedies — disgorgement, training-data injunctions, or weight modifications — that propagate downstream to you.
+10. **EU AI Act exposure.** GPAI obligations are in force in 2026. "Open-weight" is *not* a regulatory exemption when you deploy a system; you inherit deployer obligations and, depending on your modifications, possibly provider obligations. The Llama license does not allocate this risk to Meta.
+11. **Procurement red-flag.** Many enterprise legal teams now triage non-OSI licenses into a "requires exception" lane. This adds sales-cycle friction relative to a competitor on Apache-2.0 weights (e.g., Mistral, Qwen-derived stacks under permissive terms, or fully OSI-licensed bases).
+
+## Strategic risks
+
+12. **Meta as both supplier and competitor.** Meta ships consumer AI products and may, at any time, launch a feature that overlaps yours — with privileged access to the roadmap, training data, and tuning recipes you don't have.
+13. **Differentiation collapse.** Anything you can build on Llama 3, every competitor can also build on Llama 3. Defensibility has to come from data, distribution, or post-training — not the model.
+
+## Mitigations worth pricing in
+
+- Architect for **base-model portability** (abstraction over inference, eval suite that runs cross-model, RAG/agents loosely coupled to weights).
+- Track the **MAU buffer** as a board-level metric if you're in consumer.
+- Get **license review at each Llama upgrade**, not just at adoption.
+- Maintain a **fallback fine-tune on a permissively-licensed base** (Apache-2.0 or MIT-weights model) sized for your worst-case migration window.
+- Document **your own AUP layer** so a Meta AUP change doesn't silently break customer contracts.
+
+The short version: Llama 3 in 2026 is fine for prototypes, internal tools, and products where you control distribution and have a migration path. It is risky as the *sole* foundation for a venture-scale consumer product, an enterprise product sold to Fortune-500 procurement, or any product whose moat is the model itself.

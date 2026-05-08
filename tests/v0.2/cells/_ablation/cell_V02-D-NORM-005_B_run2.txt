@@ -1,0 +1,17 @@
+Short answer: "eating meat" is too coarse a category to get a single verdict. Disaggregated:
+
+**Hard to defend in 2026:**
+- Factory-farmed meat in wealthy countries with affordable plant-based and (increasingly) cultivated alternatives. The standard defenses—necessity, nutrition, cost—have weakened materially since ~2015. On utilitarian grounds the suffering-to-pleasure ratio is brutal (≈70B land animals/yr, most in confinement systems). On virtue grounds, the disposition required to remain incurious about supply-chain conditions is itself a defect. Climate and zoonotic-risk externalities compound the case.
+
+**Defensible or at least seriously contested:**
+- Subsistence hunting, pastoralism in marginal-agriculture regions, and contexts where plant alternatives are unavailable or medically contraindicated.
+- Bivalves (likely non-sentient), and arguably some wild-game and end-of-life dairy/laying culls where the counterfactual animal life wasn't created for slaughter.
+- Regeneratively grazed ruminants on land unsuitable for crops—climate math is genuinely disputed, animal-welfare math is better than CAFO but not clean.
+
+**Where the argument actually lives:**
+Not "is meat wrong" but "does the moral status of animals warrant the weight needed to override taste, habit, and culture when substitutes exist?" If you grant non-trivial moral status to vertebrates—which most ethical frameworks now do, including ones that resist Singer-style utilitarianism—then the burden of justification sits on the consumer, and for the median 2026 wealthy-country diet that burden is not being met.
+
+**Honest residue:**
+Many people, including people who've thought about this carefully, continue to eat factory-farmed meat. That's evidence about akrasia and social coordination problems, not evidence that the ethical argument is weak. The two questions—"is it defensible?" and "will I stop?"—are separable, and conflating them is how the topic usually gets dodged.
+
+Verdict: industrial meat consumption in 2026, for someone with alternatives, is not morally defensible under any major ethical framework without special pleading. Categorical "all meat-eating" claims are weaker and run into real edge cases.

@@ -1,0 +1,22 @@
+Monolith. The case is fairly one-sided at this team size.
+
+**Why monolith wins for a 5-engineer B2B SaaS:**
+
+1. **Coordination overhead scales with services, not engineers.** With 5 people you cannot afford 8+ services each needing their own deploy pipeline, observability, on-call rotation, schema-change protocol, and inter-service contract tests. Microservices push complexity from the code into the infra and the org — and you don't have the org.
+
+2. **Domain boundaries are unknown at the start.** You don't yet know where the seams in your B2B product actually are. Microservice boundaries chosen pre-product-market-fit usually become wrong, and refactoring across service boundaries is markedly more painful than refactoring across module boundaries inside one repo.
+
+3. **Latency, transactions, and debugging are free in a monolith.** Cross-service calls turn what would be a function call and a SQL transaction into a distributed-systems problem (retries, idempotency, partial failures, distributed traces). For early B2B where customers expect correctness over scale, this is a bad trade.
+
+4. **Microservice arguments that don't apply yet:** independent scaling (you have ~no load), independent deploys (you have ~no deploys per day), language heterogeneity (5 engineers should converge on one stack), team autonomy (you have one team).
+
+**The defensible nuance — not every concern lives in the monolith:**
+
+- Anything async, slow, or with very different runtime characteristics (background jobs, heavy ETL, ML inference, webhook ingestion) is fine to split out from day one. That's not "microservices," that's "don't run a 30-minute job inside a request handler."
+- Auth/identity is sometimes worth isolating early because it's a security boundary, not a scaling one.
+
+**Build the monolith with seams.** Modular boundaries inside the repo (clear package/module separation, no cross-module DB access, internal APIs you'd be willing to expose), so that when you have 25 engineers and known hot spots, extraction is mechanical rather than archaeological.
+
+**When to revisit:** team > ~15, clear independently-deployable domains have emerged from real usage, or a specific component has scaling/compliance characteristics the rest of the system shouldn't inherit. Not before.
+
+Short version: microservices solve organizational and scale problems you don't have, at the cost of engineering problems you can't yet afford. Start monolithic; design for extractability.

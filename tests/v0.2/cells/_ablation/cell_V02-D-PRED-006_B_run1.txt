@@ -1,0 +1,29 @@
+# Recession in the next 18 months — calibrated take
+
+**Honest epistemic position:** I don't have reliable real-time macro data for May 2026 (yield curve state, current unemployment trajectory, ISM, credit spreads, Fed path). Anything I claim about *current* conditions would be confabulation. So this answer is structured as: base rate → what would move it → what I'd need to see to commit to a number.
+
+## Base rate
+- Since 1945, the US has had ~12 NBER-dated recessions in ~80 years.
+- Unconditional probability of a recession *starting* in any 18-month window: **~22–28%**.
+- That's the prior. Anything more specific requires conditioning on observable signals.
+
+## Signals that would move it up
+- Inverted 3m/10y yield curve sustained >6 months (historically the cleanest single predictor; lead time 6–18 months).
+- Sahm rule triggered (3m avg unemployment up ≥0.5pp from trailing-12m low).
+- Credit spreads (HY OAS) widening through ~600 bps.
+- ISM Manufacturing <45 sustained, with services rolling over.
+- Real consumer spending negative YoY.
+
+## Signals that would move it down
+- Curve re-steepening from positive territory with falling unemployment.
+- Real wage growth + rising labor force participation.
+- Fed cutting into a non-recessionary soft landing already confirmed in revised GDP prints.
+
+## What I won't do
+- Pretend to know which of these are flashing in May 2026.
+- Give a single number that implies precision I don't have.
+
+## If forced to a number
+Without conditioning data, I'd anchor at the base rate and widen: **20–35%**, with the honest center near **~25%**. To tighten this meaningfully I'd need the signal panel above pulled fresh.
+
+If you want a real answer rather than a base-rate answer, point me at current readings (curve, Sahm, HY spreads, ISM, payrolls trend) and I'll update explicitly.

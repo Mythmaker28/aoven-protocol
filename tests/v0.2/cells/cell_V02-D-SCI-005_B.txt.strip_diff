@@ -1,0 +1,10 @@
+# strip_test_b_markers.py v0.2-strip-1.0
+# input         : C:\Users\tommy\.paperclip\instances\default\workspaces\2ae117a1-f490-4e8e-a693-0f1d8d1d675b\aoven-protocol\tests\v0.2\cells\cell_V02-D-SCI-005_B.txt
+# input_sha256  : 273fb7c1ffde16f6facb35901486c63b782ff16d1faa60ffd81b789607f7d522
+# output_sha256 : de2b430a17a7ebd493cab5ec14c067133c414fc450a6b879f8f576165f651f51
+# input_lines   : 35
+# output_lines  : 35
+L23: BEFORE: '   - Lecanemab: ARIA-E 12.6%, ARIA-H 17.3%; symptomatic ARIA-E ~2.8%. Deaths in open-label extension, especially in APOE4/4 and anticoagulated patients.'
+L23: AFTER : ' - Lecanemab: ARIA-E 12.6%, ARIA-H 17.3%; symptomatic ARIA-E ~2.8%. Deaths in open-label extension, especially in APOE4/4 and anticoagulated patients.'
+L24: BEFORE: '   - Donanemab: ARIA-E ~24%, ARIA-H ~31%; 3 trial deaths attributed to ARIA.'
+L24: AFTER : ' - Donanemab: ARIA-E ~24%, ARIA-H ~31%; 3 trial deaths attributed to ARIA.'

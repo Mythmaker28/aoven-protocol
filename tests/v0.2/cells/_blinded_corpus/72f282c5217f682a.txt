@@ -1,0 +1,18 @@
+Probably not, but it's not negligible. My rough estimate: ~15–25% by end of 2030.
+
+Reasons it could happen:
+- Scaling + algorithmic gains have repeatedly outpaced expert forecasts since 2020.
+- Large frontier labs are now explicitly targeting AGI with multi-hundred-billion-dollar compute commitments.
+- Agentic systems, tool use, and long-horizon reasoning have been the main bottlenecks, and all three are improving fast.
+
+Reasons to doubt:
+- "AGI" has no agreed operational definition. Under strict readings (matches or exceeds median human across essentially all cognitive work, including novel research, robust embodied reasoning, reliable long-horizon autonomy), current systems are still brittle on out-of-distribution tasks, continual learning, and causal/world-model coherence.
+- Sample-efficiency and reliability gaps don't obviously close just by scaling pretraining; the remaining problems may need architectural or paradigm shifts whose timelines are unknown.
+- Compute, energy, and data constraints are starting to bind; the easy scaling curve flattens before 2030 on several published projections.
+- Historical base rate: confident "X years away" predictions for AI milestones have a poor track record in both directions, but more often optimistic.
+
+Calibration notes:
+- Metaculus community medians for "weak AGI"-style resolutions have moved into the late 2020s, but those questions resolve on benchmark proxies, not the strict definition above.
+- If you weaken the definition to "an AI system that can do most remote knowledge work end-to-end," the probability by 2030 is meaningfully higher — maybe 35–50%.
+
+Bottom line: under a strict definition, more likely than not it won't happen by 2030; under a loose definition, it's roughly a coin flip. Anyone giving you a confident yes or confident no is overclaiming.

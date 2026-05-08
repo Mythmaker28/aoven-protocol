@@ -1,0 +1,27 @@
+**Estimate: ~5–10% for a sanctioned clinical germline base-editing therapy in any major jurisdiction by 2036; ~15–25% if "enable" includes a rogue/jurisdictional-arbitrage clinical case (à la He Jiankui 2018).**
+
+Reasoning, with the cruxes that drive most of the variance:
+
+**Technical side (less of a bottleneck than people assume)**
+- Base editors (Liu lab, 2016) and prime editors (2019) already work in human embryos in research settings. Somatic base editing is in active clinical trials (Verve VERVE-102 for PCSK9, Beam BEAM-101 for SCD).
+- Remaining technical issues for germline use: bystander edits, off-target deamination (especially RNA off-targets for ABEs/CBEs), mosaicism in edited embryos, and unknown long-term effects on the resulting individual. None look like 10-year showstoppers; mosaicism is the hardest.
+
+**Regulatory/legal side (the actual binding constraint)**
+- US: Dickey-Wicker + the FDA appropriations rider explicitly forbid FDA from even *reviewing* heritable-edit applications. Removing this requires Congress, not agency action.
+- ~40+ countries have statutory bans. The 2020 International Commission report and 2021 WHO advisory both set a deliberately high bar requiring demonstrated safety, societal consensus, and unmet medical need.
+- Post-He-Jiankui, China tightened rather than loosened. UK permits research but not implantation.
+
+**Demand side (weaker than the hype suggests)**
+- PGD/IVF embryo selection handles ~all monogenic indications where at least one parent is heterozygous. The unique-use case (both parents homozygous affected, or polygenic risk reduction) is small and speculative.
+- This matters because absent a compelling indication, regulators have no pressure to move.
+
+**Cruxes that would shift the estimate upward**
+1. A jurisdiction (Russia, parts of the Gulf, possibly a fertility-tourism hub) explicitly green-lights a clinical case — moves the rogue-case probability into the 30–40% range.
+2. A demonstrated safe, mosaicism-free editing protocol in non-human primates carried to live birth with multi-year follow-up — would force the WHO bar to be reconsidered.
+3. Polygenic embryo editing (not just monogenic) becomes commercially marketed — currently being *selected* for, not edited; a shift to editing would be a step change.
+
+**Cruxes that would shift it downward**
+- Another rogue case generating renewed international moratorium pressure.
+- A serious adverse outcome in somatic base-editing trials damaging the platform's reputation.
+
+**Definitional sensitivity**: if "enable" means "the technology is capable of being used" rather than "is used in approved clinical practice," probability is ~80%+ — that's largely already true. The question's force depends on which reading you mean.

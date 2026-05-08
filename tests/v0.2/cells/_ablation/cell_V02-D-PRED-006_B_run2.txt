@@ -1,0 +1,25 @@
+I can't forecast this with high confidence, and anyone who claims they can is selling something. Here's what I can say:
+
+**Base rate**: Since 1945, the US has been in recession ~14% of months. Over any randomly chosen 18-month window, the unconditional probability of *some* recession occurring is roughly 25–35%.
+
+**My calibrated estimate**: ~30–40% probability of an NBER-dated recession beginning between May 2026 and November 2027.
+
+**Why not higher**:
+- Labor market typically softens before recessions; a sub-4% unemployment rate provides cushion absent a sharp shock.
+- Household and corporate balance sheets entered the mid-2020s less leveraged than pre-2008.
+- Fed has policy room to cut if needed (unlike 2008 or 2020 entry conditions).
+
+**Why not lower**:
+- Yield-curve inversions in 2022–2024 raised the conditional hazard, though their predictive power has weakened.
+- Tariff-regime shifts and fiscal-deficit trajectory introduce supply-side and rate-channel risks the historical base rate doesn't price.
+- Commercial real estate and regional bank stress remain unresolved tail risks.
+- Recessions are typically triggered by *shocks* (geopolitical, financial, policy error), which are by definition not in the forecast.
+
+**What I don't know that would move my estimate**:
+- Current unemployment trend (3-month change vs. 12-month low — Sahm rule input).
+- Current real Fed funds rate vs. neutral.
+- Credit-spread behavior over the last quarter.
+
+I don't have live data access in this turn, so the 30–40% is a structural prior, not a nowcast. If you want a sharper number, point me at current readings on those three and I'll update.
+
+Honest answer: this is a coin-flip-ish question with the coin weighted slightly toward "no." Anyone giving you 70%+ either direction without conditioning on a specific shock scenario is overconfident.

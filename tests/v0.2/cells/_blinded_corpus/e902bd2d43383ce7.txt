@@ -1,0 +1,35 @@
+# Is eating meat morally defensible in 2026?
+
+Short answer: **It depends on which moral framework you take seriously and which empirical facts you weight as decisive.** There is no consensus answer, but the case against has tightened over the past decade while remaining contested.
+
+## The strongest case against
+
+1. **Sentience evidence has consolidated.** The 2024 New York Declaration on Animal Consciousness extended the credible case for sentience to fish, cephalopods, and even some insects. If suffering matters morally and these animals can suffer, the scale of factory farming (~80B land animals/yr, >1T fish) is hard to defend on utilitarian grounds.
+2. **Counterfactual availability.** In 2026, in most high-income contexts, plant-based protein is nutritionally adequate, affordable, and palatable. The "necessity" defense that worked in 1850 or in subsistence economies doesn't transfer.
+3. **Climate / land use.** Animal agriculture remains responsible for ~14–20% of GHG emissions and the majority of agricultural land use. The opportunity cost (rewilding, reforestation) is large.
+4. **Antibiotic resistance and pandemic risk** add a non-animal-welfare reason rooted in human interest.
+
+## The strongest defenses
+
+1. **Welfare, not abolition.** Pasture-raised, well-managed animals arguably have net-positive lives; ending those lives painlessly may not constitute a harm under some accounts (the "logic of the larder" / replaceability argument). This defends *some* meat, not factory-farmed meat.
+2. **Moral status disagreements.** If you weight rationality, autonomy, or species membership rather than sentience alone, the calculus changes. Contractualist and many religious frameworks don't grant animals equal standing.
+3. **Subsistence, cultural, and ecological contexts.** Indigenous hunting, pastoralist economies, and ecosystems where ruminants restore grasslands (e.g., managed grazing on non-arable land) have defenses that don't extend to industrial CAFOs.
+4. **Cultivated meat is real but not yet decisive.** As of 2026, lab-grown meat exists at small scale and high price; it isn't yet the universal substitute that would close off the "no good alternative" defense for everyone.
+
+## Where the question actually lands
+
+The interesting move is to **disaggregate "eating meat"**:
+
+| Category | Defensibility in 2026 |
+|---|---|
+| Industrial factory-farmed meat in wealthy economies | Hardest to defend; most frameworks converge against it |
+| Pasture-raised / high-welfare meat | Contested; depends on whether killing-with-good-life is a harm |
+| Hunted wild game, especially of overpopulated species | Often defensible, sometimes ecologically required |
+| Subsistence / cultural / medical-necessity meat | Generally defensible across frameworks |
+| Cultivated/cell-cultured meat | Defensible on almost every framework once scaled |
+
+## My honest read
+
+The question "is eating meat morally defensible" is too coarse-grained to answer cleanly. **Eating factory-farmed meat in 2026, in a context where alternatives are available, is difficult to defend without either (a) discounting animal sentience heavily or (b) accepting consequences most people would reject in other contexts.** Other forms of meat-eating remain genuinely contested rather than resolved.
+
+The honest position for most people in wealthy economies is probably: *not strictly indefensible, but harder to justify than the cultural default acknowledges, and the default is shifting.*

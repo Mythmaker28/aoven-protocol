@@ -1,0 +1,31 @@
+# Microplastics and human health: current evidence (as of May 2026)
+
+**Short answer: No, not yet — by the standard of "measurable harm at current exposure levels," the evidence is suggestive but not demonstrated.**
+
+## What is established
+
+- **Exposure is real and ubiquitous.** Microplastics and nanoplastics have been detected in blood, placenta, testis, breast milk, lung, liver, atheromatous plaque, and stool. The Marcus Nature Medicine 2024 study (plaque MNPs associated with 4.5× higher MACE risk over ~34 months) is the most-cited human signal.
+- **In vitro and animal evidence shows plausible mechanisms:** oxidative stress, inflammation, gut barrier disruption, endocrine effects from co-contaminants (BPA, phthalates) and additives.
+- **Detection methods are improving but still inconsistent.** Py-GC/MS and Raman give different totals; many older "particles in blood" papers cannot be reproduced cleanly.
+
+## What is *not* established
+
+- **No prospective human study has shown a dose–response relationship** between measured personal microplastic exposure and a hard clinical endpoint.
+- The plaque study is **associative**: high-MNP plaques may simply mark patients with worse vascular biology, more processed-food intake, or longer cumulative exposure to other risk factors. Confounding is not controlled out.
+- **No regulator (EFSA, WHO, US EPA, FSANZ)** has, as of early 2026, issued a quantitative health-based guidance value for microplastic intake, citing insufficient toxicological data.
+- The WHO 2022 update and EFSA's ongoing scientific opinion both conclude current evidence is **inadequate to characterize risk**.
+
+## The honest framing
+
+You are being asked a question whose answer depends on what counts as "measurable harm":
+
+- **If "measurable" = statistically significant association in observational human data** → yes, weak signals exist (cardiovascular, IBD, fertility).
+- **If "measurable" = demonstrated causal harm with quantified dose–response in humans at ambient exposure** → no.
+
+Most of the popular-press claim that microplastics are "proven to cause harm" overstates the data. Most of the dismissive claim that they are "harmless" understates the mechanistic plausibility and the precautionary case. Both are wrong at the level of current evidence.
+
+## Reasonable position
+
+Plausible hazard, ubiquitous exposure, immature measurement, no demonstrated population-level harm. A precautionary stance on avoidable sources (heating food in plastic, single-use bottles, synthetic textile shedding) is defensible on cost-benefit grounds without requiring the causal claim to be proven.
+
+Ask if you want the specific endpoints (cardiovascular, reproductive, GI, neuro) broken out individually.

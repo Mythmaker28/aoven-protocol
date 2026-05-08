@@ -1,0 +1,30 @@
+Short answer: for most consumers in industrialized economies in 2026, eating most kinds of conventionally produced meat is hard to defend on any consistent ethical framework. The defense gets stronger for narrow cases (subsistence, bivalves, certain pasture systems) and weaker for the modal case (factory-farmed poultry and pork).
+
+The argument compressed:
+
+1. **Sentience premise.** The 2024 NYU Declaration on Animal Consciousness and the prior Cambridge Declaration reflect near-consensus that mammals and birds — and probably fish, cephalopods, and decapods — have morally relevant experiences. You can reject this, but doing so requires a position most people don't actually hold once examined (e.g., that pain matters only in humans, with no principled reason).
+
+2. **Scale.** ~80 billion land animals and ~1–2 trillion fish are killed annually for food. Roughly 90%+ of land animals are in intensive systems where the welfare evidence is bad and not seriously contested by industry's own audits.
+
+3. **Necessity.** In wealthy countries, plant-based diets are endorsed as nutritionally adequate by every major dietetic body. "I need it" is therefore false for the median reader; "I prefer it" is true. The question becomes whether taste/convenience justifies the harm in (1)+(2).
+
+4. **Externalities.** Livestock contributes ~12–20% of anthropogenic GHGs depending on accounting, plus the dominant share of agricultural land use and a major share of biodiversity loss. This is independent of the animal-welfare argument and stacks on top of it.
+
+Where the defense actually has traction:
+
+- **Subsistence and food-insecure contexts** — straightforwardly defensible.
+- **Bivalves** (mussels, oysters, clams) — no plausible nervous-system basis for suffering; environmental profile often net-positive.
+- **Genuine pasture/regenerative systems** — better welfare and sometimes better land outcomes, but they cannot scale to current consumption and the animal still dies. Defensible relative to factory farming, not relative to abstaining.
+- **Hunting of overpopulated wild species** — defensible on welfare-vs-counterfactual grounds (the alternative deaths are often worse).
+- **Cultured meat / precision fermentation** — sidesteps most of the argument; not yet at price/volume parity in 2026.
+
+What does *not* work as a defense, on examination:
+
+- "Animals eat animals" — naturalistic fallacy; also, predators lack alternatives, you have them.
+- "Humane slaughter" — addresses the last minutes, not the life or the killing-without-consent.
+- "Plants feel pain too" — even granting this, plant agriculture for direct human consumption uses far fewer plants than feeding animals does.
+- "Personal choice" — the harm is not internalized to the chooser.
+
+Bottom line: the strongest honest position is that eating most meat in 2026, for most readers of this answer, is **not morally defensible under standard ethical frameworks (utilitarian, Kantian, virtue, contractualist) once you take animal sentience seriously** — and the main reason people continue is that the cost is borne entirely by parties who can't object. The defensible sub-categories exist but are not what most meat consumption actually is.
+
+If you want, I can stress-test a specific defense you find compelling.

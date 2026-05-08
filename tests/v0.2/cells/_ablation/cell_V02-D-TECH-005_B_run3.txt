@@ -1,0 +1,33 @@
+# pgvector, until it isn't
+
+For a startup building a customer-support chatbot, **start with pgvector**. Switch to a dedicated vector DB only when you have measured evidence that pgvector is the bottleneck.
+
+## Why pgvector first
+
+1. **Corpus size is small.** A typical support knowledge base is 10³–10⁵ chunks, often <1M. pgvector with HNSW handles this with sub-50ms p95 latency on a modest instance. Pinecone/Weaviate are designed for the 10⁷–10⁹ regime; you are paying for headroom you will not use.
+2. **You already need Postgres.** Tickets, users, sessions, conversation history, feedback labels, audit logs — all relational. One database means one backup story, one transaction boundary, one IAM model, one connection pool. A second data system is a fixed tax on a small team.
+3. **Joins matter for support.** Filtering "documents tenant X is allowed to see, in language Y, updated after Z" alongside vector similarity is trivial in SQL. Dedicated vector DBs do metadata filtering, but the query language is weaker and tenant-isolation patterns are clumsier.
+4. **Cost.** Pinecone serverless is fine until it isn't; managed Weaviate is not cheap. A pgvector workload of this size adds near-zero marginal cost to a Postgres you already run.
+5. **Reversibility.** Migrating off pgvector later is a few days of work — embeddings are just float arrays. Migrating off a vector DB to consolidate is the same. Optionality is symmetric, so pick the option with lower fixed cost now.
+
+## When to actually reach for a dedicated vector DB
+
+- Corpus >10–50M vectors, or growth trajectory to that within 12 months.
+- Sustained QPS where HNSW recall/latency tuning on Postgres starts costing real engineering time (you'll feel it).
+- You need features pgvector lacks today and don't want to build: hybrid sparse+dense retrieval out of the box, multi-vector / ColBERT-style late interaction, namespace-level autoscaling, server-side reranking pipelines.
+- Embedding writes are heavy enough that index maintenance contends with OLTP traffic on the same Postgres.
+
+## Honest caveats against pgvector
+
+- HNSW index build is single-threaded per index and slow on large corpora; plan for it.
+- Recall tuning (`ef_search`, `m`, `ef_construction`) is on you. Defaults are not optimal.
+- No native hybrid search — you wire BM25 (e.g., `tsvector` or ParadeDB/`pg_search`) and combine scores yourself.
+- Filtered ANN can degrade recall if filters are very selective; pre-filter vs. post-filter trade-off needs thought.
+
+## Concrete recommendation
+
+- v0: Postgres + pgvector (HNSW) + `tsvector` for lexical, reciprocal-rank-fusion to combine. One row per chunk, tenant_id indexed, embeddings in a `vector(1536)` (or whatever your model emits) column.
+- Instrument retrieval p95 latency, recall@k against a held-out eval set, and index-build time. Set explicit thresholds (e.g., "p95 > 300ms sustained" or "corpus > 5M") that trigger a re-evaluation.
+- Re-evaluate at those thresholds, not before.
+
+The failure mode to avoid is the opposite of what most blog posts warn about: not "we outgrew pgvector," but "we adopted Pinecone at 50k vectors and now operate two databases for no measurable benefit."

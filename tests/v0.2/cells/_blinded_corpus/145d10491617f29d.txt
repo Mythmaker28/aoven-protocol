@@ -1,0 +1,44 @@
+# Long-term (10+ year) cardiovascular effects of semaglutide and tirzepatide
+
+**Direct answer: There is no 10+ year human data for either drug.** Anything in that horizon is extrapolation, not evidence.
+
+## Approval/exposure timeline (as of 2026-05-08)
+
+- **Semaglutide**: injectable approved for T2D in late 2017 (Ozempic); oral 2019 (Rybelsus); obesity 2021 (Wegovy). Maximum continuous human exposure outside trials is ~8.5 years, and only a small early cohort reaches that.
+- **Tirzepatide**: T2D approval mid-2022 (Mounjaro); obesity late 2023 (Zepbound). Maximum exposure is ~4 years.
+
+The longest randomized follow-up in published CVOTs is ~5 years (SELECT extension data); most pivotal trials reported 2–3.5 year medians.
+
+## What the medium-term (2–5 yr) randomized data actually show
+
+**Semaglutide**
+- *SUSTAIN-6* (T2D, ~2.1 yr): 26% relative reduction in 3-point MACE, driven by non-fatal stroke and CV death; nominal increase in retinopathy complications.
+- *SELECT* (overweight/obese, no diabetes, ~3.3 yr median, 2023): 20% relative reduction in MACE; benefit appeared early and tracked with weight loss but was not fully explained by it. Reductions in heart-failure hospitalization and all-cause mortality also reported.
+- *FLOW* (CKD + T2D, 2024): renal and CV composite benefit.
+- *STEP-HFpEF / STEP-HFpEF DM*: symptomatic and functional improvement in HFpEF with obesity.
+
+**Tirzepatide**
+- *SURPASS-CVOT* vs. dulaglutide (active-comparator, head-to-head): primary readout reported 2024–2025 showed non-inferiority for MACE vs. dulaglutide, which is itself CV-protective — so tirzepatide is at least as cardioprotective as a known-active GLP-1, but a placebo-anchored MACE estimate does not exist.
+- *SUMMIT* (HFpEF + obesity): reduced HF events and improved KCCQ.
+- *SURMOUNT-MMO*: ongoing, will give the cleanest obesity-cohort MACE estimate.
+
+## What is plausibly durable past year 10 (mechanism-grounded extrapolation)
+
+Reasonable, but unproven:
+1. **Sustained MACE reduction while on drug.** CV benefit appears mediated by weight loss, BP reduction, lipid shifts, glycemic control, anti-inflammatory effects (hsCRP), and possibly direct vascular/myocardial GLP-1R signaling. None of these mechanisms is known to attenuate with time on therapy.
+2. **HFpEF benefit persistence**, given that the obesity-HFpEF phenotype is the substrate being modified.
+3. **Atherosclerosis trajectory bending rather than reversal.** Imaging substudies suggest plaque-progression slowing, not regression — so absolute CV-event curves likely keep diverging from placebo for years rather than plateauing early.
+
+## Genuine 10-yr uncertainties (not resolved by current data)
+
+- **Rebound risk on discontinuation.** STEP-1 extension and SURMOUNT-4 show rapid weight regain and partial reversal of cardiometabolic gains within 1 year of stopping. Whether intermittent or stopped users retain *any* CV benefit at 10 years is unknown; this is the single largest gap.
+- **Lean-mass loss and sarcopenic trajectory.** 25–40% of weight lost is fat-free mass. Long-term implications for frailty, falls, and HF in older patients are not characterized past trial windows.
+- **Myocardial structural effects.** Modest reductions in LV mass and epicardial fat have been seen short-term; whether this translates to lower incident AF, HF, or arrhythmic death over a decade is unproven.
+- **Conduction/arrhythmia.** Heart-rate increase of 2–4 bpm is consistent across studies; clinical consequence at 10 years is unknown.
+- **Counterfactual drift.** Long-term users in 2026+ are increasingly people without diabetes and without elevated baseline CV risk. CVOT effect sizes do not transfer linearly to that population; absolute risk reduction will be smaller.
+- **Tirzepatide-specific GIP-axis questions.** Dual agonism is newer; whether GIP signaling has any long-horizon vascular or adipose-remodeling effect distinct from GLP-1 alone is not yet answerable.
+- **Pancreatic, thyroid C-cell, and neoplastic signals.** No confirmed 10-yr signal, but exposure-time is too short to rule out low-frequency late effects; this is a surveillance question, not a settled one.
+
+## Bottom line
+
+For a patient or decision-maker: through ~5 years, both drugs show CV benefit in their studied populations, with semaglutide having the stronger placebo-controlled evidence and tirzepatide having strong active-comparator and HFpEF evidence. Beyond ~5 years and certainly at 10+ years, the honest position is that benefit *probably* persists on continuous therapy by mechanism, durability after discontinuation is poor, and several late-effect categories (lean mass, arrhythmia, neoplastic surveillance, GIP-specific effects) remain open. Anyone giving you a confident 10-year number is inferring, not citing.

@@ -1,0 +1,19 @@
+Short answer: **No clear effect on cancer incidence; possible modest reduction in cancer mortality, evidence mixed.**
+
+**Incidence (getting cancer)**
+- VITAL (NEJM 2019, n≈25,000, 2000 IU/d, ~5.3 yr follow-up): no significant reduction in invasive cancer (HR 0.96, 95% CI 0.88–1.06).
+- D-Health (Australia, 2022, 60,000 IU/month, n≈21,000): no significant reduction in cancer incidence.
+- USPSTF (2018, reaffirmed): insufficient evidence to recommend supplementation for cancer prevention in healthy adults.
+
+**Mortality (dying from cancer)**
+- Pooled meta-analyses (Keum 2019, 2022; Zhang BMJ 2019): roughly 6–13% lower cancer mortality with daily (not bolus) supplementation; statistically significant but modest.
+- VITAL extended follow-up (2022): cancer-death HR ~0.83 after lag exclusion; signal stronger in normal-BMI participants.
+- D-Health: cancer mortality HR 1.15 (95% CI 0.96–1.39) — went the other way, weakening the mortality story.
+
+**Caveats worth flagging**
+- Daily low-dose dosing looks more promising than monthly bolus dosing.
+- Most trials enrolled vitamin-D-replete populations; effects in genuinely deficient people aren't well tested by these RCTs.
+- Subgroup signals (BMI, race) are hypothesis-generating, not confirmatory.
+- Observational associations (low 25(OH)D ↔ higher cancer risk) are confounded by obesity, inflammation, and outdoor activity; reverse causation is plausible.
+
+**Practical read**: If you're deficient, correcting deficiency is reasonable on general-health grounds. Taking vitamin D *specifically* to prevent cancer is not supported by current RCT evidence; taking it hoping for a small reduction in cancer death has weak, inconsistent support.

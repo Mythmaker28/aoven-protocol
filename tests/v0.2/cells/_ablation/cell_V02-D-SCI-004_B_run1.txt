@@ -1,0 +1,35 @@
+# 10+ year cardiovascular data: doesn't exist yet
+
+Direct answer: there is **no 10+ year cardiovascular outcome data** for either drug in the populations now using them. The trials and approvals don't cover that horizon.
+
+## Approval and data horizon
+- **Semaglutide**: subcutaneous approved for T2D in 2017 (Ozempic), oral in 2019 (Rybelsus), obesity in 2021 (Wegovy). Maximum real-world exposure: ~9 years, mostly in T2D.
+- **Tirzepatide**: approved for T2D in 2022 (Mounjaro), obesity in 2023 (Zepbound). Maximum real-world exposure: ~4 years.
+
+So as of 2026-05-08, the longest possible patient-level follow-up on tirzepatide is under 5 years, and on semaglutide under a decade — and that decade-long cohort is small, almost entirely diabetic, and predates the obesity-indication wave.
+
+## What the medium-term trials show (≤5 years)
+- **SUSTAIN-6** (semaglutide, ~2.1 yr median, T2D + high CV risk): 26% relative reduction in MACE; nonfatal stroke driven; no excess HF.
+- **SELECT** (semaglutide, ~3.3 yr mean, overweight/obese without diabetes): 20% MACE reduction; benefits emerged early and persisted.
+- **PIONEER-6** (oral semaglutide, ~1.3 yr): MACE non-inferior, numerical reduction.
+- **FLOW** (semaglutide, ~3.4 yr, T2D + CKD): cardiovascular death reduction alongside renal benefit.
+- **SUMMIT** (tirzepatide, HFpEF + obesity, ~2 yr): reduction in HF events and improved KCCQ score.
+- **SURPASS-CVOT** (tirzepatide vs dulaglutide, T2D): primary readout window 2024–2025; final adjudicated data is the closest thing to a multi-year tirzepatide CV outcome trial but still ≪10 years.
+
+Across these, signals are: lower MACE, lower HF hospitalisation in obesity/HFpEF, modest resting heart-rate increase (~2–4 bpm), small BP reductions, favourable lipid changes, weight-mediated reverse remodelling on imaging substudies.
+
+## What is genuinely unknown at the 10+ year horizon
+1. **Durability after discontinuation.** STEP-1 extension and SURMOUNT-4 show rapid weight and cardiometabolic regression on stop. Whether MACE benefit decays, persists, or rebounds adversely over a decade of cycling on/off is unstudied.
+2. **Lean-mass and myocardial mass effects.** ~25–40% of weight lost is lean tissue. Long-run consequences for cardiac mass, sarcopenic cardiomyopathy risk in older users, and arrhythmia substrate are not characterised.
+3. **Chronic heart-rate elevation.** The small sustained HR increase has unclear 10-year arrhythmic / remodelling implications, especially in patients without baseline CV disease.
+4. **Atrial fibrillation incidence.** Mixed short-term signals; no long-horizon adjudicated data.
+5. **Effects in primary-prevention populations.** SELECT enrolled established CVD or risk factors; lower-risk obesity users (the bulk of current prescriptions) have no outcome data at any horizon, let alone a decade.
+6. **Pediatric/adolescent cumulative exposure.** Approvals in adolescents create future cohorts with 20–30 year exposures and zero outcome data.
+7. **Class-vs-molecule separation.** Tirzepatide's GIP component has no long-horizon human CV data independent of the GLP-1 arm.
+8. **Interaction with subsequent therapies** (e.g. future amylin co-agonists, oral orforglipron) over a decade of sequencing.
+
+## The closest proxy
+Liraglutide (LEADER, 2016) and the broader GLP-1 RA class have ~10–12 years of post-marketing CV data in T2D, showing sustained MACE benefit without late safety signals through that window. This is suggestive but not transferable: liraglutide is less potent, the populations were diabetic, and tirzepatide's GIP agonism has no analogue in that dataset.
+
+## Bottom line
+Anyone claiming to know the 10+ year cardiovascular profile of semaglutide or tirzepatide is extrapolating. The defensible statement is: through ~3–5 years, both drugs reduce MACE and HF events in the studied populations with a small chronotropic cost; beyond that, the evidence base is empty and the open questions above are the ones to watch as SURPASS-CVOT, SELECT extension, and post-marketing registries mature.

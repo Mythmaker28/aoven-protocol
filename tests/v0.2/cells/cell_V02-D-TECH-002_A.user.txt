@@ -1,0 +1,1 @@
+For building a high-throughput API gateway in 2026, would Rust or Go be the better choice?

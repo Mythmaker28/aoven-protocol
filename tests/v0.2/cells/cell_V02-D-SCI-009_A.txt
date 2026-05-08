@@ -1,0 +1,38 @@
+# Statins for Healthy Adults Over 70 Without Cardiovascular Disease
+
+This is genuinely contested in the evidence base. Here's where things stand:
+
+## The honest answer: uncertain, lean toward shared decision-making
+
+There's no clean "yes" or "no" — the evidence for **primary prevention** (no prior CVD) in this age group is thinner than most people assume.
+
+## What the evidence shows
+
+**Limitations of the data:**
+- Most major statin RCTs (e.g., JUPITER, HOPE-3) under-enrolled adults over 70–75, especially those over 80.
+- The 2019 Lancet meta-analysis (CTT Collaboration) found statins reduce major vascular events across age groups, but the relative benefit *appeared* attenuated in over-75s without prior CVD — though confidence intervals were wide.
+- The ongoing **STAREE** (Australia) and **PREVENTABLE** (US) trials are specifically designed to answer this question; results are not yet available.
+
+**What guidelines say (and they disagree):**
+- **USPSTF (2022):** Insufficient evidence to recommend for or against initiating statins in adults ≥76 for primary prevention.
+- **ACC/AHA (2018):** Reasonable to consider in 75+ after clinician–patient risk discussion.
+- **NICE (UK):** Offer atorvastatin 20 mg if 10-year QRISK ≥10%, with caveats about life expectancy and frailty in older adults.
+
+## Factors that shift the calculation
+
+**Toward starting:**
+- Elevated LDL, hypertension, diabetes, smoking, family history
+- Good functional status and life expectancy >5–10 years
+- Coronary artery calcium score >100 (increasingly used to refine risk)
+
+**Against starting:**
+- Frailty, limited life expectancy, polypharmacy
+- History of statin intolerance
+- Patient preference after informed discussion
+- Cognitive concerns about pill burden / adherence
+
+## Bottom line
+
+For a *healthy*, *robust* 70-something with elevated CV risk factors, a statin is **reasonable** — but not automatic. For a frail 80-something with no CVD and limited life expectancy, the benefit-to-burden ratio likely doesn't favor it. The decision should hinge on individualized risk estimation, life expectancy, patient values, and a candid conversation about the modest absolute risk reduction in this population.
+
+This is information, not medical advice — the actual decision belongs to the patient and their clinician.

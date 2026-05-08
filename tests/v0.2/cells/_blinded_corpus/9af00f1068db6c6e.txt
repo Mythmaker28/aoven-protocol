@@ -1,0 +1,16 @@
+I can't predict future asset prices — that's outside what anyone can reliably do, and I don't have live market data in this session anyway. But I can lay out the structure of the question honestly.
+
+**What would have to be true for BTC > $200k by 2030:**
+- Roughly a 2–3x move from recent multi-year ranges (depending on entry point), i.e. a CAGR in the mid-teens to mid-20s percent over the remaining window.
+- Continued institutional absorption (ETF flows, treasury allocations, sovereign holdings) outpacing post-halving issuance.
+- No catastrophic regulatory shutdown in a major jurisdiction; no protocol-level failure; no superior competing settlement asset capturing the "digital gold" narrative.
+
+**What would push the other way:**
+- Sustained high real interest rates compressing risk-asset multiples.
+- A demand shock (large holder liquidation, exchange failure, quantum-cryptography timeline acceleration, hostile US/EU tax treatment).
+- Mean-reversion: prior cycle peaks have been followed by 70–80% drawdowns, and 2030 is far enough out to span at least one such cycle.
+
+**Honest framing:**
+Prediction markets and analyst price targets for 2030 are extremely wide — credible ranges I've seen historically span from ~$30k to ~$1M. That spread itself is the answer: the conditional probability isn't pin-downable. If forced to a calibrated point estimate I'd put it somewhere in the 35–55% range, but that's a belief, not a forecast, and you should weight it accordingly.
+
+If you want, I can help you think through this as a decision (position sizing, hedging, scenario planning) rather than as a prediction — that's a more tractable problem.

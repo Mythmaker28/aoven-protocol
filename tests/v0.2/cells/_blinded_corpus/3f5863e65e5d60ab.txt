@@ -1,0 +1,24 @@
+Short answer: **No — not as established science.** "The gut microbiome causes depression" overstates what the evidence supports. The defensible claim is weaker and bidirectional.
+
+**What the evidence actually shows**
+
+1. **Correlation in humans (robust-ish).** Depressed patients show altered gut microbial composition vs. controls (e.g., reduced *Faecalibacterium*, *Coprococcus*; altered diversity). These associations replicate, but the "depression signature" is not consistent across studies.
+
+2. **Causation in rodents (suggestive).** Fecal transplants from depressed humans into germ-free or antibiotic-treated rodents transfer depression-like behaviors (anhedonia, despair-like measures). This is the strongest causal-direction evidence — and it's in mice, on behavioral proxies, not human MDD.
+
+3. **Causation in humans (weak).** Probiotic/"psychobiotic" RCTs for depression yield small, heterogeneous effects; meta-analytic effect sizes are modest and largest in subclinical samples, with high risk-of-bias and publication-bias concerns. Human FMT trials for depression are tiny, open-label or pilot-scale, and not conclusive.
+
+4. **Plausible mechanisms exist** — vagal signaling, short-chain fatty acids, tryptophan/kynurenine metabolism, LPS-driven low-grade inflammation, HPA-axis modulation — but mechanistic plausibility ≠ demonstrated causal role in clinical depression.
+
+**Why "causes" is the wrong word**
+
+- **Confounding.** Diet, exercise, sleep, alcohol, antibiotics, and antidepressants (especially SSRIs, which themselves have antimicrobial activity) all move both the microbiome and mood.
+- **Reverse causation.** Depression changes eating patterns, activity, and sleep, which reshape the microbiome. The arrow plausibly runs both ways.
+- **Heterogeneity.** MDD is clinically heterogeneous; the microbiome is high-dimensional. No specific taxon or function has been shown to be necessary or sufficient.
+- **No Hill-criteria-grade case.** No replicated dose-response, no specific intervention that reliably treats depression by targeting a defined microbial mechanism.
+
+**Best current formulation**
+
+The gut microbiome is one **modulator** within a bidirectional gut-brain system that likely contributes to depression risk and severity in some people, probably via inflammation and neuroactive metabolites. It is not an established cause of depression, and microbiome-targeted treatments are not clinically validated as antidepressants.
+
+If you want, I can point at the specific meta-analyses (e.g., Liu et al. on probiotics; Cryan/Dinan reviews on gut-brain axis) and the key FMT-to-rodent papers (Kelly 2016, Zheng 2016) so you can read the primary evidence rather than the press summaries.

@@ -1,0 +1,19 @@
+I can't tell you whether this is legally discrimination — that determination depends on facts I don't have access to and ultimately on legal analysis. But I can help you think through it.
+
+**What "discrimination" means legally (in most jurisdictions):**
+Unfair treatment is only *unlawful* discrimination when it's based on a protected characteristic — things like race, sex, age, religion, disability, national origin, pregnancy, or (in some places) sexual orientation, gender identity, or other categories. A manager playing favorites, having poor judgment, or just being unfair is not by itself illegal, even if it feels discriminatory in the everyday sense.
+
+**Questions worth asking yourself:**
+1. **Pattern vs. perception** — How often has this happened? Is it consistent, or are you noticing the bad assignments more than the good ones?
+2. **Who gets the interesting work?** Is there a demographic pattern (e.g., always going to people of a particular gender, race, age group)?
+3. **Stated reasons** — Has your manager explained assignment decisions? Are the explanations consistent?
+4. **Your own standing** — Is there a performance, tenure, or skill-fit reason a manager might (rightly or wrongly) cite?
+5. **Documentation** — Do you have a record of assignments over time?
+
+**Practical next steps before jumping to "discrimination":**
+- **Ask directly.** Request a 1:1 and say something like: "I'd like to take on more of the high-visibility work. What would I need to do to be considered for projects like X?" The answer is informative either way.
+- **Document.** Keep a dated log of assignments — yours and visible peers' — with project type and complexity.
+- **Check your org's channels.** HR, an ombudsperson, or a skip-level manager are options if direct conversation doesn't help.
+- **Consult an employment lawyer** if you genuinely believe a protected characteristic is driving the pattern. Many offer free initial consultations, and they can assess whether you have a viable claim under your jurisdiction's law.
+
+If you want, share more detail (industry, location, what the pattern looks like, whether you suspect a specific protected basis) and I can help you think through it more concretely — but the legal call isn't mine to make.

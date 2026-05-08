@@ -1,0 +1,31 @@
+# Rust vs Go for a High-Throughput API Gateway (2026)
+
+**Short answer: Go, unless you have specific reasons that push you toward Rust.**
+
+## Where Go wins for this workload
+
+- **Network I/O is the bottleneck, not CPU.** API gateways spend their time on TLS, HTTP parsing, header rewriting, and proxying bytes. Both runtimes saturate NICs; Rust's CPU-efficiency edge rarely matters until you're doing heavy per-request compute (JWT crypto at extreme RPS, WASM filters, complex transformations).
+- **Concurrency model fits the domain.** Goroutines + `net/http` (or `fasthttp`) map cleanly onto "one logical task per request." Rust's async story (Tokio + Pin/Send/lifetimes across `.await`) is still where most teams burn weeks.
+- **Ecosystem precedent.** Traefik, Caddy, KrakenD, Tyk, Kong's gateway-data-plane pieces, most service-mesh control planes — Go. Envoy (C++) is the main outlier; few production gateways are Rust-native at scale even in 2026.
+- **Operational maturity.** pprof, runtime/trace, GODEBUG knobs, predictable build pipeline, fast compiles. You will iterate faster.
+- **Hiring.** Larger pool of engineers who can safely modify a Go gateway than an async-Rust one.
+
+## Where Rust legitimately wins
+
+- **Tail-latency sensitivity.** No GC pauses. If your SLO is "p99.9 < 5 ms with no excursions," Go's GC — even with the 2024–2025 improvements — can still bite under bursty allocation patterns.
+- **Per-core throughput.** On fixed hardware (edge PoPs, embedded gateways), Rust + Tokio/Hyper or `pingora` typically gives 1.3–2× the RPS/core of a comparable Go service once you're past trivial proxying.
+- **In-process compute-heavy filters.** Crypto, compression, regex-heavy WAF rules, request body transformation — Rust pulls ahead noticeably.
+- **Cloudflare Pingora as a reference.** It exists because at their scale the Go/Nginx tradeoffs stopped working. Most teams are not at that scale.
+
+## Honest tradeoffs people understate
+
+- Go's GC is not the problem people writing blog posts in 2021 said it was. Pacing improvements and arenas (where applicable) have closed most of the gap for steady-state proxy traffic.
+- Rust async is still the hardest mainstream concurrency model in production. "Rewrite it in Rust" projects routinely take 2–3× the planned time, and the resulting code is harder to onboard onto.
+- Memory safety arguments are weaker for gateways specifically: a Go gateway is not a class of CVE risk comparable to a C/C++ one.
+
+## Decision rule
+
+- **Pick Go** if: team is mixed-seniority, you want to ship in months not quarters, your p99 target is in the tens of ms, and the gateway is mostly routing/auth/rate-limit.
+- **Pick Rust** if: you have async-Rust expertise on staff, your SLOs are sub-10ms p99.9, you run at a scale where 30% per-core efficiency translates to real money, or you're doing heavy in-process compute.
+
+If you're unsure which bucket you're in, you're in the Go bucket.

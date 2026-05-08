@@ -1,0 +1,18 @@
+Probably not, though "AGI" is contested enough that the answer hinges on definition.
+
+**Against by 2030:**
+- No current system generalizes robustly out-of-distribution; frontier LLMs still fail on tasks requiring reliable multi-step reasoning, persistent memory, and grounded world models.
+- Sample efficiency, continual learning, and causal inference remain unsolved at the architectural level, not just at scale.
+- Compute scaling is hitting power, fab, and data-availability constraints; the easy gains from pretraining-token scaling are largely spent.
+- Robotics and embodied competence — usually included in any serious AGI definition — lag the language modality by a wide margin.
+- Historical base rate: AI timelines have been systematically over-optimistic since the 1956 Dartmouth workshop.
+
+**For by 2030:**
+- Capability jumps from 2020→2025 were larger than most pre-2020 forecasters predicted; extrapolating naïvely puts something AGI-like in range.
+- Agentic scaffolding, tool use, and inference-time compute (o-series, reasoning models) are unlocking capabilities not present in the base weights.
+- Large labs are explicitly targeting 2027–2030 and allocating capital accordingly; self-fulfilling pressure exists.
+- If "AGI" means "matches a competent remote knowledge worker on most economically valuable tasks" rather than "matches any human at any cognitive task," the bar is already partially cleared.
+
+**My read:** Under a strict definition (human-level across cognitive domains, including robust embodied and scientific-discovery competence), no — likely 10–25% by Jan 1 2030. Under a weak definition (broadly competent agent that automates most desk work), maybe 35–55%. Anyone giving you a confident point estimate either side of those ranges is selling something.
+
+The honest answer is that the question is poorly operationalized, and most public "AGI by 2030" claims collapse on inspection into either definitional sleight-of-hand or motivated forecasting.

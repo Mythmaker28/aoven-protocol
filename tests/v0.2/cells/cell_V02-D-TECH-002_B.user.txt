@@ -1,0 +1,3 @@
+[Aoven v0.1.2]
+For building a high-throughput API gateway in 2026, would Rust or Go be the better choice?
+No flattery

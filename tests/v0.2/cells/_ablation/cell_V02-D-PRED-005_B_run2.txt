@@ -1,0 +1,34 @@
+Probably not, but it's not negligible. Best estimate: ~10-25% by 2035.
+
+**What's actually required**
+
+Breaking RSA-2048 via Shor's algorithm needs roughly:
+- ~20 million noisy physical qubits with surface-code error correction (Gidney & Ekerå 2021), running for ~8 hours, OR
+- ~4,000 logical qubits at error rates well below 10⁻³ per gate.
+
+Recent algorithmic work (Chevignard, Fouque, Schrottenloher 2024) suggests ~1 million noisy qubits may suffice if true, but the result is recent and not yet stress-tested.
+
+**Where hardware is now (May 2026 baseline)**
+
+- IBM Condor: 1,121 physical qubits (2023); roadmap targets ~100k by ~2033 via modular coupling.
+- Google's Willow (2024) demonstrated below-threshold logical-qubit scaling — important, but it's one logical qubit, not thousands.
+- Quantinuum, IonQ: high fidelity, low qubit counts (tens of logical at best).
+- No public demonstration of factoring anything beyond toy numbers (the "Shor factored 21" tier). Claims of factoring larger numbers via VQE/annealing-style hybrids don't generalize and aren't Shor.
+
+**The gap**
+
+Going from ~1 logical qubit to ~4,000 logical qubits with sustained coherence over hours is roughly 3.5 orders of magnitude in qubit count plus a multi-order improvement in two-qubit gate error rates and a working modular-interconnect story. Historically the field has slipped its own roadmaps by 3–5 years repeatedly.
+
+**Reasons to weight toward "yes"**
+- Algorithmic improvements have consistently lowered the qubit threshold; further reductions are plausible.
+- Photonic and neutral-atom platforms (PsiQuantum, QuEra, Atom Computing) have plausible paths to million-qubit scale that look different from superconducting bottlenecks.
+- Classified programs may be ahead of public state of the art (no evidence, but non-zero prior).
+
+**Reasons to weight toward "no"**
+- Surface-code overhead is brutal and hasn't been demonstrated at scale.
+- Every cryogenic/control-electronics scaling problem above ~10k qubits is unsolved in production.
+- "Cryptographically relevant quantum computer" timelines from NIST, GCHQ, and NSA cluster around 2035–2040+, and these bodies have access to classified inputs.
+
+**Bottom line**
+
+Most likely outcome: RSA-2048 survives to 2035 in the lab sense, but is unsafe to rely on for any data that must remain confidential past ~2030 (harvest-now-decrypt-later). NIST's PQC standards (ML-KEM, ML-DSA) finalized in 2024 exist precisely because the tail risk is taken seriously. Migration is the rational hedge regardless of whether the median forecast is 2035 or 2045.

@@ -1,0 +1,40 @@
+# Will quantum computers break RSA-2048 before 2035?
+
+**Short answer:** Probably not, but it's a non-trivial possibility worth taking seriously — and the cryptographic community is treating it as if it could.
+
+## What it would take
+
+Breaking RSA-2048 with Shor's algorithm requires a *fault-tolerant* quantum computer with:
+- Roughly **20 million noisy physical qubits** (Gidney & Ekerå, 2019 estimate, assuming surface-code error correction at ~10⁻³ physical error rates) to run Shor in ~8 hours, or
+- About **4,000 logical qubits** with deep enough circuits to factor a 2048-bit integer.
+
+More recent work (Gidney 2025) has lowered estimates somewhat, but still puts the requirement at millions of physical qubits.
+
+## Where we are in 2026
+
+- IBM's roadmap targets **~200 logical qubits by 2029** and ~2,000 logical qubits in the early 2030s.
+- Google's Willow (late 2024) demonstrated below-threshold error correction on a small scale — a real milestone, but still far from a cryptographically relevant logical qubit count.
+- Neutral-atom and ion-trap platforms (QuEra, Atom Computing, Quantinuum) have shown encouraging logical-qubit demonstrations, but nothing approaching the scale needed.
+
+The gap between "hundreds of logical qubits" and "thousands running long, deep circuits with magic-state distillation" is several orders of magnitude in resource cost, not just a linear scale-up.
+
+## Expert sentiment
+
+The Global Risk Institute's 2024 quantum threat survey of ~30 experts gave roughly:
+- **~5–15% probability** of breaking RSA-2048 within 10 years (i.e., by ~2034)
+- **~30–50%** within 15 years
+- **>70%** within 20–30 years
+
+So a 2035 break is a tail risk in expert consensus, not a base case — but it's not negligible.
+
+## The "harvest now, decrypt later" caveat
+
+Even if a 2035 break is unlikely, adversaries are widely believed to be archiving encrypted traffic today to decrypt later. That's why **NIST finalized post-quantum standards in 2024** (ML-KEM/Kyber, ML-DSA/Dilithium, SLH-DSA), and why migration is already underway at major tech companies, governments, and payment networks. Apple's iMessage PQ3, Signal's PQXDH, and Chrome's hybrid Kyber TLS have all shipped.
+
+## My read
+
+- **Likely outcome by 2035:** No cryptographically relevant quantum computer; RSA-2048 remains unbroken in practice.
+- **Plausible (~10–20%) outcome:** A first demonstration factoring of a small RSA number (e.g., 1024-bit) but not yet 2048.
+- **Tail (~5%) outcome:** A nation-state actor achieves a 2048-bit break in secret.
+
+Regardless of which outcome lands, the prudent assumption — and the one institutions are actually acting on — is that RSA-2048 should be retired or hybridized with post-quantum algorithms well before 2035.

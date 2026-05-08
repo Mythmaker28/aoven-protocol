@@ -1,0 +1,35 @@
+# Are Full-Time RTO Mandates Good for Company Culture?
+
+The honest answer: **it depends, and the evidence is mixed.** "Company culture" is doing a lot of work in this question — it's worth unpacking.
+
+## Arguments that RTO mandates help culture
+
+- **Spontaneous interaction**: Hallway conversations, whiteboard sessions, and overheard problem-solving are hard to replicate on Zoom. New hires especially absorb norms by osmosis.
+- **Onboarding and mentorship**: Junior employees often learn faster with proximity to senior colleagues.
+- **Shared rituals**: Lunches, after-work events, and in-person all-hands can reinforce identity and trust.
+- **Accountability signals**: Some leaders argue presence reduces free-riding and clarifies engagement.
+
+## Arguments that RTO mandates harm culture
+
+- **Selection effects**: Mandates tend to push out top performers and caregivers (disproportionately women) who have outside options or constraints. Survey data from MIT Sloan, Greenhouse, and others has repeatedly shown elevated attrition intent after RTO announcements.
+- **Trust signal**: A blanket mandate communicates that leadership doesn't trust employees to self-manage — which corrodes the very culture it's trying to build.
+- **Performative presence**: "Coffee-badging" and visible-but-disengaged work replace actual collaboration.
+- **Geographic narrowing**: You lose the talent diversity that distributed hiring brings.
+- **Resentment**: When the mandate is justified with vague "culture" language but feels like a real-estate or control decision, cynicism rises.
+
+## What the research actually suggests
+
+- Studies of hybrid arrangements (e.g., Nick Bloom's Stanford work with Trip.com) generally find **2–3 days in office** captures most collaboration benefits without the attrition cost of 5 days.
+- Fully remote can struggle on weak-tie formation and cultural transmission to new hires.
+- Fully in-office mandates often correlate with **higher attrition among high performers** without measurable productivity gains.
+
+## The more useful question
+
+Rather than "are mandates good for culture," ask:
+1. **What specific cultural outcomes** are we trying to produce (mentorship? cohesion? innovation?)
+2. **What's the minimum structure** that produces them (anchor days? team-level choice? quarterly offsites?)
+3. **Who bears the cost**, and is that distribution defensible?
+
+A mandate dressed as a culture intervention but actually solving for executive comfort or sunk-cost office leases tends to produce the worst of both worlds: the friction of compliance without the cohesion of genuine choice.
+
+**Short version**: Full-time mandates are usually a blunt instrument for a problem that responds better to intentional design.

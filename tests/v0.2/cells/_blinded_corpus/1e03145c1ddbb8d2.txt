@@ -1,0 +1,31 @@
+# Vector DB vs. pgvector for a Support Chatbot
+
+For a startup building a customer-support chatbot, **start with pgvector on Postgres** unless you have a concrete reason not to. Here's the reasoning:
+
+## Default to pgvector
+
+**Why it usually wins for a startup:**
+- **One system to operate.** You almost certainly already need Postgres for users, tickets, conversations, and billing. Adding `CREATE EXTENSION vector` is cheaper than running a second stateful service.
+- **Transactional consistency.** Embeddings, source documents, and metadata stay in the same DB, so you get atomic writes, foreign keys, and point-in-time recovery for free.
+- **Rich filtering.** Support chatbots almost always need to filter by tenant, product, locale, doc version, ACL, freshness, etc. SQL `WHERE` + `JOIN` alongside an HNSW/IVFFlat index is genuinely pleasant; many dedicated vector DBs are weaker at correlated metadata filtering at scale.
+- **Cost.** A managed Pinecone/Weaviate tier is a fixed monthly floor on top of compute you're already paying for. pgvector is ~free until you outgrow it.
+- **Scale headroom is real.** With pgvector 0.7+ (HNSW, halfvec, binary quantization) you can comfortably handle the **single-digit-millions of chunks** range that almost every support corpus lives in.
+
+## When a dedicated vector DB earns its keep
+
+Move to Pinecone, Weaviate, Qdrant, Turbopuffer, etc. when one of these is true:
+1. **Corpus > ~10M vectors** *and* p95 latency under load is becoming your bottleneck.
+2. **Heavy multi-tenant isolation** with thousands of tenants where namespacing/per-tenant indexes matter operationally.
+3. **You need features pgvector doesn't ship well**: native hybrid search with learned sparse models (SPLADE), built-in re-ranking, server-side embedding, sophisticated filtered-ANN guarantees.
+4. **You don't want to operate Postgres at all** (fully serverless stack on, say, Pinecone + Lambda).
+5. **Very high write churn** on the index (constant re-embedding) where HNSW rebuild cost in pgvector hurts.
+
+## Concrete recommendation
+
+For a customer-support chatbot specifically:
+
+- **Day 1 → ~1–2M chunks:** pgvector with HNSW, `halfvec` for storage, hybrid search via `tsvector` + RRF, and a cross-encoder re-ranker on the top-50.
+- **Watch these signals to migrate:** p95 retrieval > ~150 ms under realistic concurrency, index build times disrupting deploys, or tenant-filtered recall degrading.
+- **If/when you migrate**, abstract retrieval behind a single interface from the start so swapping in Qdrant/Turbopuffer/Pinecone is a config change, not a rewrite.
+
+The startup failure mode here isn't "picked the wrong vector store" — it's "spent six weeks on infrastructure before learning that retrieval quality, not retrieval speed, was the bottleneck." pgvector lets you iterate on chunking, hybrid search, and re-ranking — which is where chatbot quality is actually won.
