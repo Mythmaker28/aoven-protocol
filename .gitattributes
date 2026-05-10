@@ -1,0 +1,4 @@
+tests/v0.2/scoring/*.tsv -text
+tests/v0.2/scoring/*.tsv eol=lf
+tests/v0.2/cells/_blinding_seal.json -text
+tests/v0.2/cells/_blinding_seal.json eol=lf
