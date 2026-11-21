@@ -1,0 +1,47 @@
+name: selftests
+
+# Standard library only: no dependency install, no network, no secrets.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  selftests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # r1_compressor.py imports r1_normalizer; no __pycache__ in the tree.
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Self-tests (r1_normalizer 6, r1_compressor 2, strip_test_b_markers 14)
+        run: |
+          python tests/phase2/r1_normalizer.py
+          python tests/phase2/r1_compressor.py
+          python tests/v0.2/strip_test_b_markers.py --selftest
+
+      - name: Regenerate committed outputs
+        run: |
+          python tests/v0.2/scoring/_unseal.py
+          python tests/phase2/r1_ab/derive_b_prime_double.py
+
+      - name: Check regenerated outputs are byte-identical to the commit
+        run: |
+          git diff --exit-code
+          changes="$(git status --porcelain --untracked-files=all)"
+          if [ -n "$changes" ]; then
+            echo "::error::Files changed or created by the regeneration step:"
+            echo "$changes"
+            exit 1
+          fi
